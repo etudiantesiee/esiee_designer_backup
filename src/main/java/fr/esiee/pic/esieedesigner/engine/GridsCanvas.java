@@ -15,16 +15,6 @@ public class GridsCanvas extends Canvas {
 	private static final long serialVersionUID = 1214184797311322792L;
 
 	/**
-	 * width
-	 */
-	private int width;
-
-	/**
-	 * height
-	 */
-	private int height;
-
-	/**
 	 * rows
 	 */
 	private int rows;
@@ -50,8 +40,8 @@ public class GridsCanvas extends Canvas {
 	 */
 	public void paint(Graphics g) {
 		int i;
-		width = getSize().width;
-		height = getSize().height;
+		int width = getSize().width;
+		int height = getSize().height;
 
 		// draw the rows
 		int rowHt = height / (rows);
