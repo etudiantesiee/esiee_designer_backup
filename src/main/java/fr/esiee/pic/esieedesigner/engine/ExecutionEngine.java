@@ -1,4 +1,4 @@
-package fr.esiee.pic.esieeDesigner.engine;
+package fr.esiee.pic.esieedesigner.engine;
 
 import java.awt.EventQueue;
 
@@ -13,12 +13,22 @@ import javax.swing.JPanel;
  * @author etudiant
  *
  */
-public class ExecutionEngine {
+public final class ExecutionEngine {
 
 	/**
 	 * Serial version UID
 	 */
 	private static final long serialVersionUID = 2759668095433251868L;
+	
+	/**
+	 * Largeur de la fenêtre
+	 */
+	private static final int WINDOWS_WIDTH = 350;
+	
+	/**
+	 * Longueur de la fenêtre
+	 */
+	private static final int WINDOWS_HEIGHT = 250;
 
 	/**
 	 * Unique instance du moteur d'exécution
@@ -75,7 +85,7 @@ public class ExecutionEngine {
 	 */
 	private void initUI() {
 		engineFrame.setTitle("Esiee Designer Engine");
-		engineFrame.setSize(350, 250);
+		engineFrame.setSize(WINDOWS_WIDTH, WINDOWS_HEIGHT);
 		engineFrame.setLocationRelativeTo(null);
 		engineFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
