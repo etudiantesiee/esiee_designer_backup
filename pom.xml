@@ -16,6 +16,13 @@
 	</properties>
 
 	<dependencies>
+		<!-- JUnit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${version.junit}</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<!-- Configuration des dépôts cibles pour le déploiement des artefacts -->
