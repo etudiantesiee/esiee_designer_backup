@@ -1,6 +1,8 @@
 package fr.esiee.pic.esieedesigner.engine;
 
+import java.awt.Component;
 import java.awt.EventQueue;
+import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -18,17 +20,19 @@ public final class ExecutionEngine {
 	/**
 	 * Serial version UID
 	 */
+	@SuppressWarnings("unused")
 	private static final long serialVersionUID = 2759668095433251868L;
 	
 	/**
-	 * Largeur de la fenêtre
+	 * Nombre de ligne de la grille
 	 */
-	private static final int WINDOWS_WIDTH = 350;
+	private static final int GRID_NB_ROWS = 30;
 	
 	/**
-	 * Longueur de la fenêtre
+	 * Nombre de colonne de la grille
 	 */
-	private static final int WINDOWS_HEIGHT = 250;
+	private static final int GRID_NB_COLS = 30;
+	
 
 	/**
 	 * Unique instance du moteur d'exécution
@@ -39,6 +43,11 @@ public final class ExecutionEngine {
 	 * Frame à afficher
 	 */
 	private JFrame engineFrame;
+	
+	/**
+	 * Grille pour faciliter le dessin des figures
+	 */
+	private GridsCanvas grid;
 
 	/**
 	 * Constructeur privé du singleton
@@ -46,6 +55,7 @@ public final class ExecutionEngine {
 	private ExecutionEngine() {
 		super();
 		engineFrame = new JFrame();
+		grid = new GridsCanvas(GRID_NB_ROWS, GRID_NB_COLS);
 		initUI();
 	}
 
@@ -67,7 +77,7 @@ public final class ExecutionEngine {
 	 * 
 	 * @param figure
 	 */
-	public void ajouterFigure(JPanel figure) {
+	public void ajouterFigure(Component figure) {
 		engineFrame.add(figure);
 	}
 	
@@ -84,10 +94,20 @@ public final class ExecutionEngine {
 	 * Initialisation du moteur d'exécution
 	 */
 	private void initUI() {
+		// Ajout de la grille en mode invisible
+		this.ajouterFigure(grid);
+		
 		engineFrame.setTitle("Esiee Designer Engine");
-		engineFrame.setSize(WINDOWS_WIDTH, WINDOWS_HEIGHT);
+		engineFrame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
 		engineFrame.setLocationRelativeTo(null);
 		engineFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		EventQueue.invokeLater(new Runnable() {
+			@Override
+			public void run() {
+				engineFrame.setVisible(false);
+			}
+		});
 	}
 
 	/**
@@ -96,13 +116,9 @@ public final class ExecutionEngine {
 	 * @param avecGrille
 	 */
 	public void afficher(boolean avecGrille) {
-
-		EventQueue.invokeLater(new Runnable() {
-			@Override
-			public void run() {
-				engineFrame.setVisible(true);
-			}
-		});
+		
+		grid.setVisible(avecGrille);
+		engineFrame.setVisible(true);
 	}
 	
 	/**
@@ -111,5 +127,4 @@ public final class ExecutionEngine {
 	public void masquer() {
 		engineFrame.setVisible(false);
 	}
-
 }
