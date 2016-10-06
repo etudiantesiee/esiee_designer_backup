@@ -3,6 +3,12 @@ package fr.esiee.pic.esieedesigner.engine;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ * Test unitaire du moteur d'exécution
+ * 
+ * @author etudiant
+ *
+ */
 public class ExecutionEngineTest {
 	
 	@Test
