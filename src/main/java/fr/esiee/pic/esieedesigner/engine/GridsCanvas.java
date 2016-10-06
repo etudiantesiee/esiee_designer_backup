@@ -8,37 +8,61 @@ import java.awt.Graphics;
  * 
  * @author Ian Darwin, http://www.darwinsys.com/
  */
-class GridsCanvas extends Canvas {
-  /**
-	 * 
+public class GridsCanvas extends Canvas {
+	/**
+	 * Serial version UID
 	 */
 	private static final long serialVersionUID = 1214184797311322792L;
 
-int width, height;
+	/**
+	 * width
+	 */
+	private int width;
 
-  int rows;
+	/**
+	 * height
+	 */
+	private int height;
 
-  int cols;
+	/**
+	 * rows
+	 */
+	private int rows;
 
-  GridsCanvas(int r, int c) {
-//    setSize(width = w, height = h);
-    rows = r;
-    cols = c;
-  }
+	/**
+	 * cols
+	 */
+	private int cols;
 
-  public void paint(Graphics g) {
-    int i;
-    width = getSize().width;
-    height = getSize().height;
+	/**
+	 * Default contructor
+	 * 
+	 * @param r
+	 * @param c
+	 */
+	GridsCanvas(int r, int c) {
+		rows = r;
+		cols = c;
+	}
 
-    // draw the rows
-    int rowHt = height / (rows);
-    for (i = 0; i < rows; i++)
-      g.drawLine(0, i * rowHt, width, i * rowHt);
+	/**
+	 * Paint method
+	 */
+	public void paint(Graphics g) {
+		int i;
+		width = getSize().width;
+		height = getSize().height;
 
-    // draw the columns
-    int rowWid = width / (cols);
-    for (i = 0; i < cols; i++)
-      g.drawLine(i * rowWid, 0, i * rowWid, height);
-  }
+		// draw the rows
+		int rowHt = height / (rows);
+		for (i = 0; i < rows; i++) {
+			g.drawLine(0, i * rowHt, width, i * rowHt);
+		}
+
+		// draw the columns
+		int rowWid = width / (cols);
+		for (i = 0; i < cols; i++) {
+			g.drawLine(i * rowWid, 0, i * rowWid, height);
+		}
+	}
 }
