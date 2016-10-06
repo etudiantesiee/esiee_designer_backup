@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>fr.esiee.pic.esieeDesigner</groupId>
+	<groupId>fr.esiee.pic</groupId>
 	<artifactId>esieeDesigner</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -12,12 +12,26 @@
 	</description>
 
 	<properties>
-		<jfiglet.version>0.0.3</jfiglet.version>
 		<version.junit>4.8.1</version.junit>
 	</properties>
 
 	<dependencies>
 	</dependencies>
+
+	<!-- Configuration des dépôts cibles pour le déploiement des artefacts -->
+	<distributionManagement>
+		<snapshotRepository>
+			<id>etudiant-vm</id>
+			<name>etudiant-vm-snapshots</name>
+			<url>http://localhost:8081/artifactory/libs-snapshot-local</url>
+		</snapshotRepository>
+		<repository>
+			<id>etudiant-vm</id>
+			<name>etudiant-vm-releases</name>
+			<url>http://localhost:8081/artifactory/libs-release-local</url>
+		</repository>
+	</distributionManagement>
+
 
 	<!-- Configuration des dépôts cibles pour le déploiement des artefactsl -->
 	<build>
