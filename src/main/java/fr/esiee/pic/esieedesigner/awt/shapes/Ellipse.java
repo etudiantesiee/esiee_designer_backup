@@ -67,12 +67,14 @@ public final class Ellipse extends Component {
 	public void paint(Graphics g) {
 		Graphics2D g2d = (Graphics2D) g;
 		
-		if (this.color != null) {
-			g2d.setPaint(this.color);
-		}
-		
 		// Construction de l'ellipse
 		Ellipse2D ellipse = new Ellipse2D.Double(this.x, this.y, this.w, this.h);
+
+		if (this.color != null) {
+			g2d.setPaint(this.color);
+			g2d.fill(ellipse);
+		}
+		
 		g2d.draw(ellipse);
 	}
 }

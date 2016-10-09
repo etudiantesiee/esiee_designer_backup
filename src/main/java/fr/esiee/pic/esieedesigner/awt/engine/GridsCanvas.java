@@ -1,14 +1,15 @@
 package fr.esiee.pic.esieedesigner.awt.engine;
 
-import java.awt.Canvas;
+import java.awt.Component;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 
 /**
  * Program to draw grids.
  * 
  * @author Ian Darwin, http://www.darwinsys.com/
  */
-public class GridsCanvas extends Canvas {
+public class GridsCanvas extends Component {
 	/**
 	 * Serial version UID
 	 */
@@ -30,7 +31,7 @@ public class GridsCanvas extends Canvas {
 	 * @param r
 	 * @param c
 	 */
-	GridsCanvas(int r, int c) {
+	public GridsCanvas(int r, int c) {
 		rows = r;
 		cols = c;
 	}
@@ -39,6 +40,8 @@ public class GridsCanvas extends Canvas {
 	 * Paint method
 	 */
 	public void paint(Graphics g) {
+		Graphics2D g2d = (Graphics2D) g;
+		
 		int i;
 		int width = getSize().width;
 		int height = getSize().height;
@@ -46,13 +49,13 @@ public class GridsCanvas extends Canvas {
 		// draw the rows
 		int rowHt = height / (rows);
 		for (i = 0; i < rows; i++) {
-			g.drawLine(0, i * rowHt, width, i * rowHt);
+			g2d.drawLine(0, i * rowHt, width, i * rowHt);
 		}
 
 		// draw the columns
 		int rowWid = width / (cols);
 		for (i = 0; i < cols; i++) {
-			g.drawLine(i * rowWid, 0, i * rowWid, height);
+			g2d.drawLine(i * rowWid, 0, i * rowWid, height);
 		}
 	}
 }

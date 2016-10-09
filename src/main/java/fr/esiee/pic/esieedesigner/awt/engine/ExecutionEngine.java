@@ -1,7 +1,6 @@
 package fr.esiee.pic.esieedesigner.awt.engine;
 
 import java.awt.Component;
-import java.awt.EventQueue;
 import java.awt.Toolkit;
 
 import javax.swing.JFrame;
@@ -42,7 +41,7 @@ public final class ExecutionEngine {
 	/**
 	 * Frame à afficher
 	 */
-	private JFrame engineFrame;
+	private MainFrameComponent engineFrame;
 
 	/**
 	 * Grille pour faciliter le dessin des figures
@@ -54,7 +53,7 @@ public final class ExecutionEngine {
 	 */
 	private ExecutionEngine() {
 		super();
-		engineFrame = new JFrame();
+		engineFrame = new MainFrameComponent();
 		grid = new GridsCanvas(GRID_NB_ROWS, GRID_NB_COLS);
 		initUI();
 	}
@@ -94,20 +93,17 @@ public final class ExecutionEngine {
 	 * Initialisation du moteur d'exécution
 	 */
 	private void initUI() {
-		// Ajout de la grille en mode invisible
-		this.ajouterFigure(grid);
-
 		engineFrame.setTitle("Esiee Designer Engine");
 		engineFrame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
+		
+		// Positionnement de l'écran au centre
 		engineFrame.setLocationRelativeTo(null);
+		
+		// Méthode de fermeture
 		engineFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-		EventQueue.invokeLater(new Runnable() {
-			@Override
-			public void run() {
-				engineFrame.setVisible(false);
-			}
-		});
+		
+		// Ajout de la grille en mode invisible
+		this.ajouterFigure(grid);
 	}
 
 	/**
@@ -116,7 +112,7 @@ public final class ExecutionEngine {
 	 * @param avecGrille
 	 */
 	public void afficher(boolean avecGrille) {
-		grid.setVisible(avecGrille);
+//		grid.setVisible(avecGrille);
 		engineFrame.setVisible(true);
 	}
 
