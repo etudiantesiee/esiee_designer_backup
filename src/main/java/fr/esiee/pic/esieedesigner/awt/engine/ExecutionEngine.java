@@ -1,4 +1,4 @@
-package fr.esiee.pic.esieedesigner.engine;
+package fr.esiee.pic.esieedesigner.awt.engine;
 
 import java.awt.Component;
 import java.awt.EventQueue;

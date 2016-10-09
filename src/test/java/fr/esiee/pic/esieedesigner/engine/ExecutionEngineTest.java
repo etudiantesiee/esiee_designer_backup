@@ -1,6 +1,8 @@
 package fr.esiee.pic.esieedesigner.engine;
 
 import org.junit.Test;
+
+import fr.esiee.pic.esieedesigner.awt.engine.ExecutionEngine;
 import static org.junit.Assert.*;
 
 /**

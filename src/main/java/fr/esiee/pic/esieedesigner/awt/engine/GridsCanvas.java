@@ -1,4 +1,4 @@
-package fr.esiee.pic.esieedesigner.engine;
+package fr.esiee.pic.esieedesigner.awt.engine;
 
 import java.awt.Canvas;
 import java.awt.Graphics;
