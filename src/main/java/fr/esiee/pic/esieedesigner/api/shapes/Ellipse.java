@@ -1,4 +1,4 @@
-package fr.esiee.pic.esieedesigner.api;
+package fr.esiee.pic.esieedesigner.api.shapes;
 
 /**
  * Réprésente la figure géométrique 2D ellipse

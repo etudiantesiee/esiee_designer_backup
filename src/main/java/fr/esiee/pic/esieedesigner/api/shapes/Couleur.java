@@ -1,4 +1,4 @@
-package fr.esiee.pic.esieedesigner.api;
+package fr.esiee.pic.esieedesigner.api.shapes;
 
 /**
  * Réprésente une couleur RGB à ajouter dans une figure géométrique
@@ -7,10 +7,11 @@ package fr.esiee.pic.esieedesigner.api;
  *
  */
 public enum Couleur {
+	
 	/**
-	 * Couleur Grise
+	 * Couleur noir
 	 */
-	GRIS(0.5f, 0.5f, 0.5f, 0.5f),
+	NOIR(0f, 0f, 0f, 0f),
 	
 	/**
 	 * Couleur Blanche
@@ -18,9 +19,9 @@ public enum Couleur {
 	BLANC(1f, 1f, 1f, 1f),
 	
 	/**
-	 * Couleur noir
+	 * Couleur Grise
 	 */
-	Noir(0f, 0f, 0f, 0f);
+	GRIS(0.5f, 0.5f, 0.5f, 0.5f);
 	
 	private final float r, g, b, a;
 	

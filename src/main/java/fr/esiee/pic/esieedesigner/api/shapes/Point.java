@@ -1,4 +1,4 @@
-package fr.esiee.pic.esieedesigner.api;
+package fr.esiee.pic.esieedesigner.api.shapes;
 
 /**
  * Représente un point 2D en terme de figure gémétrique
