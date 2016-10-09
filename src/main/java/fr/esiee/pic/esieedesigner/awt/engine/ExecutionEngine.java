@@ -112,7 +112,7 @@ public final class ExecutionEngine {
 	 * @param avecGrille
 	 */
 	public void afficher(boolean avecGrille) {
-//		grid.setVisible(avecGrille);
+		grid.setVisible(avecGrille);
 		engineFrame.setVisible(true);
 	}
 

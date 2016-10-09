@@ -1,10 +1,15 @@
 package fr.esiee.pic.esieedesigner.awt.factory.impl;
 
+import java.awt.Color;
 import java.awt.Component;
+import java.awt.geom.Point2D;
 
+import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.awt.factory.ShapesFactory;
+import fr.esiee.pic.esieedesigner.awt.shapes.EllipseAWT;
+import fr.esiee.pic.esieedesigner.awt.shapes.GeneralShape;
 
 /**
  * Implémentation AWT de la factory de figure
@@ -41,14 +46,39 @@ public final class ShapesFactoryImpl implements ShapesFactory {
 	}
 	
 	@Override
-	public Component produceEllipse(Ellipse ellipse) {
-		// TODO Auto-generated method stub
-		return null;
+	public Component produceEllipse(Ellipse ellipse, Couleur couleur) {
+		float x = (float) ellipse.getX();
+		float y = (float) ellipse.getY();
+		float w = (float) ellipse.getL();
+		float h = (float) ellipse.getH();
+		Color color = new Color(couleur.getR(), couleur.getG(), couleur.getB(), couleur.getA());
+		
+		return new EllipseAWT(x, y, w, h, color);
 	}
 	
 	@Override
 	public Component produceShapeFromPoints(Point[] points) {
-		// TODO Auto-generated method stub
-		return null;
+		return this.produceShapeFromPoints(points, null);
+	}
+	
+	@Override
+	public Component produceEllipse(Ellipse ellipse) {
+		return this.produceEllipse(ellipse, null);
+	}
+	
+	@Override
+	public Component produceShapeFromPoints(Point[] points, Couleur couleur) {
+		int nbPoints = points.length;
+		Point2D[] points2D = new Point2D[nbPoints];
+		for(int i = 0; i < nbPoints; i++) {
+			Point currentPoint = points[i];
+			double x = currentPoint.getX();
+			double y = currentPoint.getY();
+			
+			points2D[i] = new Point2D.Double(x, y);
+		}
+		
+		Color color = new Color(couleur.getR(), couleur.getG(), couleur.getB(), couleur.getA());
+		return new GeneralShape(points2D, color);
 	}
 }

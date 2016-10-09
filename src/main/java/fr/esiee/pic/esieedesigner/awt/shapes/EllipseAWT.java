@@ -12,7 +12,7 @@ import java.awt.geom.Ellipse2D;
  * @author etudiant
  *
  */
-public final class Ellipse extends Component {
+public final class EllipseAWT extends Component {
 
 	/**
 	 * Serial version ID
@@ -53,7 +53,7 @@ public final class Ellipse extends Component {
 	 * @param h
 	 * @param color
 	 */
-	public Ellipse(float x, float y, float w, float h, Color color) {
+	public EllipseAWT(float x, float y, float w, float h, Color color) {
 		this.x = x;
 		this.y = y;
 		this.w = w;
