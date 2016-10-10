@@ -51,7 +51,11 @@ public final class ShapesFactoryImpl implements ShapesFactory {
 		float y = (float) ellipse.getY();
 		float w = (float) ellipse.getL();
 		float h = (float) ellipse.getH();
-		Color color = new Color(couleur.getR(), couleur.getG(), couleur.getB(), couleur.getA());
+		
+		Color color = null;
+		if (couleur != null) {
+			color = new Color(couleur.getR(), couleur.getG(), couleur.getB(), couleur.getA());
+		}
 		
 		return new EllipseAWT(x, y, w, h, color);
 	}
@@ -78,7 +82,11 @@ public final class ShapesFactoryImpl implements ShapesFactory {
 			points2D[i] = new Point2D.Double(x, y);
 		}
 		
-		Color color = new Color(couleur.getR(), couleur.getG(), couleur.getB(), couleur.getA());
+		Color color = null;
+		if (couleur != null) {
+			color = new Color(couleur.getR(), couleur.getG(), couleur.getB(), couleur.getA());
+		}
+		
 		return new GeneralShape(points2D, color);
 	}
 }

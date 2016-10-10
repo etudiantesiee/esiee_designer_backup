@@ -1,4 +1,4 @@
-package fr.esiee.pic.esieedesigner.engine;
+package fr.esiee.pic.esieedesigner.awt.engine;
 
 import org.junit.Test;
 
