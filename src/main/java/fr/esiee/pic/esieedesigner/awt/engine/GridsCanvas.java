@@ -132,9 +132,4 @@ public class GridsCanvas extends Component {
 
 		return stroke;
 	}
-
-	public static void main(String[] args) {
-		ExecutionEngine e = ExecutionEngine.getInstance();
-		e.afficher(true);
-	}
 }
