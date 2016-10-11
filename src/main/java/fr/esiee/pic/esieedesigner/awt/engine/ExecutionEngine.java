@@ -1,6 +1,7 @@
 package fr.esiee.pic.esieedesigner.awt.engine;
 
 import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.Toolkit;
 
 import javax.swing.JFrame;
@@ -94,7 +95,7 @@ public final class ExecutionEngine {
 	 */
 	private void initUI() {
 		engineFrame.setTitle("Esiee Designer Engine");
-		engineFrame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
+		engineFrame.setSize(this.getSize());
 		
 		// Positionnement de l'écran au centre
 		engineFrame.setLocationRelativeTo(null);
@@ -103,7 +104,16 @@ public final class ExecutionEngine {
 		engineFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		// Ajout de la grille en mode invisible
-		this.ajouterFigure(grid);
+//		this.ajouterFigure(grid);
+	}
+	
+	/**
+	 * Dimension de l'écran
+	 * 
+	 * @return
+	 */
+	public Dimension getSize() {
+		return Toolkit.getDefaultToolkit().getScreenSize();
 	}
 
 	/**
