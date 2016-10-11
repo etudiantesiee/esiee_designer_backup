@@ -24,10 +24,21 @@ public final class CheminDePoints {
 	private Couleur couleur;
 	
 	/**
+	 * Coloriage des traits
+	 */
+	private Couleur couleurTraitsLaison;
+	
+	/**
+	 * Indique si l'épaisseur des traits de laison doit être minimal
+	 */
+	private boolean traitDeLaisonFin;
+	
+	/**
 	 * Constructeur par défaut
 	 */
 	public CheminDePoints() {
 		points = new LinkedList<>();
+		traitDeLaisonFin = false;
 	}
 	
 	/**
@@ -47,8 +58,24 @@ public final class CheminDePoints {
 	 * @param couleur
 	 * @return
 	 */
-	public CheminDePoints colorier(Couleur couleur) {
+	public CheminDePoints couleurDeFond(Couleur couleur) {
 		this.couleur = couleur;
+		return this;
+	}
+	
+	/**
+	 * Couleur des traits de laisons
+	 * 
+	 * @param couleur
+	 * @return
+	 */
+	public CheminDePoints couleurDesTrait(Couleur couleurDesTrait) {
+		this.couleurTraitsLaison = couleur;
+		return this;
+	}
+	
+	public CheminDePoints traitDeLiaisonFin() {
+		this.traitDeLaisonFin = true;
 		return this;
 	}
 	
@@ -68,7 +95,25 @@ public final class CheminDePoints {
 	 * 
 	 * @return
 	 */
-	public Couleur getCouleur() {
+	public Couleur getCouleurDeFond() {
 		return couleur;
+	}
+	
+	/**
+	 * Getter de la couleur des traits
+	 * 
+	 * @return
+	 */
+	public Couleur getCouleurTraits() {
+		return couleurTraitsLaison;
+	}
+	
+	/**
+	 * Retourne true si les traits de laison entre les points sont fin.
+	 * 
+	 * @return
+	 */
+	public boolean aDesTraitsFin() {
+		return traitDeLaisonFin;
 	}
 }

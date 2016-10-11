@@ -87,8 +87,11 @@ public final class AfficheurDeFormes {
 		// Affichage des chemins de points
 		for (CheminDePoints c : cheminsDePoints) {
 			Point[] points = c.toArray();
-			Couleur couleur = c.getCouleur();
-			Component shapeComp = shapesFactory.produceShapeFromPoints(points, couleur);
+			Couleur couleur = c.getCouleurDeFond();
+			Couleur couleurDesTraits = c.getCouleurTraits();
+			boolean traitFin = c.aDesTraitsFin();
+			
+			Component shapeComp = shapesFactory.produceShapeFromPoints(points, couleur, couleurDesTraits, traitFin);
 			engine.ajouterFigure(shapeComp);
 		}
 	}

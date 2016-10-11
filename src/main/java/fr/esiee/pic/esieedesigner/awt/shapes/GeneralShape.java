@@ -44,7 +44,7 @@ public class GeneralShape extends Component {
 	/**
 	 * Taille des traits de jointures
 	 */
-	private static final float WIDTH_OF_LINE_STROKE = 3.0f;
+	private static final float WIDTH_OF_LINE_STROKE = 4.0f;
 	
 	/**
 	 * Petite taille des traits de jointures

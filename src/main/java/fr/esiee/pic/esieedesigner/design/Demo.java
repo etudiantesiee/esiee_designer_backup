@@ -31,7 +31,7 @@ public class Demo extends CreateurDeForme {
 		.ajouter(pointDuHaut)
 		.ajouter(pointDeDroite)
 		.ajouter(pointDeGauche)
-		.colorier(Couleur.GRIS);
+		.couleurDeFond(Couleur.GRIS);
 		
 		// Dessinons un carre
 		int coteDuCarre = 200;

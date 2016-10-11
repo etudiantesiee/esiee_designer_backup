@@ -81,8 +81,14 @@ public class Grille extends CreateurDeForme {
 
 			Point symetriquePointCourant = new Point(xSymetriquePointCourant,
 					ySymetriquePointCourant);
-			demarrerNouveauDessinAvecDesPoints().ajouter(pointCourant)
-					.ajouter(symetriquePointCourant).colorier(Couleur.GRIS);
+			
+			// Ajout des points
+			demarrerNouveauDessinAvecDesPoints()
+			.ajouter(pointCourant)
+			.ajouter(symetriquePointCourant)
+			.couleurDeFond(Couleur.GRIS)
+			.couleurDesTrait(Couleur.GRIS)
+			.traitDeLiaisonFin();
 
 			xPointCourant = xPointCourant + this.uniteLongueur;
 
@@ -106,8 +112,12 @@ public class Grille extends CreateurDeForme {
 
 			Point symetriquePointCourant = new Point(xSymetriquePointCourant,
 					ySymetriquePointCourant);
-			demarrerNouveauDessinAvecDesPoints().ajouter(pointCourant)
-					.ajouter(symetriquePointCourant).colorier(Couleur.GRIS);
+			demarrerNouveauDessinAvecDesPoints()
+			.ajouter(pointCourant)
+			.ajouter(symetriquePointCourant)
+			.couleurDeFond(Couleur.GRIS)
+			.couleurDesTrait(Couleur.GRIS)
+			.traitDeLiaisonFin();
 
 			yPointCourant = yPointCourant + this.uniteLargeur;
 
