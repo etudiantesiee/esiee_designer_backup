@@ -12,6 +12,13 @@ import fr.esiee.pic.esieedesigner.ui.tools.AfficheurDeFormes;
  *
  */
 public final class EcranPrincipal {
+	
+	/**
+	 * Construteur par défaut masqué
+	 */
+	private EcranPrincipal() {
+		super();
+	}
 
 	/**
 	 * Méthod Main

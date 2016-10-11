@@ -59,8 +59,8 @@ public final class CheminDePoints {
 	 */
 	public Point[] toArray() {
 		int nbPoint = this.points.size();
-		Point[] points = new Point[nbPoint];
-		return this.points.toArray(points).clone();
+		Point[] pointsArray = new Point[nbPoint];
+		return this.points.toArray(pointsArray).clone();
 	}
 
 	/**
