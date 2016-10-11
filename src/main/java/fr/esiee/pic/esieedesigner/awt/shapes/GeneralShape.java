@@ -32,9 +32,24 @@ public class GeneralShape extends Component {
 	private final Color color;
 	
 	/**
+	 * Couleur des traits
+	 */
+	private final Color lineColor;
+	
+	/**
+	 * Epaisseur des traits minimum si true
+	 */
+	private final boolean tinyStrokeWidth;
+	
+	/**
 	 * Taille des traits de jointures
 	 */
 	private static final float WIDTH_OF_LINE_STROKE = 3.0f;
+	
+	/**
+	 * Petite taille des traits de jointures
+	 */
+	private static final float WIDTH_OF_LINE_STROKE_TINY = 1.0f;
 	
 	/**
 	 * Limit
@@ -54,7 +69,7 @@ public class GeneralShape extends Component {
 	/**
 	 * Couleur des lignes de jointures entre les points
 	 */
-	private static final Color LINE_COLOR = new Color(0f,0f,0f,.9f);
+	private static final Color LINE_DEFAULT_COLOR = new Color(0f,0f,0f,.9f);
 
 	/**
 	 * Construit une figure à partir d'une liste de point et d'une couleur.
@@ -65,6 +80,24 @@ public class GeneralShape extends Component {
 	public GeneralShape(Point2D[] points, Color color) {
 		this.points = points.clone();
 		this.color = color;
+		this.lineColor = null;
+		this.tinyStrokeWidth = false;
+	}
+	
+	/**
+	 * Construit une figure à partir : 
+	 * 	- d'une liste de point, 
+	 * 	- d'une couleur 
+	 * 	- d'information sur la forme des lignes de dessin : couleur et épaisseur
+	 * 
+	 * @param points
+	 * @param color
+	 */
+	public GeneralShape(Point2D[] points, Color color, Color lineColor, boolean tinyStrokeWidth) {
+		this.points = points.clone();
+		this.color = color;
+		this.lineColor = lineColor;
+		this.tinyStrokeWidth = tinyStrokeWidth;
 	}
 
 	/**
@@ -92,7 +125,7 @@ public class GeneralShape extends Component {
 		rec.closePath();
 		
 		// taille des traits (de liaison entre les points)
-		float width = WIDTH_OF_LINE_STROKE;
+		float width = this.tinyStrokeWidth ? WIDTH_OF_LINE_STROKE_TINY : WIDTH_OF_LINE_STROKE;
 		
 		// Décoration de la fin des traits
 		int cap = BasicStroke.CAP_SQUARE;
@@ -121,7 +154,13 @@ public class GeneralShape extends Component {
 			g2d.fill(rec);
 		}
 
-		g2d.setPaint(LINE_COLOR);
+		// Definition de la couleur des lignes de dessin
+		if (lineColor != null) {
+			g2d.setPaint(lineColor);
+		} else {
+			g2d.setPaint(LINE_DEFAULT_COLOR);
+		}
+		
 		g2d.draw(rec);
 	}
 }

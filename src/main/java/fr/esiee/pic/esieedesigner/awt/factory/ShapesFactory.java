@@ -46,4 +46,13 @@ public interface ShapesFactory {
 	 * @return
 	 */
 	Component produceShapeFromPoints(Point[] points, Couleur couleur);
+	
+	/**
+	 * Construit une figure géométrique à partir de points.
+	 * On fournit également des informations sur le style de traits (couleur, épaisseur...)
+	 * 
+	 * @param points
+	 * @return
+	 */
+	Component produceShapeFromPoints(Point[] points, Couleur couleur, Couleur couleurTrait, boolean traitFin);
 }

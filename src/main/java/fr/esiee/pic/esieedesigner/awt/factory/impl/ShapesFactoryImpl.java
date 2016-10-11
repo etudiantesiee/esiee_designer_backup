@@ -72,6 +72,11 @@ public final class ShapesFactoryImpl implements ShapesFactory {
 	
 	@Override
 	public Component produceShapeFromPoints(Point[] points, Couleur couleur) {
+		return produceShapeFromPoints(points, couleur, null, false);
+	}
+	
+	@Override
+	public Component produceShapeFromPoints(Point[] points, Couleur couleur, Couleur couleurTrait, boolean traitFin) {
 		int nbPoints = points.length;
 		Point2D[] points2D = new Point2D[nbPoints];
 		for(int i = 0; i < nbPoints; i++) {
@@ -87,6 +92,11 @@ public final class ShapesFactoryImpl implements ShapesFactory {
 			color = new Color(couleur.getR(), couleur.getG(), couleur.getB(), couleur.getA());
 		}
 		
-		return new GeneralShape(points2D, color);
+		Color lineColor = null;
+		if (couleurTrait != null) {
+			lineColor = new Color(couleurTrait.getR(), couleurTrait.getG(), couleurTrait.getB(), couleurTrait.getA());
+		}
+		
+		return new GeneralShape(points2D, color, lineColor, traitFin);
 	}
 }
