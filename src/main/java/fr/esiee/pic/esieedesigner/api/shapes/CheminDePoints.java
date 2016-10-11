@@ -19,6 +19,11 @@ public final class CheminDePoints {
 	private final List<Point> points;
 	
 	/**
+	 * Coloriage de fond
+	 */
+	private Couleur couleur;
+	
+	/**
 	 * Constructeur par défaut
 	 */
 	public CheminDePoints() {
@@ -37,12 +42,33 @@ public final class CheminDePoints {
 	}
 	
 	/**
+	 * Couleur de fond de la forme
+	 * 
+	 * @param couleur
+	 * @return
+	 */
+	public CheminDePoints colorier(Couleur couleur) {
+		this.couleur = couleur;
+		return this;
+	}
+	
+	/**
 	 * Retourne la liste de point actuelle sous forme de tableau
 	 * 
 	 * @return
 	 */
 	public Point[] toArray() {
-		return (Point[]) this.points.toArray().clone();
+		int nbPoint = this.points.size();
+		Point[] points = new Point[nbPoint];
+		return this.points.toArray(points).clone();
 	}
 
+	/**
+	 * Getter de la couleur
+	 * 
+	 * @return
+	 */
+	public Couleur getCouleur() {
+		return couleur;
+	}
 }

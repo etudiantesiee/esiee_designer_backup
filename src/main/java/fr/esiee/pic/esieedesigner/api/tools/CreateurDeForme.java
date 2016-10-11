@@ -1,9 +1,12 @@
 package fr.esiee.pic.esieedesigner.api.tools;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import fr.esiee.pic.esieedesigner.api.shapes.CheminDePoints;
+import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 
 /**
@@ -17,7 +20,7 @@ public abstract class CreateurDeForme {
 	/**
 	 * Liste des ellipses composant le dessin
 	 */
-	private final List<Ellipse> ellipses;
+	private final Map<Ellipse, Couleur> ellipses;
 	
 	/**
 	 * Liste des figures faites à partir de points
@@ -29,7 +32,7 @@ public abstract class CreateurDeForme {
 	 */
 	public CreateurDeForme() {
 		super();
-		ellipses = new ArrayList<>();
+		ellipses = new HashMap<>();
 		formesAvecPoints = new ArrayList<>();
 	}
 	
@@ -51,8 +54,19 @@ public abstract class CreateurDeForme {
 	 * @param ellipse
 	 * @return
 	 */
+	protected CreateurDeForme ajouterEllipse(Ellipse ellipse, Couleur couleur) {
+		this.ellipses.put(ellipse, couleur);
+		return this;
+	}
+	
+	/**
+	 * Ajoute une nouvelle ellipse à la figure en cours de construction.
+	 * 
+	 * @param ellipse
+	 * @return
+	 */
 	protected CreateurDeForme ajouterEllipse(Ellipse ellipse) {
-		this.ellipses.add(ellipse);
+		ajouterEllipse(ellipse, null);
 		return this;
 	}
 	
@@ -60,4 +74,21 @@ public abstract class CreateurDeForme {
 	 * Méthode à implémenter pour créer un dessiner.
 	 */
 	public abstract void dessiner();
+
+	/**
+	 * Getter de la liste des ellipses
+	 * 
+	 * @return
+	 */
+	public Map<Ellipse, Couleur> getEllipses() {
+		return ellipses;
+	}
+
+	/**
+	 * Getter de la liste des formes faites à partir de points
+	 * @return
+	 */
+	public List<CheminDePoints> getFormesAvecPoints() {
+		return formesAvecPoints;
+	}
 }
