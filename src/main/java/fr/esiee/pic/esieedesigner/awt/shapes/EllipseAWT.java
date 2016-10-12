@@ -6,6 +6,8 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
 
+import fr.esiee.pic.esieedesigner.awt.shared.Constants;
+
 /**
  * Figure géométrique Ellipse avec JAVA 2D
  * 
@@ -75,6 +77,8 @@ public final class EllipseAWT extends Component {
 			g2d.fill(ellipse);
 		}
 		
+		
+		g2d.setPaint(Constants.LINE_DEFAULT_COLOR);
 		g2d.draw(ellipse);
 	}
 }

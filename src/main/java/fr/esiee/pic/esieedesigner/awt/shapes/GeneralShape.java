@@ -8,6 +8,8 @@ import java.awt.Graphics2D;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Point2D;
 
+import fr.esiee.pic.esieedesigner.awt.shared.Constants;
+
 /**
  * Figure géométrique java 2D construite à partir de point
  * 
@@ -66,11 +68,6 @@ public class GeneralShape extends Component {
 	 */
 	private static final float DASH_PHASE = 0.0f;
 	
-	/**
-	 * Couleur des lignes de jointures entre les points
-	 */
-	private static final Color LINE_DEFAULT_COLOR = new Color(0f,0f,0f,.9f);
-
 	/**
 	 * Construit une figure à partir d'une liste de point et d'une couleur.
 	 * 
@@ -158,7 +155,7 @@ public class GeneralShape extends Component {
 		if (lineColor != null) {
 			g2d.setPaint(lineColor);
 		} else {
-			g2d.setPaint(LINE_DEFAULT_COLOR);
+			g2d.setPaint(Constants.LINE_DEFAULT_COLOR);
 		}
 		
 		g2d.draw(rec);
