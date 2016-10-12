@@ -37,7 +37,6 @@ public class MainFrameComponent extends JFrame {
 
 	@Override
 	public void paint(Graphics g) {
-//		super.paint(g);
 		
 		for (Component c : components) {
 			// Dessin du composant

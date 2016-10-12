@@ -88,7 +88,7 @@ public class Grille extends CreateurDeForme {
 			.ajouter(symetriquePointCourant)
 			.couleurDeFond(Couleur.GRIS)
 			.couleurDesTrait(Couleur.GRIS)
-			.traitDeLiaisonFin();
+			.produireTraitDeLiaisonDePetiteTaille();
 
 			xPointCourant = xPointCourant + this.uniteLongueur;
 
@@ -117,7 +117,7 @@ public class Grille extends CreateurDeForme {
 			.ajouter(symetriquePointCourant)
 			.couleurDeFond(Couleur.GRIS)
 			.couleurDesTrait(Couleur.GRIS)
-			.traitDeLiaisonFin();
+			.produireTraitDeLiaisonDePetiteTaille();
 
 			yPointCourant = yPointCourant + this.uniteLargeur;
 

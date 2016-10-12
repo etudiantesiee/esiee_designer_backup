@@ -25,16 +25,6 @@ public final class ExecutionEngine {
 	private static final long serialVersionUID = 2759668095433251868L;
 
 	/**
-	 * Nombre de ligne de la grille
-	 */
-	private static final int GRID_NB_ROWS = 30;
-
-	/**
-	 * Nombre de colonne de la grille
-	 */
-	private static final int GRID_NB_COLS = 30;
-
-	/**
 	 * Unique instance du moteur d'exécution
 	 */
 	private static ExecutionEngine instance;
@@ -45,17 +35,11 @@ public final class ExecutionEngine {
 	private MainFrameComponent engineFrame;
 
 	/**
-	 * Grille pour faciliter le dessin des figures
-	 */
-	private GridsCanvas grid;
-
-	/**
 	 * Constructeur privé du singleton
 	 */
 	private ExecutionEngine() {
 		super();
 		engineFrame = new MainFrameComponent();
-		grid = new GridsCanvas(GRID_NB_ROWS, GRID_NB_COLS);
 		initUI();
 	}
 
@@ -102,9 +86,6 @@ public final class ExecutionEngine {
 		
 		// Méthode de fermeture
 		engineFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		// Ajout de la grille en mode invisible
-//		this.ajouterFigure(grid);
 	}
 	
 	/**
@@ -121,8 +102,7 @@ public final class ExecutionEngine {
 	 * 
 	 * @param avecGrille
 	 */
-	public void afficher(boolean avecGrille) {
-		grid.setVisible(avecGrille);
+	public void afficher() {
 		engineFrame.setVisible(true);
 	}
 

@@ -74,7 +74,13 @@ public final class CheminDePoints {
 		return this;
 	}
 	
-	public CheminDePoints traitDeLiaisonFin() {
+	/**
+	 * Si cette méthode est appelée, 
+	 * les traits qui relie les points seront de petites tailles
+	 * 
+	 * @return
+	 */
+	public CheminDePoints produireTraitDeLiaisonDePetiteTaille() {
 		this.traitDeLaisonFin = true;
 		return this;
 	}

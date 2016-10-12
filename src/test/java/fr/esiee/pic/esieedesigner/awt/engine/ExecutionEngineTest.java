@@ -23,13 +23,13 @@ public class ExecutionEngineTest {
 	@Test
 	public void testAffichageAvecGrille() {
 		ExecutionEngine i1 = ExecutionEngine.getInstance();
-		i1.afficher(true);
+		i1.afficher();
 	}
 	
 	@Test
 	public void testAffichageSansGrille() {
 		ExecutionEngine i1 = ExecutionEngine.getInstance();
-		i1.afficher(false);
+		i1.afficher();
 	}
 	
 	@Test

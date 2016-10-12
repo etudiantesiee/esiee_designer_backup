@@ -50,7 +50,7 @@ public final class EcranPrincipal {
 		afficheur.afficher(grille);
 		
 		// Affichage du moteur d'exécution
-		engine.afficher(false);
+		engine.afficher();
 	}
 
 }

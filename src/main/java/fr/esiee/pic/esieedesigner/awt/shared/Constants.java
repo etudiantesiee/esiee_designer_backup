@@ -9,6 +9,13 @@ import java.awt.Color;
  *
  */
 public final class Constants {
+	
+	/**
+	 * Constructeur par defaut caché
+	 */
+	private Constants() {
+		super();
+	}
 
 	/**
 	 * Couleur des lignes de jointures entre les points
