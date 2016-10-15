@@ -90,8 +90,9 @@ public final class AfficheurDeFormes {
 			Couleur couleur = c.getCouleurDeFond();
 			Couleur couleurDesTraits = c.getCouleurTraits();
 			boolean traitFin = c.aDesTraitsFin();
+			boolean relierLesPointsExtreme = c.relierLesPointsExtremes();
 			
-			Component shapeComp = shapesFactory.produceShapeFromPoints(points, couleur, couleurDesTraits, traitFin);
+			Component shapeComp = shapesFactory.produceShapeFromPoints(points, couleur, couleurDesTraits, traitFin, relierLesPointsExtreme);
 			engine.ajouterFigure(shapeComp);
 		}
 	}

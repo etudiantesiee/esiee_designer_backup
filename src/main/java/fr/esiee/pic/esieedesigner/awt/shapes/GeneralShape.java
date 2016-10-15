@@ -44,6 +44,11 @@ public class GeneralShape extends Component {
 	private final boolean tinyStrokeWidth;
 	
 	/**
+	 * Fermer le chemin
+	 */
+	private final boolean closePath;
+	
+	/**
 	 * Taille des traits de jointures
 	 */
 	private static final float WIDTH_OF_LINE_STROKE = 4.0f;
@@ -79,6 +84,23 @@ public class GeneralShape extends Component {
 		this.color = color;
 		this.lineColor = null;
 		this.tinyStrokeWidth = false;
+		this.closePath = true;
+	}
+	
+	/**
+	 * Construit une figure à partir d'une liste de point et d'une couleur.
+	 * closePath précise si le dernier et le premier point doivent être reliés
+	 * 
+	 * @param points
+	 * @param color
+	 * @param closePath
+	 */
+	public GeneralShape(Point2D[] points, Color color, boolean closePath) {
+		this.points = points.clone();
+		this.color = color;
+		this.lineColor = null;
+		this.tinyStrokeWidth = false;
+		this.closePath = closePath;
 	}
 	
 	/**
@@ -89,12 +111,37 @@ public class GeneralShape extends Component {
 	 * 
 	 * @param points
 	 * @param color
+	 * @param lineColor
+	 * @param tinyStrokeWidth
 	 */
 	public GeneralShape(Point2D[] points, Color color, Color lineColor, boolean tinyStrokeWidth) {
 		this.points = points.clone();
 		this.color = color;
 		this.lineColor = lineColor;
 		this.tinyStrokeWidth = tinyStrokeWidth;
+		this.closePath = true;
+	}
+	
+	/**
+	 * Construit une figure à partir : 
+	 * 	- d'une liste de point, 
+	 * 	- d'une couleur 
+	 * 	- d'information sur la forme des lignes de dessin : couleur et épaisseur
+	 * 
+	 * closePath précise si le dernier et le premier point doivent être reliés
+	 * 
+	 * @param points
+	 * @param color
+	 * @param lineColor
+	 * @param tinyStrokeWidth
+	 * @param closePath
+	 */
+	public GeneralShape(Point2D[] points, Color color, Color lineColor, boolean tinyStrokeWidth, boolean closePath) {
+		this.points = points.clone();
+		this.color = color;
+		this.lineColor = lineColor;
+		this.tinyStrokeWidth = tinyStrokeWidth;
+		this.closePath = closePath;
 	}
 
 	/**
@@ -119,7 +166,9 @@ public class GeneralShape extends Component {
 			rec.lineTo(x, y);
 		}
 
-		rec.closePath();
+		if (this.closePath) {
+			rec.closePath();
+		}
 		
 		// taille des traits (de liaison entre les points)
 		float width = this.tinyStrokeWidth ? WIDTH_OF_LINE_STROKE_TINY : WIDTH_OF_LINE_STROKE;

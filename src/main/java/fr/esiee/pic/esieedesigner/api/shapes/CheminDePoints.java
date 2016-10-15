@@ -34,11 +34,17 @@ public final class CheminDePoints {
 	private boolean traitDeLaisonFin;
 	
 	/**
+	 * Précise si le dernier et le premier point doivent être reliés
+	 */
+	private boolean relierLesPointsExtremes;
+	
+	/**
 	 * Constructeur par défaut
 	 */
 	public CheminDePoints() {
 		points = new LinkedList<>();
 		traitDeLaisonFin = false;
+		relierLesPointsExtremes = true;
 	}
 	
 	/**
@@ -86,6 +92,16 @@ public final class CheminDePoints {
 	}
 	
 	/**
+	 * Précise si le dernier et le premier point doivent être reliés
+	 * 
+	 * @return
+	 */
+	public CheminDePoints nePasRelierLesPointsExtreme() {
+		this.relierLesPointsExtremes = false;
+		return this;
+	}
+	
+	/**
 	 * Retourne la liste de point actuelle sous forme de tableau
 	 * 
 	 * @return
@@ -122,7 +138,16 @@ public final class CheminDePoints {
 	public boolean aDesTraitsFin() {
 		return traitDeLaisonFin;
 	}
-
+	
+	/**
+	 * Retoure vraie si les points extremes doivent être reliés.
+	 * 
+	 * @return
+	 */
+	public boolean relierLesPointsExtremes() {
+		return relierLesPointsExtremes;
+	}
+	
 	@Override
 	public String toString() {
 		return "CheminDePoints [points=" + points + ", couleur=" + couleur
