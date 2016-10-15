@@ -21,7 +21,12 @@ public enum Couleur {
 	/**
 	 * Couleur Grise
 	 */
-	GRIS(0.5f, 0.5f, 0.5f, 0.5f);
+	GRIS(0.5f, 0.5f, 0.5f, 0.5f),
+
+	/**
+	 * Couleur Jaune
+	 */
+	JAUNE(1f, 1f, 0f, 0.5f);
 	
 	private final float r, g, b, a;
 	

@@ -73,9 +73,33 @@ public class Demo extends CreateurDeForme {
 	 */
 	private static final double ECART_X_BASE_GAUCHE_PORTE_SERRURE = LONGUEUR_PORTE * 0.80;
 	
+	/**
+	 * Centre du cercle jaune
+	 */
+	private static final Point CENTRE_CERCLE_JAUNE = new Point(100, 100);
+	
+	/**
+	 * Rayon du cercle jaune
+	 */
+	private static final double RAYON_DU_CERCLE_JAUNE = 200; 
+	
 	@Override
 	public void dessiner() {
+		dessinerCercleJaune();
 		dessinerMaison();
+	}
+	
+	/**
+	 * Exemple de dessin d'un cercle de couleur jaune
+	 */
+	public void dessinerCercleJaune() {
+		double xCentreCercleJAune = CENTRE_CERCLE_JAUNE.getX();
+		double yCentreCercleJAune = CENTRE_CERCLE_JAUNE.getY();
+		
+		// Pour un clercle la largeur et la hauteur de l'ellipse sont égales.
+		Ellipse cercleJaune = new Ellipse(xCentreCercleJAune, yCentreCercleJAune, RAYON_DU_CERCLE_JAUNE, RAYON_DU_CERCLE_JAUNE);
+		
+		ajouterEllipse(cercleJaune, Couleur.JAUNE);
 	}
 	
 	/**
@@ -134,7 +158,6 @@ public class Demo extends CreateurDeForme {
 		Ellipse serrure = new Ellipse(xSerrure, ySerrure, DIAMETRE_SERRURE, DIAMETRE_SERRURE);
 		
 		ajouterEllipse(serrure, Couleur.GRIS);
-		
 	}
 
 }
