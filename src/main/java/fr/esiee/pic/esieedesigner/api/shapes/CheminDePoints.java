@@ -122,4 +122,11 @@ public final class CheminDePoints {
 	public boolean aDesTraitsFin() {
 		return traitDeLaisonFin;
 	}
+
+	@Override
+	public String toString() {
+		return "CheminDePoints [points=" + points + ", couleur=" + couleur
+				+ ", couleurTraitsLaison=" + couleurTraitsLaison
+				+ ", traitDeLaisonFin=" + traitDeLaisonFin + "]";
+	}
 }

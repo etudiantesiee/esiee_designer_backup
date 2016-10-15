@@ -22,12 +22,12 @@ public class Demo extends CreateurDeForme {
 	/**
 	 * Largeur de la maison
 	 */
-	private static final int LONGUEUR_MAISON = 600;
+	private static final int LONGUEUR_MAISON = 300;
 	
 	/**
 	 * Longueur de la maison
 	 */
-	private static final int LARGEUR_MAISON = 400;
+	private static final int LARGEUR_MAISON = 200;
 	
 	/**
 	 * Longueur de la base du toit
@@ -89,7 +89,7 @@ public class Demo extends CreateurDeForme {
 		dessinerMaison();
 	}
 	
-	/**
+	/**l
 	 * Exemple de dessin d'un cercle de couleur jaune
 	 */
 	public void dessinerCercleJaune() {

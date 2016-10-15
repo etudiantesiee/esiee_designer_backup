@@ -124,5 +124,4 @@ public class Grille extends CreateurDeForme {
 			pointCourant = new Point(xPointCourant, yPointCourant);
 		}
 	}
-
 }

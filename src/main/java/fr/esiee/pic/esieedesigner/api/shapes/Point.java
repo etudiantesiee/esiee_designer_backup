@@ -49,4 +49,12 @@ public final class Point {
 	public double getY() {
 		return y;
 	}
+
+	/**
+	 * toString() method
+	 */
+	@Override
+	public String toString() {
+		return "Point [x=" + x + ", y=" + y + "]";
+	}
 }
