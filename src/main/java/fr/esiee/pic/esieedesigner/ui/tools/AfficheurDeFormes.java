@@ -1,6 +1,7 @@
 package fr.esiee.pic.esieedesigner.ui.tools;
 
 import java.awt.Component;
+import java.awt.Dimension;
 import java.util.List;
 import java.util.Map;
 
@@ -40,12 +41,28 @@ public final class AfficheurDeFormes {
 	private static AfficheurDeFormes instance;
 	
 	/**
+	 * Longueur de l'affichage 
+	 */
+	private final double longueurAffichage;
+	
+	/**
+	 * Largeur de l'affichage
+	 */
+	private final double largeurAffichage;
+	
+	/**
 	 * Construteur par défaut caché
 	 */
 	private AfficheurDeFormes() {
 		super();
 		shapesFactory = ShapesFactoryImpl.getInstance();
 		engine = ExecutionEngine.getInstance();
+		engine.afficher();
+		
+		// Dimension de l'écran
+		Dimension dimEcran = engine.getSize();
+		this.longueurAffichage = dimEcran.getWidth();
+		this.largeurAffichage = dimEcran.getHeight();
 	}
 	
 	/**
@@ -95,5 +112,23 @@ public final class AfficheurDeFormes {
 			Component shapeComp = shapesFactory.produceShapeFromPoints(points, couleur, couleurDesTraits, traitFin, relierLesPointsExtreme);
 			engine.ajouterFigure(shapeComp);
 		}
+	}
+
+	/**
+	 * Retourne la longueur de l'écran d'affichage
+	 * 
+	 * @return
+	 */
+	public double getLongueurAffichage() {
+		return longueurAffichage;
+	}
+
+	/**
+	 * Retourne la largeur de l'écran d'affichage
+	 * 
+	 * @return
+	 */
+	public double getLargeurAffichage() {
+		return largeurAffichage;
 	}
 }

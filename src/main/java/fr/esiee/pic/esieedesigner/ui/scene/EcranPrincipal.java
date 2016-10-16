@@ -1,8 +1,9 @@
 package fr.esiee.pic.esieedesigner.ui.scene;
 
-import java.awt.Dimension;
+import java.util.ArrayList;
+import java.util.List;
 
-import fr.esiee.pic.esieedesigner.awt.engine.ExecutionEngine;
+import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 import fr.esiee.pic.esieedesigner.design.exemple.MaisonAvecSoleilEtLune;
 import fr.esiee.pic.esieedesigner.design.exemple.PersonnageManga;
 import fr.esiee.pic.esieedesigner.design.shared.Grille;
@@ -10,7 +11,7 @@ import fr.esiee.pic.esieedesigner.ui.tools.AfficheurDeFormes;
 
 /**
  * Interface graphique principale du programme
- * Affiche tous les élements crées précédemment
+ * Affiche les élements crées précédemment
  * 
  * @author etudiant
  *
@@ -28,10 +29,59 @@ public final class EcranPrincipal {
 	private static final int UNITE_VERTIACLE_GRILLE = 50;
 	
 	/**
+	 * Liste des dessin à afficher sur l'écran
+	 */
+	private final List<CreateurDeForme> listDeDessins;
+	
+	/**
+	 *  Utilitaire d'affichage de formes
+	 */
+	private final AfficheurDeFormes afficheur;
+	
+	/**
 	 * Construteur par défaut masqué
 	 */
-	private EcranPrincipal() {
+	private EcranPrincipal(AfficheurDeFormes afficheur, boolean afficherGrille) {
 		super();
+		listDeDessins = new ArrayList<>();
+		this.afficheur = afficheur;
+		
+		// Initialisation des formes à afficher
+		if (afficherGrille) {
+			afficherGrille();
+		}
+		
+		init();
+	}
+	
+	/**
+	 * Ajoute la grille aux éléments à afficher
+	 */
+	private final void afficherGrille() {
+		// Affichage de la grille
+		double longueurEcran = this.afficheur.getLongueurAffichage();
+		double largeurEcran = this.afficheur.getLargeurAffichage();
+		Grille grille = new Grille(longueurEcran, largeurEcran, UNITE_HORIZONTALE_GRILLE, UNITE_VERTIACLE_GRILLE);
+		listDeDessins.add(grille);
+	}
+	
+	/**
+	 * Initialisation des formes à dessiner
+	 */
+	private final void init() {
+		// Affichage de la démo : maison, soleil, lune...
+		MaisonAvecSoleilEtLune demoMaison = new MaisonAvecSoleilEtLune();
+		listDeDessins.add(demoMaison);
+		
+		// Affichage de la démo : personnage manga
+		PersonnageManga demoManga = new PersonnageManga();
+		listDeDessins.add(demoManga);
+	}
+	
+	public final void afficherDessin() {
+		for (CreateurDeForme dessin : this.listDeDessins) {
+			afficheur.afficher(dessin);
+		}
 	}
 
 	/**
@@ -40,32 +90,13 @@ public final class EcranPrincipal {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
-		// Instanciation du moteur d'exécution
-		ExecutionEngine engine = ExecutionEngine.getInstance();
-		
-		// Dimension de l'écran
-		Dimension dimEcran = engine.getSize();
-		double xEcran = dimEcran.getWidth();
-		double yEcran = dimEcran.getHeight();
-		
-		// Utilitaire d'affichage de formes
 		AfficheurDeFormes afficheur = AfficheurDeFormes.getInstance();
 		
-		// Affichage de la démo : maison, soleil, lune...
-		MaisonAvecSoleilEtLune demoMaison = new MaisonAvecSoleilEtLune();
-		afficheur.afficher(demoMaison);
+		// Affichage de la grille ?
+		boolean afficherGrille = true;
 		
-		// Affichage de la démo : personnage manga
-		PersonnageManga demoManga = new PersonnageManga();
-		afficheur.afficher(demoManga);
-		
-		// Affichage de la grille
-		Grille grille = new Grille(xEcran, yEcran, UNITE_HORIZONTALE_GRILLE, UNITE_VERTIACLE_GRILLE);
-		afficheur.afficher(grille);
-		
-		// Affichage du moteur d'exécution
-		engine.afficher();
+		EcranPrincipal e = new EcranPrincipal(afficheur, afficherGrille);
+		e.afficherDessin();
 	}
 
 }
