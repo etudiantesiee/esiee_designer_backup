@@ -2,6 +2,7 @@ package fr.esiee.pic.esieedesigner.awt.engine;
 
 import java.awt.Component;
 import java.awt.Graphics;
+import java.awt.HeadlessException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class MainFrameComponent extends JFrame {
 	/**
 	 * All component to print
 	 */
-	private List<Component> components;
+	private final List<Component> components;
 	
 	/**
 	 * Default constructor
@@ -37,19 +38,18 @@ public class MainFrameComponent extends JFrame {
 
 	@Override
 	public void paint(Graphics g) {
-		
-		for (Component c : components) {
-			// Dessin du composant
-			c.paint(g);
-		}
+		super.paintComponents(g);
 	}
 	
 	@Override
 	public Component add(Component c) {
-		// Définition (pour la grille)
+		super.add(c);
+		
+		// Définition de la taille de l'écran 
+		// nécessaire pour le dessin de la grille par exemple
 		c.setSize(getSize());
 		
-		// Ajout du composant
+		// Ajout du composant pour un usage ultérieure
 		this.components.add(c);
 		return c;
 	}
