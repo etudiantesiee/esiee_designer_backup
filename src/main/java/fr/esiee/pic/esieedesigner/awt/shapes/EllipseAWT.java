@@ -47,7 +47,7 @@ public final class EllipseAWT extends Component {
 	private final Color color;
 	
 	/**
-	 * Constructeur
+	 * (x, y) : définit les coordonnées du centre de l'éllipse
 	 * 
 	 * @param x
 	 * @param y
@@ -69,8 +69,15 @@ public final class EllipseAWT extends Component {
 	public void paint(Graphics g) {
 		Graphics2D g2d = (Graphics2D) g;
 		
+		// Adaptation des coordonnées
+		// Dans une ellipse AWT x et y correspondent 
+		// aux coordonnées du point supérieur gauche d'un rectangle (ou carré) 
+		// dans lequel l'éllipse est contenue 
+		double newX = this.x - this.w/2;
+		double newY = this.y - this.h/2;
+		
 		// Construction de l'ellipse
-		Ellipse2D ellipse = new Ellipse2D.Double(this.x, this.y, this.w, this.h);
+		Ellipse2D ellipse = new Ellipse2D.Double(newX, newY, this.w, this.h);
 
 		if (this.color != null) {
 			g2d.setPaint(this.color);

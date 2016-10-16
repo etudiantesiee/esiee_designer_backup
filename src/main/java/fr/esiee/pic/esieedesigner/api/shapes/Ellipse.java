@@ -4,12 +4,15 @@ package fr.esiee.pic.esieedesigner.api.shapes;
  * Réprésente la figure géométrique 2D ellipse
  * 
  * Une ellipse se définit à partir des éléments ci-dessous :
- * 	- Une abscisse
- *  - Une ordonnée
+ * 	- Une abscisse : celle du centre de l'ellipe
+ *  - Une ordonnée : celle du centre de l'éllipse
  *  - Une largeur
  *  - une hauteur
  *  
- * Si la largeur = hauteur, l'éllipse devient un cercle.
+ * Si la largeur = hauteur
+ * 	- l'éllipse devient un cercle.
+ * 	- largeur devient le diametre
+ * 	- hauteur : devient le diametre
  * 
  * @author etudiant
  *
@@ -17,12 +20,12 @@ package fr.esiee.pic.esieedesigner.api.shapes;
 public final class Ellipse {
 	
 	/**
-	 * L'abscisse de l'éllipse
+	 * L'abscisse du centre de l'éllipse
 	 */
 	private final double x;
 	
 	/**
-	 * L'ordonnée de l'éllipse
+	 * L'ordonnée du centre de l'éllipse
 	 */
 	private final double y;
 	
@@ -38,10 +41,14 @@ public final class Ellipse {
 
 	/**
 	 * Construit une éllipse à partir de :
-	 * 	- ses corrdonnées x (abscisse) et y (ordonnée)
-	 * 	- sa largeur
-	 * 	- de sa hauteur
-	 *  
+	 * 	- des corrdonnées de son centre : x (abscisse) et y (ordonnée)
+	 * 	- sa largeur l
+	 * 	- de sa hauteur h
+	 * Si la h = l
+	 * 	- l'éllipse devient un cercle.
+	 * 	- l devient le diametre
+	 * 	- h : devient le diametre
+	 * 
 	 * @param x
 	 * @param y
 	 * @param l
