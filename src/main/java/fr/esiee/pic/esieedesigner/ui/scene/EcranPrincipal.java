@@ -79,6 +79,9 @@ public final class EcranPrincipal {
 		listDeDessins.add(demoManga);
 	}
 	
+	/**
+	 * Affichage des dessins
+	 */
 	public final void afficherDessin() {
 		for (CreateurDeForme dessin : this.listDeDessins) {
 			afficheur.afficher(dessin);
