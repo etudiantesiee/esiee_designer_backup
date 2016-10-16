@@ -58,7 +58,7 @@ public final class EcranPrincipal {
 	/**
 	 * Ajoute la grille aux éléments à afficher
 	 */
-	private final void afficherGrille() {
+	private void afficherGrille() {
 		// Affichage de la grille
 		double longueurEcran = this.afficheur.getLongueurAffichage();
 		double largeurEcran = this.afficheur.getLargeurAffichage();
@@ -69,7 +69,7 @@ public final class EcranPrincipal {
 	/**
 	 * Initialisation des formes à dessiner
 	 */
-	private final void init() {
+	private void init() {
 		// Affichage de la démo : maison, soleil, lune...
 		MaisonAvecCercleEtEllipse demoMaison = new MaisonAvecCercleEtEllipse();
 		listDeDessins.add(demoMaison);
@@ -82,7 +82,7 @@ public final class EcranPrincipal {
 	/**
 	 * Affichage des dessins
 	 */
-	public final void afficherDessin() {
+	public void afficherDessin() {
 		for (CreateurDeForme dessin : this.listDeDessins) {
 			afficheur.afficher(dessin);
 		}

@@ -2,7 +2,6 @@ package fr.esiee.pic.esieedesigner.awt.engine;
 
 import java.awt.Component;
 import java.awt.Graphics;
-import java.awt.HeadlessException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,7 +28,6 @@ public class MainFrameComponent extends JFrame {
 	/**
 	 * Default constructor
 	 * 
-	 * @throws HeadlessException
 	 */
 	public MainFrameComponent() {
 		super();
