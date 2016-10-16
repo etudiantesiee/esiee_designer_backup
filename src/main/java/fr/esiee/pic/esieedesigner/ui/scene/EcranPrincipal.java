@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
-import fr.esiee.pic.esieedesigner.design.exemple.MaisonAvecSoleilEtLune;
+import fr.esiee.pic.esieedesigner.design.exemple.MaisonAvecCercleEtEllipse;
 import fr.esiee.pic.esieedesigner.design.exemple.PersonnageManga;
 import fr.esiee.pic.esieedesigner.design.shared.Grille;
 import fr.esiee.pic.esieedesigner.ui.tools.AfficheurDeFormes;
@@ -46,12 +46,13 @@ public final class EcranPrincipal {
 		listDeDessins = new ArrayList<>();
 		this.afficheur = afficheur;
 		
+		init();
+		
 		// Initialisation des formes à afficher
 		if (afficherGrille) {
 			afficherGrille();
 		}
 		
-		init();
 	}
 	
 	/**
@@ -70,8 +71,8 @@ public final class EcranPrincipal {
 	 */
 	private final void init() {
 		// Affichage de la démo : maison, soleil, lune...
-		MaisonAvecSoleilEtLune demoMaison = new MaisonAvecSoleilEtLune();
-//		listDeDessins.add(demoMaison);
+		MaisonAvecCercleEtEllipse demoMaison = new MaisonAvecCercleEtEllipse();
+		listDeDessins.add(demoMaison);
 		
 		// Affichage de la démo : personnage manga
 		PersonnageManga demoManga = new PersonnageManga();

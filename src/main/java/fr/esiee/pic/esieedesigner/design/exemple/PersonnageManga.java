@@ -26,7 +26,7 @@ public class PersonnageManga extends CreateurDeForme {
 	/**
 	 * Point exterieure du pied gauche du manga
 	 */
-	private static final Point PIED_GAUCHE_EXTERIEURE_MANGA = new Point(900, 750);
+	private static final Point PIED_GAUCHE_EXTERIEURE_MANGA = new Point(1000, 750);
 	
 	/**
 	 * Longueure du trait unissantles deux pieds du manga

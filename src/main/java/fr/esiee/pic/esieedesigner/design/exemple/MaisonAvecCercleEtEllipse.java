@@ -12,22 +12,22 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
  * @author etudiant
  *
  */
-public class MaisonAvecSoleilEtLune extends CreateurDeForme {
+public class MaisonAvecCercleEtEllipse extends CreateurDeForme {
 	
 	/**
 	 * Point en bas à gauche de la maison
 	 */
-	private static final Point BASE_BAS_GAUCHE_MAISON = new Point(200, 750);
+	private static final Point BASE_BAS_GAUCHE_MAISON = new Point(400, 750);
 	
 	/**
 	 * Largeur de la maison
 	 */
-	private static final int LONGUEUR_MAISON = 300;
+	private static final int LONGUEUR_MAISON = 400;
 	
 	/**
 	 * Longueur de la maison
 	 */
-	private static final int LARGEUR_MAISON = 200;
+	private static final int LARGEUR_MAISON = 350;
 	
 	/**
 	 * Longueur de la base du toit
@@ -76,16 +76,33 @@ public class MaisonAvecSoleilEtLune extends CreateurDeForme {
 	/**
 	 * Centre du cercle jaune
 	 */
-	private static final Point CENTRE_CERCLE_JAUNE = new Point(150, 150);
+	private static final Point CENTRE_CERCLE_JAUNE = new Point(150, 200);
 	
 	/**
 	 * Rayon du cercle jaune
 	 */
 	private static final double DIAMETRE_DU_CERCLE_JAUNE = 200; 
 	
+	
+	/**
+	 * Centre de la forme ovale
+	 */
+	private static final Point CENTRE_FORME_OVALE = new Point(150, 600);
+	
+	/**
+	 * Longueur de la forme ovale
+	 */
+	private static final double LONGUEUR_FORME_OVALE = 200;
+	
+	/**
+	 * Largeur de la forme ovale
+	 */
+	private static final double LARGEUR_FORME_OVALE = 300;
+	
 	@Override
 	public void dessiner() {
 		dessinerCercleJaune();
+		dessinerFormeOvale();
 		dessinerMaison();
 	}
 	
@@ -95,10 +112,19 @@ public class MaisonAvecSoleilEtLune extends CreateurDeForme {
 	private void dessinerCercleJaune() {
 
 		// Pour un clercle la largeur et la hauteur de l'ellipse sont égales.
-		Point centreCercleJaune = new Point(CENTRE_CERCLE_JAUNE.getX(), CENTRE_CERCLE_JAUNE.getY());
-		Ellipse cercleJaune = new Ellipse(centreCercleJaune, DIAMETRE_DU_CERCLE_JAUNE, DIAMETRE_DU_CERCLE_JAUNE);
+		Ellipse cercleJaune = new Ellipse(CENTRE_CERCLE_JAUNE, DIAMETRE_DU_CERCLE_JAUNE, DIAMETRE_DU_CERCLE_JAUNE);
 		
 		ajouterEllipse(cercleJaune, Couleur.JAUNE);
+	}
+	
+	/**
+	 * Exemple de dessin d'une forme ovale
+	 */
+	private void dessinerFormeOvale() {
+		// Pour une forme ovale, la longueur doit différer de la largeur
+		Ellipse formeOvale = new Ellipse(CENTRE_FORME_OVALE, LONGUEUR_FORME_OVALE, LARGEUR_FORME_OVALE);
+		
+		ajouterEllipse(formeOvale, Couleur.BLANC);
 	}
 	
 	/**
