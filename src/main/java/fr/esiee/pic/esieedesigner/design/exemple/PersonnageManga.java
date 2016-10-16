@@ -53,6 +53,26 @@ public class PersonnageManga extends CreateurDeForme {
 	 */
 	private static final double LARGEUR_DES_YEUX = 20;
 	
+	/**
+	 * Longueur du nez
+	 */
+	private static final double LONGUEUR_NEZ = 25;
+	
+	/**
+	 * Longueur du nez
+	 */
+	private static final double LARGEUR_NEZ = 12;
+	
+	/**
+	 * Longueur de la bouche
+	 */
+	private static final double LONGUEUR_BOUCHE = 100;
+	
+	/**
+	 * Longueur du trait du menton
+	 */
+	private static final double LONGUEUR_TRAIT_MENTON = 12;
+	
 	@Override
 	public void dessiner() {
 		dessinerManga();
@@ -83,6 +103,14 @@ public class PersonnageManga extends CreateurDeForme {
 		.ajouter(piedHautGauche1)
 		.ajouter(piedHautGauche2);
 		
+		
+		// Dessin de la limite des pieds
+		Point limitePiedBas = new Point(piedBasDroitManga.getX() - LONGUEUR_BAS_PIED_MANGA/2, piedBasDroitManga.getY());
+		Point limitePiedHaut = new Point(limitePiedBas.getX(), limitePiedBas.getY() - 2 * UNITE_VERTICALE);
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(limitePiedBas)
+		.ajouter(limitePiedHaut);
 		
 		// Défintion des points du coté droit du corps du manga
 		Point corpsCoteHautDroit = new Point(corpsBasDroit.getX(), corpsBasDroit.getY() - UNITE_VERTICALE);
@@ -231,6 +259,30 @@ public class PersonnageManga extends CreateurDeForme {
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
 		
 		// Dessin du nez
+		Point sommetHautDuNez = new Point(centreOeilDroit.getX() - UNITE_HORIZONTALE, centreOeilDroit.getY() + UNITE_VERTICALE);
+		Point sommetDroitNez = new Point(sommetHautDuNez.getX() + LONGUEUR_NEZ/2, sommetHautDuNez.getY() + LARGEUR_NEZ);
+		Point sommetGaucheNez = new Point(sommetDroitNez.getX() - LONGUEUR_NEZ, sommetDroitNez.getY());
 		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(sommetGaucheNez)
+		.ajouter(sommetHautDuNez)
+		.ajouter(sommetDroitNez)
+		.nePasRelierLesPointsExtreme();
+		
+		// Dessin de la bouche
+		Point boucheDroit = new Point(sommetHautDuNez.getX() + UNITE_HORIZONTALE, sommetHautDuNez.getY() + UNITE_VERTICALE);
+		Point boucheGauche = new Point(boucheDroit.getX() - LONGUEUR_BOUCHE, boucheDroit.getY());
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(boucheDroit)
+		.ajouter(boucheGauche);
+		
+		// Dessin trait menton
+		Point traitMentonDroit = new Point(sommetHautDuNez.getX() + LONGUEUR_TRAIT_MENTON/2, sommetHautDuNez.getY() + 3 * UNITE_VERTICALE);
+		Point traitMentonGauche = new Point(traitMentonDroit.getX() - LONGUEUR_TRAIT_MENTON, traitMentonDroit.getY());
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(traitMentonDroit)
+		.ajouter(traitMentonGauche);
 	}
 }
