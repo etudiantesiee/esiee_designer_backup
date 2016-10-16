@@ -103,7 +103,6 @@ public class PersonnageManga extends CreateurDeForme {
 		.ajouter(piedHautGauche1)
 		.ajouter(piedHautGauche2);
 		
-		
 		// Dessin de la limite des pieds
 		Point limitePiedBas = new Point(piedBasDroitManga.getX() - LONGUEUR_BAS_PIED_MANGA/2, piedBasDroitManga.getY());
 		Point limitePiedHaut = new Point(limitePiedBas.getX(), limitePiedBas.getY() - 2 * UNITE_VERTICALE);
@@ -111,6 +110,18 @@ public class PersonnageManga extends CreateurDeForme {
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(limitePiedBas)
 		.ajouter(limitePiedHaut);
+		
+		
+		dessinerDuCorpsEtDeLaTete(corpsBasDroit,
+				corpsBasGauche);
+	}
+
+	/**
+	 * @param piedBasDroitManga
+	 * @param corpsBasDroit
+	 * @param corpsBasGauche
+	 */
+	private void dessinerDuCorpsEtDeLaTete(Point corpsBasDroit, Point corpsBasGauche) {
 		
 		// Défintion des points du coté droit du corps du manga
 		Point corpsCoteHautDroit = new Point(corpsBasDroit.getX(), corpsBasDroit.getY() - UNITE_VERTICALE);
@@ -156,6 +167,21 @@ public class PersonnageManga extends CreateurDeForme {
 		.ajouter(corpsBasGauche)
 		.couleurDeFond(Couleur.GRIS);
 		
+		dessinDesMainsEtDesDoigts(brasDroit2, brasDroit3, epauleDroit2, brasGauche2,
+				brasGauche3, epauleGauche2);
+	}
+
+	/**
+	 * @param brasDroit2
+	 * @param brasDroit3
+	 * @param epauleDroit2
+	 * @param brasGauche2
+	 * @param brasGauche3
+	 * @param epauleGauche2
+	 */
+	private void dessinDesMainsEtDesDoigts(Point brasDroit2, Point brasDroit3,
+			Point epauleDroit2, Point brasGauche2, Point brasGauche3,
+			Point epauleGauche2) {
 		// Dessin des mains côté droit :
 		Point mainDroite1 = new Point(brasDroit2.getX(), brasDroit2.getY() + UNITE_VERTICALE);
 		Point mainDroite2 = new Point(mainDroite1.getX() + UNITE_HORIZONTALE, mainDroite1.getY());
@@ -200,6 +226,14 @@ public class PersonnageManga extends CreateurDeForme {
 			.ajouter(separateurDoigtGaucheHaut);
 		}
 		
+		dessinDeLaTete(epauleDroit2, epauleGauche2);
+	}
+
+	/**
+	 * @param epauleDroit2
+	 * @param epauleGauche2
+	 */
+	private void dessinDeLaTete(Point epauleDroit2, Point epauleGauche2) {
 		// Dessin côtés tête
 		Point coteTeteDroit = new Point(epauleDroit2.getX() + UNITE_HORIZONTALE, epauleDroit2.getY() - 2 * UNITE_VERTICALE);
 		Point coteTeteGauche = new Point(epauleGauche2.getX() - UNITE_HORIZONTALE, epauleGauche2.getY() - 2 * UNITE_VERTICALE);
@@ -242,6 +276,15 @@ public class PersonnageManga extends CreateurDeForme {
 		.ajouter(chev11)
 		.couleurDeFond(Couleur.GRIS);
 		
+		dessinOeilNezBoucheMenton(epauleDroit2, epauleGauche2);
+	}
+
+	/**
+	 * @param epauleDroit2
+	 * @param epauleGauche2
+	 */
+	private void dessinOeilNezBoucheMenton(Point epauleDroit2,
+			Point epauleGauche2) {
 		// Dessin oeil droit
 		double abscisseOeilDroit = epauleDroit2.getX() - 2 * UNITE_HORIZONTALE;
 		double ordonneOeilDroit = epauleDroit2.getY() - 3 * UNITE_VERTICALE;
