@@ -161,5 +161,48 @@ public class PersonnageManga extends CreateurDeForme {
 			.ajouter(separateurDoigtGaucheBas)
 			.ajouter(separateurDoigtGaucheHaut);
 		}
+		
+		// Dessin côtés tête
+		Point coteTeteDroit = new Point(epauleDroit2.getX() + UNITE_HORIZONTALE, epauleDroit2.getY() - 2 * UNITE_VERTICALE);
+		Point coteTeteGauche = new Point(epauleGauche2.getX() - UNITE_HORIZONTALE, epauleGauche2.getY() - 2 * UNITE_VERTICALE);
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(epauleDroit2)
+		.ajouter(coteTeteDroit);
+		
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(epauleGauche2)
+		.ajouter(coteTeteGauche);
+		
+		// Dessin chevelure
+		Point chev1 = new Point(coteTeteDroit.getX() - UNITE_HORIZONTALE, coteTeteDroit.getY() - 2* UNITE_VERTICALE);
+		Point chev2 = new Point(chev1.getX() - UNITE_HORIZONTALE, chev1.getY());
+		Point chev3 = new Point(chev2.getX() - UNITE_HORIZONTALE, chev2.getY() - UNITE_VERTICALE);
+		Point chev4 = new Point(chev3.getX() - UNITE_HORIZONTALE, chev3.getY() + UNITE_VERTICALE);
+		Point chev5 = new Point(chev4.getX() - UNITE_HORIZONTALE, chev4.getY() - UNITE_VERTICALE);
+		Point chev6 = new Point(chev5.getX() - UNITE_HORIZONTALE, chev5.getY() + UNITE_VERTICALE);
+		Point chev7 = new Point(chev6.getX() - UNITE_HORIZONTALE, chev6.getY());
+		Point chev8 = new Point(chev7.getX() - UNITE_HORIZONTALE, chev7.getY() - 2* UNITE_VERTICALE);
+		Point chev9 = new Point(chev8.getX() - UNITE_HORIZONTALE, chev8.getY() - 2* UNITE_VERTICALE);
+		Point chev10 = new Point(chev9.getX() - UNITE_HORIZONTALE, chev9.getY() - 2* UNITE_VERTICALE);
+		Point chev11 = new Point(chev10.getX() - UNITE_HORIZONTALE, chev10.getY() - 2* UNITE_VERTICALE);
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(coteTeteDroit)
+		.ajouter(chev1)
+		.ajouter(chev2)
+		.ajouter(chev3)
+		.ajouter(chev4)
+		.ajouter(chev5)
+		.ajouter(chev6)
+		.ajouter(chev7)
+		.ajouter(coteTeteGauche)
+		.ajouter(chev8)
+		.ajouter(chev9)
+		.ajouter(chev10)
+		.ajouter(chev11)
+		.nePasRelierLesPointsExtreme();
+		
 	}
 }
