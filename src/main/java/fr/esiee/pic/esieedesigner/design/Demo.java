@@ -27,7 +27,7 @@ public class Demo extends CreateurDeForme {
 	/**
 	 * Point en bas à gauche de la maison
 	 */
-	private static final Point BASE_BAS_GAUCHE_MAISON = new Point(300, 800);
+	private static final Point BASE_BAS_GAUCHE_MAISON = new Point(200, 750);
 	
 	/**
 	 * Largeur de la maison
@@ -86,17 +86,17 @@ public class Demo extends CreateurDeForme {
 	/**
 	 * Centre du cercle jaune
 	 */
-	private static final Point CENTRE_CERCLE_JAUNE = new Point(100, 100);
+	private static final Point CENTRE_CERCLE_JAUNE = new Point(150, 150);
 	
 	/**
 	 * Rayon du cercle jaune
 	 */
-	private static final double RAYON_DU_CERCLE_JAUNE = 200; 
+	private static final double DIAMETRE_DU_CERCLE_JAUNE = 200; 
 	
 	/**
 	 * Point exterieure du pied gauche du manga
 	 */
-	private static final Point PIED_GAUCHE_EXTERIEURE_MANGA = new Point(900, 800);
+	private static final Point PIED_GAUCHE_EXTERIEURE_MANGA = new Point(900, 750);
 	
 	/**
 	 * Longueure du trait unissantles deux pieds du manga
@@ -114,12 +114,12 @@ public class Demo extends CreateurDeForme {
 	/**l
 	 * Exemple de dessin d'un cercle de couleur jaune
 	 */
-	public void dessinerCercleJaune() {
+	private void dessinerCercleJaune() {
 		double xCentreCercleJAune = CENTRE_CERCLE_JAUNE.getX();
 		double yCentreCercleJAune = CENTRE_CERCLE_JAUNE.getY();
 		
 		// Pour un clercle la largeur et la hauteur de l'ellipse sont égales.
-		Ellipse cercleJaune = new Ellipse(xCentreCercleJAune, yCentreCercleJAune, RAYON_DU_CERCLE_JAUNE, RAYON_DU_CERCLE_JAUNE);
+		Ellipse cercleJaune = new Ellipse(xCentreCercleJAune, yCentreCercleJAune, DIAMETRE_DU_CERCLE_JAUNE, DIAMETRE_DU_CERCLE_JAUNE);
 		
 		ajouterEllipse(cercleJaune, Couleur.JAUNE);
 	}
@@ -127,7 +127,7 @@ public class Demo extends CreateurDeForme {
 	/**
 	 * Exemple de dessin d'un personnage de manga
 	 */
-	public void dessinerManga() {
+	private void dessinerManga() {
 		
 		// Dessin des pieds du manga
 		Point piedBasGaucheManga = PIED_GAUCHE_EXTERIEURE_MANGA;
@@ -199,7 +199,7 @@ public class Demo extends CreateurDeForme {
 	/**
 	 * Exemple de dessin de maison
 	 */
-	public void dessinerMaison() {
+	private void dessinerMaison() {
 		// Dessin du cadre de la maison
 		Point baseBasGauche = BASE_BAS_GAUCHE_MAISON;
 		Point baseBasDroit = new Point(baseBasGauche.getX() + LONGUEUR_MAISON, baseBasGauche.getY());
