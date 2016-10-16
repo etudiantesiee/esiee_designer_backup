@@ -18,5 +18,12 @@ public class EllipseTest {
 		Ellipse e = new Ellipse(1, 1, 1, 1);
 		assertNotNull(e);
 	}
+	
+	@Test
+	public void testConstructeurPoint() {
+		Point p = new Point(1, 1);
+		Ellipse e = new Ellipse(p, 1, 1);
+		assertNotNull(e);
+	}
 
 }

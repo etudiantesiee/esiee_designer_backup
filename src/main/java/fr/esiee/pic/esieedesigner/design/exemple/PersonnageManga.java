@@ -1,6 +1,7 @@
 package fr.esiee.pic.esieedesigner.design.exemple;
 
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -42,6 +43,15 @@ public class PersonnageManga extends CreateurDeForme {
 	 */
 	private static final double NOMBRE_DE_DOIGT = 4;
 	
+	/**
+	 * Longueur des yeux
+	 */
+	private static final double LONGUEUR_DES_YEUX = 15;
+	
+	/**
+	 * Largeur des yeux
+	 */
+	private static final double LARGEUR_DES_YEUX = 20;
 	
 	@Override
 	public void dessiner() {
@@ -183,10 +193,10 @@ public class PersonnageManga extends CreateurDeForme {
 		Point chev5 = new Point(chev4.getX() - UNITE_HORIZONTALE, chev4.getY() - UNITE_VERTICALE);
 		Point chev6 = new Point(chev5.getX() - UNITE_HORIZONTALE, chev5.getY() + UNITE_VERTICALE);
 		Point chev7 = new Point(chev6.getX() - UNITE_HORIZONTALE, chev6.getY());
-		Point chev8 = new Point(chev7.getX() - UNITE_HORIZONTALE, chev7.getY() - 2* UNITE_VERTICALE);
-		Point chev9 = new Point(chev8.getX() - UNITE_HORIZONTALE, chev8.getY() - 2* UNITE_VERTICALE);
-		Point chev10 = new Point(chev9.getX() - UNITE_HORIZONTALE, chev9.getY() - 2* UNITE_VERTICALE);
-		Point chev11 = new Point(chev10.getX() - UNITE_HORIZONTALE, chev10.getY() - 2* UNITE_VERTICALE);
+		Point chev8 = new Point(coteTeteGauche.getX(), coteTeteGauche.getY() - 3 * UNITE_VERTICALE);
+		Point chev9 = new Point(chev8.getX() + 2 * UNITE_HORIZONTALE, chev8.getY() - 2 * UNITE_VERTICALE);
+		Point chev10 = new Point(chev9.getX() + 4 * UNITE_HORIZONTALE, chev9.getY());
+		Point chev11 = new Point(chev10.getX() + 2 * UNITE_HORIZONTALE, chev10.getY() + 2 * UNITE_VERTICALE);
 		
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(coteTeteDroit)
@@ -202,7 +212,25 @@ public class PersonnageManga extends CreateurDeForme {
 		.ajouter(chev9)
 		.ajouter(chev10)
 		.ajouter(chev11)
-		.nePasRelierLesPointsExtreme();
+		.couleurDeFond(Couleur.GRIS);
+		
+		// Dessin oeil droit
+		double abscisseOeilDroit = epauleDroit2.getX() - 2 * UNITE_HORIZONTALE;
+		double ordonneOeilDroit = epauleDroit2.getY() - 3 * UNITE_VERTICALE;
+		Point centreOeilDroit = new Point(abscisseOeilDroit, ordonneOeilDroit);
+		Ellipse oeilDroit = new Ellipse(centreOeilDroit, LONGUEUR_DES_YEUX, LARGEUR_DES_YEUX);
+		
+		ajouterEllipse(oeilDroit, Couleur.NOIR);
+		
+		// Dessin oeil gauche
+		double abscisseOeilGauche = epauleGauche2.getX() + 2 * UNITE_HORIZONTALE;
+		double ordonneOeilGauche = epauleGauche2.getY() - 3 * UNITE_VERTICALE;
+		Point centreOeilGauche = new Point(abscisseOeilGauche, ordonneOeilGauche);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, LONGUEUR_DES_YEUX, LARGEUR_DES_YEUX);
+		
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
+		
+		// Dessin du nez
 		
 	}
 }

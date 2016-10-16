@@ -11,7 +11,7 @@ public enum Couleur {
 	/**
 	 * Couleur noir
 	 */
-	NOIR(0f, 0f, 0f, 0.5f),
+	NOIR(0f, 0f, 0f, 1f),
 	
 	/**
 	 * Couleur Blanche

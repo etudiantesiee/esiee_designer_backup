@@ -93,11 +93,10 @@ public class MaisonAvecSoleilEtLune extends CreateurDeForme {
 	 * Exemple de dessin d'un cercle de couleur jaune
 	 */
 	private void dessinerCercleJaune() {
-		double xCentreCercleJAune = CENTRE_CERCLE_JAUNE.getX();
-		double yCentreCercleJAune = CENTRE_CERCLE_JAUNE.getY();
-		
+
 		// Pour un clercle la largeur et la hauteur de l'ellipse sont égales.
-		Ellipse cercleJaune = new Ellipse(xCentreCercleJAune, yCentreCercleJAune, DIAMETRE_DU_CERCLE_JAUNE, DIAMETRE_DU_CERCLE_JAUNE);
+		Point centreCercleJaune = new Point(CENTRE_CERCLE_JAUNE.getX(), CENTRE_CERCLE_JAUNE.getY());
+		Ellipse cercleJaune = new Ellipse(centreCercleJaune, DIAMETRE_DU_CERCLE_JAUNE, DIAMETRE_DU_CERCLE_JAUNE);
 		
 		ajouterEllipse(cercleJaune, Couleur.JAUNE);
 	}
@@ -155,7 +154,8 @@ public class MaisonAvecSoleilEtLune extends CreateurDeForme {
 		// Construction de la serrure
 		double xSerrure = baseGauchePorte.getX() + ECART_X_BASE_GAUCHE_PORTE_SERRURE;
 		double ySerrure = baseGauchePorte.getY() - (LARGEUR_PORTE/2);
-		Ellipse serrure = new Ellipse(xSerrure, ySerrure, DIAMETRE_SERRURE, DIAMETRE_SERRURE);
+		Point centreSerrure = new Point(xSerrure, ySerrure);
+		Ellipse serrure = new Ellipse(centreSerrure, DIAMETRE_SERRURE, DIAMETRE_SERRURE);
 		
 		ajouterEllipse(serrure, Couleur.GRIS);
 	}

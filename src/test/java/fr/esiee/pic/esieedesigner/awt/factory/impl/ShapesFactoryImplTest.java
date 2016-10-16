@@ -23,7 +23,8 @@ public class ShapesFactoryImplTest {
 	
 	@Test
 	public void testProductionEllipse() {
-		Ellipse e = new Ellipse(100, 100, 100, 100);
+		Point p = new Point(100, 100);
+		Ellipse e = new Ellipse(p, 100, 100);
 		ShapesFactory sf = ShapesFactoryImpl.getInstance();
 		Component c = sf.produceEllipse(e);
 		assertNotNull(c);

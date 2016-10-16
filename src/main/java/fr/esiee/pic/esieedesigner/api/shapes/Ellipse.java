@@ -61,6 +61,26 @@ public final class Ellipse {
 		this.l = l;
 		this.h = h;
 	}
+	
+	/**
+	 * Construit une éllipse à partir de :
+	 * 	- des corrdonnées de son centre : le point centreEllipse
+	 * Si la h = l
+	 * 	- l'éllipse devient un cercle.
+	 * 	- l devient le diametre
+	 * 	- h : devient le diametre
+	 * 
+	 * @param centreEllipse
+	 * @param l
+	 * @param h
+	 */
+	public Ellipse(Point centreEllipse, double l, double h) {
+		super();
+		this.x = centreEllipse.getX();
+		this.y = centreEllipse.getY();
+		this.l = l;
+		this.h = h;
+	}
 
 	/**
 	 * Getter de l'abscisse

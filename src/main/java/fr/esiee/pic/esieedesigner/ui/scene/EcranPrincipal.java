@@ -71,7 +71,7 @@ public final class EcranPrincipal {
 	private final void init() {
 		// Affichage de la démo : maison, soleil, lune...
 		MaisonAvecSoleilEtLune demoMaison = new MaisonAvecSoleilEtLune();
-		listDeDessins.add(demoMaison);
+//		listDeDessins.add(demoMaison);
 		
 		// Affichage de la démo : personnage manga
 		PersonnageManga demoManga = new PersonnageManga();
