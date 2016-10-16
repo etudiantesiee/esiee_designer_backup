@@ -1,4 +1,4 @@
-package fr.esiee.pic.esieedesigner.design;
+package fr.esiee.pic.esieedesigner.design.exemple;
 
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
@@ -12,7 +12,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
  * @author etudiant
  *
  */
-public class Demo extends CreateurDeForme {
+public class MaisonAvecSoleilEtLune extends CreateurDeForme {
 	
 	/**
 	 * Pas de dessin horizontale
@@ -127,7 +127,7 @@ public class Demo extends CreateurDeForme {
 	/**
 	 * Exemple de dessin d'un personnage de manga
 	 */
-	private void dessinerManga() {
+	public void dessinerManga() {
 		
 		// Dessin des pieds du manga
 		Point piedBasGaucheManga = PIED_GAUCHE_EXTERIEURE_MANGA;

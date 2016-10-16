@@ -1,4 +1,4 @@
-package fr.esiee.pic.esieedesigner.design;
+package fr.esiee.pic.esieedesigner.design.shared;
 
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;

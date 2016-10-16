@@ -3,8 +3,9 @@ package fr.esiee.pic.esieedesigner.ui.scene;
 import java.awt.Dimension;
 
 import fr.esiee.pic.esieedesigner.awt.engine.ExecutionEngine;
-import fr.esiee.pic.esieedesigner.design.Demo;
-import fr.esiee.pic.esieedesigner.design.Grille;
+import fr.esiee.pic.esieedesigner.design.exemple.MaisonAvecSoleilEtLune;
+import fr.esiee.pic.esieedesigner.design.exemple.PersonnageManga;
+import fr.esiee.pic.esieedesigner.design.shared.Grille;
 import fr.esiee.pic.esieedesigner.ui.tools.AfficheurDeFormes;
 
 /**
@@ -51,9 +52,13 @@ public final class EcranPrincipal {
 		// Utilitaire d'affichage de formes
 		AfficheurDeFormes afficheur = AfficheurDeFormes.getInstance();
 		
-		// Affichage de la démo
-		Demo demo = new Demo();
-		afficheur.afficher(demo);
+		// Affichage de la démo : maison, soleil, lune...
+		MaisonAvecSoleilEtLune demoMaison = new MaisonAvecSoleilEtLune();
+		afficheur.afficher(demoMaison);
+		
+		// Affichage de la démo : personnage manga
+		PersonnageManga demoManga = new PersonnageManga();
+		afficheur.afficher(demoManga);
 		
 		// Affichage de la grille
 		Grille grille = new Grille(xEcran, yEcran, UNITE_HORIZONTALE_GRILLE, UNITE_VERTIACLE_GRILLE);
