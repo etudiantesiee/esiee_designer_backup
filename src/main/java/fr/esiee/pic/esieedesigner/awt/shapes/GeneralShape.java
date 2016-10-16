@@ -148,6 +148,7 @@ public class GeneralShape extends Component {
 	 * Paint method
 	 */
 	public void paint(Graphics g) {
+		// Utilisation de la 2D
 		Graphics2D g2d = (Graphics2D) g;
 
 		GeneralPath rec = new GeneralPath();
@@ -167,6 +168,7 @@ public class GeneralShape extends Component {
 		}
 
 		if (this.closePath) {
+			// On rejoint les points extremes
 			rec.closePath();
 		}
 		
@@ -202,11 +204,14 @@ public class GeneralShape extends Component {
 
 		// Definition de la couleur des lignes de dessin
 		if (lineColor != null) {
+			// Couleur définit
 			g2d.setPaint(lineColor);
 		} else {
+			// Couleur par défaut
 			g2d.setPaint(Constants.LINE_DEFAULT_COLOR);
 		}
 		
+		// Déssin de la forme
 		g2d.draw(rec);
 	}
 }

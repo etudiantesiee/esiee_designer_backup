@@ -54,9 +54,11 @@ public final class ShapesFactoryImpl implements ShapesFactory {
 		
 		Color color = null;
 		if (couleur != null) {
+			// Une couleur définit
 			color = new Color(couleur.getR(), couleur.getG(), couleur.getB(), couleur.getA());
 		}
 		
+		// Retour de l'ellipse
 		return new EllipseAWT(x, y, w, h, color);
 	}
 	
@@ -91,24 +93,30 @@ public final class ShapesFactoryImpl implements ShapesFactory {
 			Couleur couleurTrait, boolean traitFin, boolean closePath) {
 		int nbPoints = points.length;
 		Point2D[] points2D = new Point2D[nbPoints];
+		
+		// Construction des Point2D AWT
 		for(int i = 0; i < nbPoints; i++) {
 			Point currentPoint = points[i];
 			double x = currentPoint.getX();
 			double y = currentPoint.getY();
 			
+			// Construction du point AWT courant
 			points2D[i] = new Point2D.Double(x, y);
 		}
 		
 		Color color = null;
 		if (couleur != null) {
+			// couleur définit
 			color = new Color(couleur.getR(), couleur.getG(), couleur.getB(), couleur.getA());
 		}
 		
 		Color lineColor = null;
 		if (couleurTrait != null) {
+			// Couleur du trait définit
 			lineColor = new Color(couleurTrait.getR(), couleurTrait.getG(), couleurTrait.getB(), couleurTrait.getA());
 		}
 		
+		// Retour de la forme
 		return new GeneralShape(points2D, color, lineColor, traitFin, closePath);
 	}
 }

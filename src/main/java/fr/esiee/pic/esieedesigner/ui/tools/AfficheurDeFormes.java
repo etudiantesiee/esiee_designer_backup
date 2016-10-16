@@ -97,6 +97,8 @@ public final class AfficheurDeFormes {
 		for (Map.Entry<Ellipse, Couleur> e : ellipses.entrySet()) {
 			Ellipse currentEllipse = e.getKey();
 			Couleur currentCouleur = e.getValue();
+			
+			// Appel de la factory
 			Component ellipseComp = shapesFactory.produceEllipse(currentEllipse, currentCouleur);
 			engine.ajouterFigure(ellipseComp);
 		}
@@ -109,6 +111,7 @@ public final class AfficheurDeFormes {
 			boolean traitFin = c.aDesTraitsFin();
 			boolean relierLesPointsExtreme = c.relierLesPointsExtremes();
 			
+			// Appel de la factory
 			Component shapeComp = shapesFactory.produceShapeFromPoints(points, couleur, couleurDesTraits, traitFin, relierLesPointsExtreme);
 			engine.ajouterFigure(shapeComp);
 		}

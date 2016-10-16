@@ -80,11 +80,12 @@ public final class EllipseAWT extends Component {
 		Ellipse2D ellipse = new Ellipse2D.Double(newX, newY, this.w, this.h);
 
 		if (this.color != null) {
+			// Couleur définit
 			g2d.setPaint(this.color);
 			g2d.fill(ellipse);
 		}
 		
-		
+		// Modif paint
 		g2d.setPaint(Constants.LINE_DEFAULT_COLOR);
 		g2d.draw(ellipse);
 	}

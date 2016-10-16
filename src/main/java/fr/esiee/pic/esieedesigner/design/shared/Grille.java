@@ -61,7 +61,10 @@ public class Grille extends CreateurDeForme {
 
 	@Override
 	public void dessiner() {
+		// Dessin des barres verticales de la grille
 		dessinerBarresVerticales();
+		
+		// Dessin des barres horizontales de la grille
 		dessinerBarresHorizontales();
 	}
 
@@ -75,6 +78,7 @@ public class Grille extends CreateurDeForme {
 		double xPointCourant = pointCourant.getX();
 		double yPointCourant = pointCourant.getY();
 
+		// Itération sur la longueur de l'écran
 		while (xPointCourant <= longueurEcran) {
 			double xSymetriquePointCourant = xPointCourant;
 			double ySymetriquePointCourant = yPointCourant + largeurEcran;
@@ -90,6 +94,7 @@ public class Grille extends CreateurDeForme {
 			.couleurDesTrait(Couleur.GRIS)
 			.produireTraitDeLiaisonDePetiteTaille();
 
+			// Seule l'abscisse varie
 			xPointCourant = xPointCourant + this.uniteLongueur;
 
 			pointCourant = new Point(xPointCourant, yPointCourant);
@@ -106,6 +111,7 @@ public class Grille extends CreateurDeForme {
 		double xPointCourant = pointCourant.getX();
 		double yPointCourant = pointCourant.getY();
 
+		// Itération sur la largeur de l'écran
 		while (yPointCourant <= largeurEcran) {
 			double xSymetriquePointCourant = xPointCourant + longueurEcran;
 			double ySymetriquePointCourant = yPointCourant;
@@ -119,6 +125,7 @@ public class Grille extends CreateurDeForme {
 			.couleurDesTrait(Couleur.GRIS)
 			.produireTraitDeLiaisonDePetiteTaille();
 
+			// Seule l'ordonnée varie
 			yPointCourant = yPointCourant + this.uniteLargeur;
 
 			pointCourant = new Point(xPointCourant, yPointCourant);

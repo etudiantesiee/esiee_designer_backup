@@ -78,7 +78,11 @@ public final class ExecutionEngine {
 	 * Initialisation du moteur d'exécution
 	 */
 	private void initUI() {
+		
+		// Titre de la fenetre
 		engineFrame.setTitle("Esiee Designer Engine");
+		
+		// Taille de la fenetre
 		engineFrame.setSize(this.getSize());
 		
 		// Positionnement de l'écran au centre
@@ -94,6 +98,7 @@ public final class ExecutionEngine {
 	 * @return
 	 */
 	public Dimension getSize() {
+		// Fenetre plein écran
 		return Toolkit.getDefaultToolkit().getScreenSize();
 	}
 

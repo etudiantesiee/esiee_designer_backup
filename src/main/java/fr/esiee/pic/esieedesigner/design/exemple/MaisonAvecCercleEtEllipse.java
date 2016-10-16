@@ -101,8 +101,13 @@ public class MaisonAvecCercleEtEllipse extends CreateurDeForme {
 	
 	@Override
 	public void dessiner() {
+		// Dessi du cercle jaune
 		dessinerCercleJaune();
+		
+		// Dessin de la forme ovale
 		dessinerFormeOvale();
+		
+		// Dessin de la maison
 		dessinerMaison();
 	}
 	
@@ -114,6 +119,7 @@ public class MaisonAvecCercleEtEllipse extends CreateurDeForme {
 		// Pour un clercle la largeur et la hauteur de l'ellipse sont égales.
 		Ellipse cercleJaune = new Ellipse(CENTRE_CERCLE_JAUNE, DIAMETRE_DU_CERCLE_JAUNE, DIAMETRE_DU_CERCLE_JAUNE);
 		
+		// On ajout à la liste des composants à déssiner
 		ajouterEllipse(cercleJaune, Couleur.JAUNE);
 	}
 	
@@ -124,6 +130,7 @@ public class MaisonAvecCercleEtEllipse extends CreateurDeForme {
 		// Pour une forme ovale, la longueur doit différer de la largeur
 		Ellipse formeOvale = new Ellipse(CENTRE_FORME_OVALE, LONGUEUR_FORME_OVALE, LARGEUR_FORME_OVALE);
 		
+		// On ajoute à la liste des composants à déssiner
 		ajouterEllipse(formeOvale, Couleur.BLANC);
 	}
 	
@@ -183,6 +190,7 @@ public class MaisonAvecCercleEtEllipse extends CreateurDeForme {
 		Point centreSerrure = new Point(xSerrure, ySerrure);
 		Ellipse serrure = new Ellipse(centreSerrure, DIAMETRE_SERRURE, DIAMETRE_SERRURE);
 		
+		// On ajout à la liste des composants à déssiner
 		ajouterEllipse(serrure, Couleur.GRIS);
 	}
 

@@ -46,6 +46,7 @@ public final class EcranPrincipal {
 		listDeDessins = new ArrayList<>();
 		this.afficheur = afficheur;
 		
+		// Initialisation des formes à dessiner
 		init();
 		
 		// Initialisation des formes à afficher
@@ -83,6 +84,8 @@ public final class EcranPrincipal {
 	 * Affichage des dessins
 	 */
 	public void afficherDessin() {
+		
+		// Itération sur la liste des dessins
 		for (CreateurDeForme dessin : this.listDeDessins) {
 			afficheur.afficher(dessin);
 		}
@@ -94,6 +97,8 @@ public final class EcranPrincipal {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		
+		// Afficheur
 		AfficheurDeFormes afficheur = AfficheurDeFormes.getInstance();
 		
 		// Affichage de la grille ?

@@ -111,7 +111,7 @@ public class PersonnageManga extends CreateurDeForme {
 		.ajouter(limitePiedBas)
 		.ajouter(limitePiedHaut);
 		
-		
+		// Suite du dessin
 		dessinerDuCorpsEtDeLaTete(corpsBasDroit,
 				corpsBasGauche);
 	}
@@ -167,6 +167,7 @@ public class PersonnageManga extends CreateurDeForme {
 		.ajouter(corpsBasGauche)
 		.couleurDeFond(Couleur.GRIS);
 		
+		// Suite du dessin
 		dessinDesMainsEtDesDoigts(brasDroit2, brasDroit3, epauleDroit2, brasGauche2,
 				brasGauche3, epauleGauche2);
 	}
@@ -226,6 +227,7 @@ public class PersonnageManga extends CreateurDeForme {
 			.ajouter(separateurDoigtGaucheHaut);
 		}
 		
+		// Suite du dessin
 		dessinDeLaTete(epauleDroit2, epauleGauche2);
 	}
 
@@ -276,6 +278,7 @@ public class PersonnageManga extends CreateurDeForme {
 		.ajouter(chev11)
 		.couleurDeFond(Couleur.GRIS);
 		
+		// Suite du dessin
 		dessinOeilNezBoucheMenton(epauleDroit2, epauleGauche2);
 	}
 
