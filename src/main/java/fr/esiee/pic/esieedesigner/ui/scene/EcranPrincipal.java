@@ -21,14 +21,14 @@ import fr.esiee.pic.esieedesigner.ui.tools.AfficheurDeFormes;
 public final class EcranPrincipal {
 	
 	/**
-	 * Unite sur l'axe des abscisse
+	 * Unite sur l'axe des abscissed
 	 */
-	private static final int UNITE_HORIZONTALE_GRILLE = 50;
+	private static final int UNITE_HORIZONTALE_GRILLE = 25;
 	
 	/**
 	 * Unité sur l'axe des ordonnées
 	 */
-	private static final int UNITE_VERTIACLE_GRILLE = 50;
+	private static final int UNITE_VERTIACLE_GRILLE = 25;
 	
 	/**
 	 * Liste des dessin à afficher sur l'écran
