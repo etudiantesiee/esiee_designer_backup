@@ -9,6 +9,7 @@ import fr.esiee.pic.esieedesigner.design.exemple.PersonnageManga;
 import fr.esiee.pic.esieedesigner.design.shared.Grille;
 import fr.esiee.pic.esieedesigner.design.tp2.DessinsGroupe1;
 import fr.esiee.pic.esieedesigner.design.tp2.DessinsGroupe2;
+import fr.esiee.pic.esieedesigner.design.tp2.DessinsGroupe3;
 import fr.esiee.pic.esieedesigner.ui.tools.AfficheurDeFormes;
 
 /**
@@ -82,6 +83,10 @@ public final class EcranPrincipal {
 		// Affichage des dessins du groupe 2
 		DessinsGroupe2 grp2 = new DessinsGroupe2();
 		listDeDessins.add(grp2);
+		
+		// Affichage des dessins du groupe 2
+		DessinsGroupe3 grp3 = new DessinsGroupe3();
+		listDeDessins.add(grp3);
 	}
 
 	/**
