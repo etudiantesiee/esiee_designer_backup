@@ -12,9 +12,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 
 	@Override
 	public void dessiner() {
-		// Ajout vos dessins ici
-		// Pensez à désactiver les dessins de la démo 
-		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+		
 	}
 
 }
