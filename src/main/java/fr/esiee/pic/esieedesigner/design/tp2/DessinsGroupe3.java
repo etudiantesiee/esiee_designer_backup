@@ -87,7 +87,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
     	
     }
     /**
-     * dessin 
+     * dessin oeil droit
      */
     public void dessinerYeuxD() {
     	Point centreOeilDroite = new Point(POINT_DEPART.getX() + 5*UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
@@ -96,7 +96,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		ajouterEllipse(oeilDroite, Couleur.NOIR);
     }
     /**
-     * dessin 
+     * dessin oeil gauche
      */
     public void dessinerYeuxG() {
     	Point centreOeilGauche = new Point(POINT_DEPART.getX() + 3*UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
