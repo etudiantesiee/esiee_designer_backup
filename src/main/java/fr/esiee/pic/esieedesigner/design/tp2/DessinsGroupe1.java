@@ -1,5 +1,6 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -110,6 +111,12 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point mentonc = new Point(200,250);
 		Point mentond = new Point(275,175);
   
+		
+		// yeux droit
+		Point centreOeilGauche = new Point(150, 100);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 5, 10);
+		
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
 		
 		
 		
