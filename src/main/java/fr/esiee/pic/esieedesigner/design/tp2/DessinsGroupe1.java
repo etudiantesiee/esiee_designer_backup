@@ -216,8 +216,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 			.ajouter(mancheDroite)
 			.nePasRelierLesPointsExtreme();
 		
-
-              
+	
 	}
 	
 
