@@ -32,39 +32,32 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	public void dessiner() {
 
 
-		 Point talonDroite = new Point((7*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*14);
-		 Point boutpiedDroite = new Point((9*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*14);
-		 Point hautpiedDroite = new Point((8*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*13);
+		 Point talonDroite = new Point(0+origin.getX(),UNITE_VERTICALE*14 + origin.getY());
+		 Point boutpiedDroite = new Point((2*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*14 + origin.getY());
+		 Point hautpiedDroite = new Point((1*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*13 + origin.getY());
 		 
-		 Point jupebasDroite = new Point((12*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*13);
+		 Point jupebasDroite = new Point((5*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*13 + origin.getY());
 		 
 		 
-		 Point jupehautDroite = new Point((11*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*11);
-		 Point aisselleDroite = new Point((11*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*10);
+		 Point jupehautDroite = new Point((4*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*11 + origin.getY());
+		 Point aisselleDroite = new Point((4*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*10 + origin.getY());
 		 
-		 Point manche1Droite = new Point((12*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*11);
+		 Point manche1Droite = new Point((5*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*11 + origin.getY());
 		 
-		 Point main1Droite = new Point((13*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*12);
-		 Point main2Droite = new Point((13*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*11);
-		 Point main3Droite = new Point((14*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*11);
+		 Point main1Droite = new Point((6*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*12 + origin.getY());
+		 Point main2Droite = new Point((6*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*11 + origin.getY());
+		 Point main3Droite = new Point((7*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*11 + origin.getY());
 		 
-		 Point manche2Droite = new Point((13*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*10);
+		 Point manche2Droite = new Point((6*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*10 + origin.getY());
 		
 		 
-		 Point epauleDroite = new Point((11*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*8);
+		 Point epauleDroite = new Point((4*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*8 + origin.getY());
+		 Point couDroite = new Point((3*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*8 + origin.getY());
 		 
-		 Point sysmetriecorpsDroite = new Point((10*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*8);
+		 Point sysmetriecorpsDroite = new Point((4*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*8 + origin.getY());
 		 
-		 Point oeildroitPoint = new Point((8*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*5);
-		 Ellipse oeilDroit = new Ellipse(oeildroitPoint, 10, 20);
-		 
-		 Point oeilgauchePoint = new Point((10*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*5);
-		 Ellipse oeilGauche = new Ellipse(oeilgauchePoint, 10, 20);
-			
-			
-		 ajouterEllipse(oeilDroit, Couleur.NOIR);
-		 ajouterEllipse(oeilGauche, Couleur.NOIR);
-		 
+
+ 
 		 
 		 demarrerNouveauDessinAvecDesPoints()
       		.ajouter(talonDroite)
@@ -80,6 +73,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		    .ajouter(manche2Droite)
 		    .ajouter(epauleDroite)
 		    .ajouter(sysmetriecorpsDroite)
+		    .ajouter(couDroite)
 		    .nePasRelierLesPointsExtreme();
 		 
 		 demarrerNouveauDessinAvecDesPoints()
@@ -96,6 +90,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 			.ajouter(getSymetrie(manche2Droite))
 			.ajouter(getSymetrie(epauleDroite))
 			.ajouter(getSymetrie(sysmetriecorpsDroite))
+			.ajouter(getSymetrie(couDroite))
 			.nePasRelierLesPointsExtreme();
 			
 		
@@ -224,6 +219,23 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(getSymetrie(u))
 		.ajouter(getSymetrie(t))
 		.ajouter(getSymetrie(s));
+		
+		/*nez*/
+		Point v= new Point(origin.getX()+0,origin.getY()+125);
+		Point w= new Point(origin.getX()+5,origin.getY()+130);
+		
+		/*dessin nez*/
+		demarrerNouveauDessinAvecDesPoints().ajouter(w)
+		.ajouter(v)
+		.ajouter(getSymetrie(w))
+		.nePasRelierLesPointsExtreme();
+		
+		/*yeux*/
+		Point x= new Point(origin.getX()+25,origin.getY()+100);
+		
+		/*dessin yeux*/
+		ajouterEllipse(new Ellipse(x, 10, 20), Couleur.NOIR);
+		ajouterEllipse(new Ellipse(getSymetrie(x), 10, 20), Couleur.NOIR);
 		
 		}
 	
