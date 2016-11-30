@@ -1,5 +1,6 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -19,22 +20,40 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+		
 		// variable taille case
 		int x = 25;
 		
-
-
-		// Partie Flo
+		// Partie Flo Cheveux
 		
-        Point basGaucheTete = new Point(50,175);
-        Point gaucheTete2 = new Point(25,75);
+        Point basGaucheTete = new Point(2*x,7*x);
+        Point gaucheTete2 = new Point(x,3*x);
+        Point gaucheTete3 = new Point(x,x);
+        Point gaucheTete4 = new Point(2*x,0);
+        Point hautDroite = new Point(12*x,0);
+        Point hautDroite2 = new Point(13*x,x);
+        Point hautDroite3 = new Point(13*x,3*x);
+        Point hautDroite4 = new Point(12*x,7*x);
+        Point basDroite = new Point(11*x,7*x);
+        Point basGauche = new Point(3*x,7*x);
+
+
+
+
 
         
         demarrerNouveauDessinAvecDesPoints()
+        .ajouter(basGauche)
         .ajouter(basGaucheTete)
         .ajouter(gaucheTete2)
+        .ajouter(gaucheTete3)
+        .ajouter(gaucheTete4)
+        .ajouter(hautDroite)
+        .ajouter(hautDroite2)
+        .ajouter(hautDroite3)
+        .ajouter(hautDroite4)
+        .ajouter(basDroite)
         .nePasRelierLesPointsExtreme();
-        
         
    //// PARTIE AMINE ET PRADHIBAN
 
@@ -93,7 +112,17 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point mentond = new Point(275,175);
   
 		
+		// yeux gauche
+		Point centreOeilGauche = new Point(150, 100);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 5, 5);
 		
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
+		
+		// yeux droit
+		Point centreOeilDroit = new Point(200, 100);
+		Ellipse oeilDroit = new Ellipse(centreOeilDroit, 5, 5);
+		
+		ajouterEllipse(oeilDroit, Couleur.NOIR);
 		
 		
 		// PARTIE A&D
@@ -166,9 +195,37 @@ public class DessinsGroupe1 extends CreateurDeForme {
 			.nePasRelierLesPointsExtreme();
 	
 		
+		
+		//MAIN GAUCHE
+		
+		Point mainGauche1 = new Point(1*x,13*x);
+		Point mainGauche2 = new Point(2*x,13*x);
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(mancheGaucheHaut)
+			.ajouter(mainGauche1)
+			.ajouter(mainGauche2)
+			.ajouter(mancheGaucheBas)
+			.nePasRelierLesPointsExtreme();
+		
+		// MAIN DROITE
+
+		Point mainDroite1 = new Point(12*x,13*x);
+		Point mainDroite2 = new Point(13*x,13*x);
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(mancheDroite1)
+			.ajouter(mainDroite1)
+			.ajouter(mainDroite2)
+			.ajouter(mancheDroite)
+			.nePasRelierLesPointsExtreme();
+		
 
               
 	}
+	
+
+	
   
 }
 

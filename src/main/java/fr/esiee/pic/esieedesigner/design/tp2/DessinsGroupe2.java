@@ -13,12 +13,79 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
 
 public class DessinsGroupe2 extends CreateurDeForme {
+	/**
+	 * Pas de dessin horizontale
+	 */
+	private static final double UNITE_HORIZONTALE = 50;
+	private static final double OFFSET = 1050;
+	/**
+	 * Pas de dessin verticale
+	 */
+	private static final double UNITE_VERTICALE = 50;
 	
-private static final Point origin= new Point(60*25,5*25);
+	private static final Point origin= new Point(60*25,5*25);
 
 
 	@Override
 	public void dessiner() {
+
+
+		 Point Talon_droite = new Point((7*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*14);
+		 Point BoutPied_droite = new Point((9*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*14);
+		 Point HautPied_droite = new Point((8*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*13);
+		 
+		 Point JupeBas_droite = new Point((12*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*13);
+		 
+		 
+		 Point JupeHaut_droite = new Point((11*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*11);
+		 Point Aisselle_droite = new Point((11*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*10);
+		 
+		 Point Manche1_droite = new Point((12*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*11);
+		 
+		 Point Main1_droite = new Point((13*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*12);
+		 Point Main2_droite = new Point((13*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*11);
+		 Point Main3_droite = new Point((14*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*11);
+		 
+		 Point Manche2_droite = new Point((13*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*10);
+		
+		 
+		 Point Epaule_droite = new Point((11*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*8);
+		 
+		 Point SysmetrieCorps_droite = new Point((7*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*8);
+		 
+		 demarrerNouveauDessinAvecDesPoints()
+      		.ajouter(Talon_droite)
+		    .ajouter(BoutPied_droite)
+		    .ajouter(HautPied_droite)
+		    .ajouter(JupeBas_droite)
+		    .ajouter(JupeHaut_droite)
+		    .ajouter(Aisselle_droite)
+		    .ajouter(Manche1_droite)
+		    .ajouter(Main1_droite)
+		    .ajouter(Main2_droite)
+		    .ajouter(Main3_droite)
+		    .ajouter(Manche2_droite)
+		    .ajouter(Epaule_droite)
+		    .ajouter(SysmetrieCorps_droite)
+		 
+		 	.ajouter(getSymetrie(Talon_droite))
+			.ajouter(getSymetrie(BoutPied_droite))
+			.ajouter(getSymetrie(HautPied_droite))
+			.ajouter(getSymetrie(JupeBas_droite))
+			.ajouter(getSymetrie(JupeHaut_droite))
+			.ajouter(getSymetrie(Aisselle_droite))
+			.ajouter(getSymetrie(Manche1_droite))
+			.ajouter(getSymetrie(Main1_droite))
+			.ajouter(getSymetrie(Main2_droite))
+			.ajouter(getSymetrie(Main3_droite))
+			.ajouter(getSymetrie(Manche2_droite))
+			.ajouter(getSymetrie(Epaule_droite))
+			.ajouter(getSymetrie(SysmetrieCorps_droite));
+			
+		
+	
+
+		
 		/*cheveux*/
 		Point a= new Point(origin.getX()+50,origin.getY()+0);
 		Point b= new Point(origin.getX()+100,origin.getY()+25);
@@ -66,6 +133,7 @@ private static final Point origin= new Point(60*25,5*25);
 		.ajouter(getSymetrie(c))
 		.ajouter(getSymetrie(b))
 		.ajouter(getSymetrie(a));
+
 		
 		/*visage*/
 		Point p= new Point(origin.getX()+75,origin.getY()+200);
@@ -86,6 +154,7 @@ private static final Point origin= new Point(60*25,5*25);
 		
 		}
 	
+
 	
 	
 	private Point getSymetrie(Point point){
