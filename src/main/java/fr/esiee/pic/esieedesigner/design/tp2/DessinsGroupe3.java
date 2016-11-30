@@ -47,7 +47,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 		Point p11 = dessinerBrasG(p10);
 		Point p12 = dessinerBrasD(p11);
 		Point p13 = dessinerJambeG(p12);
-		Point p14 = dessinerJambeD(p13);		
+	    dessinerJambeD(p13);		
 		
 	}
 
@@ -149,7 +149,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
     public Point dessinerNez(Point p) {
     	// Dessin des deux narines pour constituer le nez
     	Point pn1= dessinerNarineGauche(p);
-    	Point pn2= dessinerNarineDroite(pn1);
+    	 dessinerNarineDroite(pn1);
     	return p;
     }
     
