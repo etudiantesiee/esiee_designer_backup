@@ -72,36 +72,36 @@ public class DessinsGroupe1 extends CreateurDeForme{
 		dessinerMainDroite();
 		
 		//Bras GRAUCHE
-				Point debEpauleGauche = new Point(4*x,8*x);
-				Point finEpauleGauche = new Point(3*x, 8*x);
-				Point coudeGauche1 = new Point(1*x, 10*x);
-				Point coudeGauche2 = new Point(2*x, 11*x);
-				Point mancheGaucheHaut = new Point(1*x, 12*x);
-				Point mancheGaucheBas = new Point(2*x, 12*x);
-				Point aisselleGauche = new Point(3*x, 10*x);
-				Point tailleGauche = new Point(5*x,11*x);
-				Point chevilleGauche1 = new Point(4*x,13*x);
-				Point piedGauche1 = new Point(3*x,14*x);
-				Point chevilleGauche2 = new Point(5*x,13*x);
-				Point piedGauche2 = new Point(6*x,14*x);
-				Point piGauche = new Point(6*x,12*x);
-				Point piDroite = new Point(8*x,12*x);
+				Point debEpauleGauche = new Point(4*(x+30),8*x);
+				Point finEpauleGauche = new Point(3*(x+30), 8*x);
+				Point coudeGauche1 = new Point(1*(x+30), 10*x);
+				Point coudeGauche2 = new Point(2*(x+30), 11*x);
+				Point mancheGaucheHaut = new Point(1*(x+30), 12*x);
+				Point mancheGaucheBas = new Point(2*(x+30), 12*x);
+				Point aisselleGauche = new Point(3*(x+30), 10*x);
+				Point tailleGauche = new Point(5*(x+30),11*x);
+				Point chevilleGauche1 = new Point(4*(x+30),13*x);
+				Point piedGauche1 = new Point(3*(x+30),14*x);
+				Point chevilleGauche2 = new Point(5*(x+30),13*x);
+				Point piedGauche2 = new Point(6*(x+30),14*x);
+				Point piGauche = new Point(6*(x+30),12*x);
+				Point piDroite = new Point(8*(x+30),12*x);
 				
 						
 					
 				//Bas du corps DROITE
-				Point chevilleDroite1 = new Point(9*x,13*x);
-				Point piedDroite1 = new Point(8*x,14*x);
-				Point piedDroite2 = new Point(11*x,14*x);
-				Point chevilleDroite2 = new Point(10*x,13*x);
-				Point tailleDroite = new Point(9*x,11*x);
-				Point aisselleDroite = new Point(11*x,10*x);
-				Point coudeDroite1 = new Point(12*x,11*x);
-				Point mancheDroite1 = new Point(12*x,12*x);	
-				Point mancheDroite = new Point(13*x,12*x);
-				Point coudeDroite2 = new Point(13*x,10*x);
-				Point debEpauleDroite = new Point(10*x,8*x);
-				Point finEpauleDroite = new Point(11*x, 8*x);
+				Point chevilleDroite1 = new Point(9*(x+30),13*x);
+				Point piedDroite1 = new Point(8*(x+30),14*x);
+				Point piedDroite2 = new Point(11*(x+30),14*x);
+				Point chevilleDroite2 = new Point(10*(x+30),13*x);
+				Point tailleDroite = new Point(9*(x+30),11*x);
+				Point aisselleDroite = new Point(11*(x+30),10*x);
+				Point coudeDroite1 = new Point(12*(x+30),11*x);
+				Point mancheDroite1 = new Point(12*(x+30),12*x);	
+				Point mancheDroite = new Point(13*(x+30),12*x);
+				Point coudeDroite2 = new Point(13*(x+30),10*x);
+				Point debEpauleDroite = new Point(10*(x+30),8*x);
+				Point finEpauleDroite = new Point(11*(x+30), 8*x);
 				
 
 				demarrerNouveauDessinAvecDesPoints()
@@ -145,10 +145,10 @@ public class DessinsGroupe1 extends CreateurDeForme{
 		  
 		double l = 6.25;
 		//Main gauche
-		Point mainGauche1 = new Point(1*x,13*x);
-		Point mainGauche2 = new Point(2*x,13*x);
-		Point mancheGaucheHaut = new Point(1*x, 12*x);
-		Point mancheGaucheBas = new Point(2*x, 12*x);
+		Point mainGauche1 = new Point(1*(x+30),13*x);
+		Point mainGauche2 = new Point(2*(x+30),13*x);
+		Point mancheGaucheHaut = new Point(1*(x+30), 12*x);
+		Point mancheGaucheBas = new Point(2*(x+30), 12*x);
 		
 		demarrerNouveauDessinAvecDesPoints()
 			.ajouter(mancheGaucheHaut)
@@ -158,12 +158,12 @@ public class DessinsGroupe1 extends CreateurDeForme{
 			.nePasRelierLesPointsExtreme();
 		
 		//Doigts gauche
-		Point doigtG1a = new Point(1*x + l,13*x);
-		Point doigtG1b = new Point(1*x + l,12.75*x);
-		Point doigtG2a = new Point(1*x + 2*l,13*x);
-		Point doigtG2b = new Point(1*x + 2*l,12.75*x);
-		Point doigtG3a = new Point(1*x + 3*l,13*x);
-		Point doigtG3b = new Point(1*x + 3*l,12.75*x);
+		Point doigtG1a = new Point(1*(x+30) + l,13*x);
+		Point doigtG1b = new Point(1*(x+30) + l,12.75*x);
+		Point doigtG2a = new Point(1*(x+30) + 2*l,13*x);
+		Point doigtG2b = new Point(1*(x+30) + 2*l,12.75*x);
+		Point doigtG3a = new Point(1*(x+30) + 3*l,13*x);
+		Point doigtG3b = new Point(1*(x+30) + 3*l,12.75*x);
 
 		demarrerNouveauDessinAvecDesPoints()
 			.ajouter(doigtG1a)
@@ -189,10 +189,10 @@ public class DessinsGroupe1 extends CreateurDeForme{
 		  
 		double l = 6.25;
 		
-		Point mainDroite1 = new Point(12*x,13*x);
-		Point mainDroite2 = new Point(13*x,13*x);
-		Point mancheDroite1 = new Point(12*x,12*x);	
-		Point mancheDroite = new Point(13*x,12*x);
+		Point mainDroite1 = new Point(12*(x+30),13*x);
+		Point mainDroite2 = new Point(13*(x+30),13*x);
+		Point mancheDroite1 = new Point(12*(x+30),12*x);	
+		Point mancheDroite = new Point(13*(x+30),12*x);
 		
 		demarrerNouveauDessinAvecDesPoints()
 			.ajouter(mancheDroite1)
@@ -203,12 +203,12 @@ public class DessinsGroupe1 extends CreateurDeForme{
 		
 		
 		// doigts de la main droite
-		Point doigtD1a = new Point(12*x + l,13*x);
-		Point doigtD1b = new Point(12*x + l,12.75*x);
-		Point doigtD2a = new Point(12*x + 2*l,13*x);
-		Point doigtD2b = new Point(12*x + 2*l,12.75*x);
-		Point doigtD3a = new Point(12*x + 3*l,13*x);
-		Point doigtD3b = new Point(12*x + 3*l,12.75*x);
+		Point doigtD1a = new Point(12*(x) + l,13*x);
+		Point doigtD1b = new Point(12*(x+30) + l,12.75*x);
+		Point doigtD2a = new Point(12*(x+30) + 2*l,13*x);
+		Point doigtD2b = new Point(12*(x+30) + 2*l,12.75*x);
+		Point doigtD3a = new Point(12*(x+30) + 3*l,13*x);
+		Point doigtD3b = new Point(12*(x+30) + 3*l,12.75*x);
 
 		demarrerNouveauDessinAvecDesPoints()
 			.ajouter(doigtD1a)
