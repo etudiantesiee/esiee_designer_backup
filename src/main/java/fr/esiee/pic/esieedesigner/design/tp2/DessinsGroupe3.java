@@ -136,7 +136,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
     }
 
     /**
-     * dessin 
+     * dessin du nez
      */
     public void dessinerNez() {
     	
@@ -161,7 +161,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
     }
 
     /**
-     * dessin 
+     * dessin du menton
      */
     public void dessinerMenton() {
     	double untier = 16.6;
@@ -177,7 +177,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
     }
 
     /**
-     * dessin 
+     * dessin des cheveux1
      */
     public void dessinerCheveux1() {
        double troisquart = 32.5;
@@ -194,7 +194,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
     }
 
     /**
-     * dessin 
+     * dessin cheveux2
      */
     public void dessinerCheveux2() {
    	   Point cheveux21 = new Point (POINT_DEPART.getX() + 3*UNITE_HORIZONTALE,POINT_DEPART.getY() - 12*UNITE_VERTICALE);
@@ -208,7 +208,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
    	   .couleurDeFond(Couleur.GRIS);        
     }
     /**
-     * dessin 
+     * dessin cheveux3
      */
     public void dessinerCheveux3() {
         double troisquart = 32.5;
@@ -223,7 +223,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
   	   .couleurDeFond(Couleur.GRIS);  	         
     }
     /**
-     * dessin 
+     * dessin du bras gauche
      */
     public void dessinerBrasG() {
     	double deuxtier = 16.6;
@@ -248,7 +248,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
  	   .couleurDeFond(Couleur.GRIS);  	         
     }
     /**
-     * dessin 
+     * dessin du beas droit
      */
     public void dessinerBrasD() {
     	double deuxtier = 16.6;
@@ -273,7 +273,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
  	   .couleurDeFond(Couleur.GRIS);  	   
     }
     /**
-     * dessin 
+     * dessin de la jambe gauche
      */
     public void dessinerJambeG() {
         
@@ -294,7 +294,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	   .couleurDeFond(Couleur.GRIS);
     }
     /**
-     * dessin 
+     * dessin de la jambe droite
      */
     public void dessinerJambeD() {
  	   Point jambeD1 = new Point (POINT_DEPART.getX()+5*UNITE_HORIZONTALE,POINT_DEPART.getY());
