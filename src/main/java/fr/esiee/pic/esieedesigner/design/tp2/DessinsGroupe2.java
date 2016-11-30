@@ -25,7 +25,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	private static final double UNITE_VERTICALE = 25;
 	
-	private static final Point ORIGIN= new Point(60*25,5*25);
+	private static final Point ORIGIN= new Point(10*25,5*25);
 
 	@Override
 	public void dessiner() {
