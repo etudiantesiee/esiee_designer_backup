@@ -18,12 +18,12 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	/**
 	 * Pas de dessin horizontale
 	 */
-	private static final double UNITE_HORIZONTALE = 50;
+	private static final double UNITE_HORIZONTALE = 25;
 	private static final double OFFSET = 1050;
 	/**
 	 * Pas de dessin verticale
 	 */
-	private static final double UNITE_VERTICALE = 50;
+	private static final double UNITE_VERTICALE = 25;
 	
 	private static final Point origin= new Point(60*25,5*25);
 
@@ -55,15 +55,15 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		 
 		 Point sysmetriecorpsDroite = new Point((7*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*8);
 		 
-		 Point oeildroitPoint = new Point((10*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*3);
+		 Point oeildroitPoint = new Point((8*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*5);
 		 Ellipse oeilDroit = new Ellipse(oeildroitPoint, 10, 20);
 		 
-		 Point oeilgauchePoint = new Point((8*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*3);
+		 Point oeilgauchePoint = new Point((10*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*5);
 		 Ellipse oeilGauche = new Ellipse(oeilgauchePoint, 10, 20);
 			
 			
 		 ajouterEllipse(oeilDroit, Couleur.NOIR);
-		ajouterEllipse(oeilGauche, Couleur.NOIR);
+		 ajouterEllipse(oeilGauche, Couleur.NOIR);
 		 
 		 
 		 demarrerNouveauDessinAvecDesPoints()
