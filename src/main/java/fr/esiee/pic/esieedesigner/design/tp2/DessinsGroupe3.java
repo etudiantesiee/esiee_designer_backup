@@ -56,6 +56,12 @@ public class DessinsGroupe3 extends CreateurDeForme {
      */
     public void dessinerContour() {
     	Point mentonBasGauche = new Point(POINT_DEPART.getX() + 3 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 2 * UNITE_VERTICALE); 
+    	Point mentonHautGauche = new Point(mentonBasGauche.getX() - 2 * UNITE_HORIZONTALE, mentonBasGauche.getY() - 2 * UNITE_VERTICALE);
+    	
+    	demarrerNouveauDessinAvecDesPoints()
+    	
+    	.ajouter(mentonBasGauche)
+    	.ajouter(mentonHautGauche);
     }
     /**
      * dessin 
@@ -75,14 +81,19 @@ public class DessinsGroupe3 extends CreateurDeForme {
     public void dessinerLunette() {
     	
      Point lunette1 = new Point(POINT_DEPART.getX() + UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
-     Point lunette2 = new Point(lunette1.getX() + UNITE_HORIZONTALE, lunette1.getY() -UNITE_VERTICALE);
-     Point lunette3 = new Point(lunette1.getX() + 6*UNITE_HORIZONTALE, lunette2.getY());
-     
+     Point lunette2 = new Point(lunette1.getX() , lunette1.getY() -UNITE_VERTICALE);
+     Point lunette3 = new Point(lunette2.getX() + 6*UNITE_HORIZONTALE, lunette2.getY());
+     Point lunette4 = new Point(lunette3.getX(), lunette3.getY() +UNITE_VERTICALE);
+     Point lunette5 = new Point(lunette4.getX() -UNITE_HORIZONTALE, lunette4.getY() +UNITE_VERTICALE);
+     Point lunette6 = new Point(lunette5.getX() -UNITE_HORIZONTALE, lunette5.getY() );
      demarrerNouveauDessinAvecDesPoints()
           
      .ajouter(lunette1)
      .ajouter(lunette2)
-     .ajouter(lunette3);
+     .ajouter(lunette3)
+     .ajouter(lunette4)
+     .ajouter(lunette5)     
+     .ajouter(lunette6);
      
     }
 
