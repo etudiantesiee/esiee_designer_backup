@@ -16,9 +16,13 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	public void dessiner() {
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
-	
-		
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+
+
+		
+		// variable taille case
+		int x = 25;
+		
 
 		// Partie Flo
 		
@@ -31,7 +35,6 @@ public class DessinsGroupe1 extends CreateurDeForme {
         .ajouter(gaucheTete2)
         .nePasRelierLesPointsExtreme();
 		
-		int x = 25;	
 		//Bras GRAUCHE
 		Point debEpauleGauche = new Point(4*x,8*x);
 		Point finEpauleGauche = new Point(3*x, 8*x);
@@ -47,7 +50,6 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point piedGauche2 = new Point(6*x,14*x);
 		Point piGauche = new Point(6*x,12*x);
 		Point piDroite = new Point(8*x,12*x);
-		//Point chevilleDroite1 = new Point(8*x,12*x);
 		
 		
 		demarrerNouveauDessinAvecDesPoints()
@@ -67,21 +69,59 @@ public class DessinsGroupe1 extends CreateurDeForme {
 					.ajouter(piDroite)
 					.nePasRelierLesPointsExtreme();
 				
-				
+			
+		//Bas du corps DROITE
+		Point chevilleDroite1 = new Point(9*x,13*x);
+		Point piedDroite1 = new Point(8*x,14*x);
+		Point piedDroite2 = new Point(11*x,14*x);
+		Point chevilleDroite2 = new Point(10*x,13*x);
+		Point tailleDroite = new Point(9*x,11*x);
+		Point aisselleDroite = new Point(11*x,12*x);
+		Point coudeDroite1 = new Point(12*x,13*x);
+		Point mancheDroite1 = new Point(12*x,14*x);	
+		Point mancheDroite = new Point(13*x,14*x);
+		Point coudeDroite2 = new Point(13*x,12*x);
+		Point debEpauleDroite = new Point(10*x,10*x);
+		Point finEpauleDroite = new Point(11*x, 10*x);
 		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(chevilleDroite1)
+			.ajouter(piedDroite1)
+			.ajouter(piedDroite2)
+			.ajouter(chevilleDroite2)
+			.ajouter(tailleDroite)
+			.ajouter(aisselleDroite)
+			.ajouter(coudeDroite1)
+			.ajouter(mancheDroite1)
+			.ajouter(mancheDroite)
+			.ajouter(coudeDroite2)
+			.ajouter(finEpauleDroite)
+			.ajouter(debEpauleDroite)
 
+			//.ajouter(piDroite)
+			.nePasRelierLesPointsExtreme();
+	
 		
-	  Point mentona = new Point(75,175);
-	  Point mentonb = new Point(150,250);
-	  Point mentonc = new Point(200,250);
-	  Point mentond = new Point(275,175);
+		
+		
+		
+		
+		
+		
+		
+		
+		// TETE
+		Point mentona = new Point(75,175);
+		Point mentonb = new Point(150,250);
+		Point mentonc = new Point(200,250);
+		Point mentond = new Point(275,175);
      
-      demarrerNouveauDessinAvecDesPoints()
-      		.ajouter(mentona)
-      		.ajouter(mentonb)
-      		.ajouter(mentonc)
-      		.ajouter(mentond)
-      		.nePasRelierLesPointsExtreme();
+		demarrerNouveauDessinAvecDesPoints()
+      			.ajouter(mentona)
+      			.ajouter(mentonb)
+      			.ajouter(mentonc)
+      			.ajouter(mentond)
+      			.nePasRelierLesPointsExtreme();
 
 	  
 	  
