@@ -171,6 +171,16 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin 
      */
     public void dessinerCheveux1() {
+       double troisquart = 75;
+ 	   Point cheveux11 = new Point (POINT_DEPART.getX() + UNITE_HORIZONTALE,POINT_DEPART.getY() - 11*UNITE_VERTICALE);
+ 	   Point cheveux12 = new Point (cheveux11.getX() + 2*UNITE_HORIZONTALE,cheveux11.getY() + UNITE_VERTICALE );
+ 	   Point cheveux13 = new Point (cheveux12.getX()- UNITE_HORIZONTALE, cheveux12.getY() - troisquart);
+ 	  
+	   demarrerNouveauDessinAvecDesPoints()
+ 	   .ajouter(cheveux11)
+ 	   .ajouter(cheveux12)
+ 	   .ajouter(cheveux13)   
+ 	   .couleurDeFond(Couleur.GRIS);  	 
         
     }
 
@@ -178,13 +188,30 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin 
      */
     public void dessinerCheveux2() {
-        
+   	   Point cheveux21 = new Point (POINT_DEPART.getX() + 3*UNITE_HORIZONTALE,POINT_DEPART.getY() - 12*UNITE_VERTICALE);
+   	   Point cheveux22 = new Point (cheveux21.getX() + UNITE_HORIZONTALE,cheveux21.getY() + 2*UNITE_VERTICALE );
+   	   Point cheveux23 = new Point (cheveux22.getX()+ UNITE_HORIZONTALE, cheveux22.getY() - 2*UNITE_VERTICALE );
+   	  
+  	   demarrerNouveauDessinAvecDesPoints()
+   	   .ajouter(cheveux21)
+   	   .ajouter(cheveux22)
+   	   .ajouter(cheveux23)   
+   	   .couleurDeFond(Couleur.GRIS);        
     }
     /**
      * dessin 
      */
     public void dessinerCheveux3() {
-        
+        double troisquart = 75;
+  	   Point cheveux31 = new Point (POINT_DEPART.getX() + 7*UNITE_HORIZONTALE,POINT_DEPART.getY() - 11*UNITE_VERTICALE);
+  	   Point cheveux32 = new Point (cheveux31.getX() - 2*UNITE_HORIZONTALE,cheveux31.getY() + UNITE_VERTICALE );
+  	   Point cheveux33 = new Point (cheveux32.getX()+ UNITE_HORIZONTALE, cheveux32.getY() - troisquart);
+  	  
+ 	   demarrerNouveauDessinAvecDesPoints()
+  	   .ajouter(cheveux31)
+  	   .ajouter(cheveux32)
+  	   .ajouter(cheveux33)   
+  	   .couleurDeFond(Couleur.GRIS);  	         
     }
     /**
      * dessin 
