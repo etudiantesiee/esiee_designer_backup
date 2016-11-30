@@ -1,18 +1,18 @@
-package fr.esiee.pic.esieedesigner.design.tp2;
-
-import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+	package fr.esiee.pic.esieedesigner.design.tp2;
+	
+	import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
-
-/**
- * Le groupe 3 ajoutera ses dessins dans cette classe.
- * 
- * @author etudiant
- *
- */
-public class DessinsGroupe3 extends CreateurDeForme {
+	
 	/**
+	 * Le groupe 3 ajoutera ses dessins dans cette classe.
+	 * 
+	 * @author etudiant
+	 *
+	 */
+	public class DessinsGroupe3 extends CreateurDeForme {
+		/**
 	 * Unite de dessin Horizontale
 	 */
 	private static final double UNITE_HORIZONTALE = 25;
@@ -50,6 +50,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		dessinerJambeD();		
 		
 	}
+
 
 
     /**
@@ -136,11 +137,30 @@ public class DessinsGroupe3 extends CreateurDeForme {
     }
 
     /**
-     * dessin 
+     * dessin du nez
      */
     public void dessinerNez() {
+    	dessinerNarineGauche();
+        dessinerNarineDroite();
+    }
+    
+    /**
+     * dessin de la narine gauche
+     */
+    public void dessinerNarineGauche() {
+    	Point nez = new Point (POINT_DEPART.getX() + 4 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 6 * UNITE_VERTICALE);
     	
-        
+    	demarrerNouveauDessinAvecDesPoints()
+    	
+    	.ajouter(nez);
+    	
+    }
+    
+    /**
+     * dessin de la narine droite
+     */
+    public void dessinerNarineDroite() {
+    	
     }
 
     /**
@@ -161,12 +181,13 @@ public class DessinsGroupe3 extends CreateurDeForme {
     }
 
     /**
-     * dessin 
+     * dessin du menton
      */
     public void dessinerMenton() {
-    	double untier = 16.6;
-    	double longueurmenton = 20;
-    	Point menton1 = new Point(POINT_DEPART.getX() -untier+ 4*UNITE_HORIZONTALE, POINT_DEPART.getY() -2*UNITE_VERTICALE-untier);
+    	double untier = 7.5;
+    	double decalage = 5.5;
+    	double longueurmenton = 7.5;
+    	Point menton1 = new Point(POINT_DEPART.getX() - decalage+ 4*UNITE_HORIZONTALE, POINT_DEPART.getY() -2*UNITE_VERTICALE-untier);
     	Point menton2 = new Point(menton1.getX() +longueurmenton, menton1.getY());
     	demarrerNouveauDessinAvecDesPoints()
         
@@ -177,10 +198,10 @@ public class DessinsGroupe3 extends CreateurDeForme {
     }
 
     /**
-     * dessin 
+     * dessin des cheveux1
      */
     public void dessinerCheveux1() {
-       double troisquart = 32.5;
+       double troisquart = 36.5;
  	   Point cheveux11 = new Point (POINT_DEPART.getX() + UNITE_HORIZONTALE,POINT_DEPART.getY() - 11*UNITE_VERTICALE);
  	   Point cheveux12 = new Point (cheveux11.getX() + 2*UNITE_HORIZONTALE,cheveux11.getY() + UNITE_VERTICALE );
  	   Point cheveux13 = new Point (cheveux12.getX()- UNITE_HORIZONTALE, cheveux12.getY() - troisquart);
@@ -194,7 +215,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
     }
 
     /**
-     * dessin 
+     * dessin cheveux2
      */
     public void dessinerCheveux2() {
    	   Point cheveux21 = new Point (POINT_DEPART.getX() + 3*UNITE_HORIZONTALE,POINT_DEPART.getY() - 12*UNITE_VERTICALE);
@@ -208,10 +229,10 @@ public class DessinsGroupe3 extends CreateurDeForme {
    	   .couleurDeFond(Couleur.GRIS);        
     }
     /**
-     * dessin 
+     * dessin cheveux3
      */
     public void dessinerCheveux3() {
-        double troisquart = 32.5;
+        double troisquart = 36.5;
   	   Point cheveux31 = new Point (POINT_DEPART.getX() + 7*UNITE_HORIZONTALE,POINT_DEPART.getY() - 11*UNITE_VERTICALE);
   	   Point cheveux32 = new Point (cheveux31.getX() - 2*UNITE_HORIZONTALE,cheveux31.getY() + UNITE_VERTICALE );
   	   Point cheveux33 = new Point (cheveux32.getX()+ UNITE_HORIZONTALE, cheveux32.getY() - troisquart);
@@ -223,7 +244,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
   	   .couleurDeFond(Couleur.GRIS);  	         
     }
     /**
-     * dessin 
+     * dessin du bras gauche
      */
     public void dessinerBrasG() {
     	double deuxtier = 16.6;
@@ -248,7 +269,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
  	   .couleurDeFond(Couleur.GRIS);  	         
     }
     /**
-     * dessin 
+     * dessin du beas droit
      */
     public void dessinerBrasD() {
     	double deuxtier = 16.6;
@@ -273,7 +294,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
  	   .couleurDeFond(Couleur.GRIS);  	   
     }
     /**
-     * dessin 
+     * dessin de la jambe gauche
      */
     public void dessinerJambeG() {
         
@@ -293,8 +314,9 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	   .ajouter(jambeG6)
 	   .couleurDeFond(Couleur.GRIS);
     }
+
     /**
-     * dessin 
+     * dessin de la jambe droite
      */
     public void dessinerJambeD() {
  	   Point jambeD1 = new Point (POINT_DEPART.getX()+5*UNITE_HORIZONTALE,POINT_DEPART.getY());
@@ -313,5 +335,6 @@ public class DessinsGroupe3 extends CreateurDeForme {
  	   .ajouter(jambeD6)
  	   .couleurDeFond(Couleur.GRIS);        
     }
-	
+    
 }
+	
