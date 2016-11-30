@@ -215,16 +215,16 @@ public class DessinsGroupe1 extends CreateurDeForme{
 	 * dessiner cheveux
 	 */
 	public void dessinerCheveux(){
-		Point basGaucheTete = new Point(2*X,7*X);
-        Point gaucheTete2 = new Point(X,3*X);
-        Point gaucheTete3 = new Point(X,X);
-        Point gaucheTete4 = new Point(2*X,0);
-        Point hautDroite = new Point(12*X,0);
-        Point hautDroite2 = new Point(13*X,X);
-        Point hautDroite3 = new Point(13*X,3*X);
-        Point hautDroite4 = new Point(12*X,7*X);
-        Point basDroite = new Point(11*X,7*X);
-        Point basGauche = new Point(3*X,7*X);     
+		Point basGaucheTete = new Point(32*X,7*X);
+        Point gaucheTete2 = new Point(31*X,3*X);
+        Point gaucheTete3 = new Point(31*X,X);
+        Point gaucheTete4 = new Point(32*X,0);
+        Point hautDroite = new Point(42*X,0);
+        Point hautDroite2 = new Point(43*X,X);
+        Point hautDroite3 = new Point(43*X,3*X);
+        Point hautDroite4 = new Point(42*X,7*X);
+        Point basDroite = new Point(41*X,7*X);
+        Point basGauche = new Point(33*X,7*X);     
 
         
         demarrerNouveauDessinAvecDesPoints()
@@ -240,6 +240,10 @@ public class DessinsGroupe1 extends CreateurDeForme{
         .ajouter(basDroite)
         .nePasRelierLesPointsExtreme();
 		}
+	
+	/**
+	 * dessin nez
+	 */
 	
 	public void dessinerNez(){   
         Point basGaucheNez = new Point(6.75*X,5.25*X);
@@ -305,7 +309,9 @@ public class DessinsGroupe1 extends CreateurDeForme{
        			.couleurDeFond(Couleur.GRIS)
        			.nePasRelierLesPointsExtreme();
 	}
-	
+	/**
+	 * dessin bouche gauche
+	 */
 	public void dessinerBouche(){
         Point bouchea = new Point(750+150,200);
         Point boucheb = new Point(750+200,200);

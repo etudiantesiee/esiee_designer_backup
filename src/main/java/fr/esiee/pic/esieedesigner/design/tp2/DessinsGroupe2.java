@@ -24,10 +24,9 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	private static final double UNITE_VERTICALE = 25;
 	
-	/**
-	 * Definition de l'ORIGINe
-	 */
-	private static final Point ORIGIN = new Point(60*25,5*25);
+
+	private static final Point ORIGIN= new Point(10*25,5*25);
+
 
 	/*fonction de dessin du personnage*/
 	@Override
@@ -84,7 +83,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 			.ajouter(getSymetrie(sysmetriecorpsDroite))
 			.ajouter(getSymetrie(couDroite))
 			.nePasRelierLesPointsExtreme();
-		 
+
 		 /*dessin de la manche droite*/
 		 demarrerNouveauDessinAvecDesPoints()
 		 .ajouter(manche1Droite)
