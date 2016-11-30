@@ -138,6 +138,17 @@ public class DessinsGroupe1 extends CreateurDeForme {
        			.ajouter(lunetted)
        			.ajouter(lunettee)
        			.nePasRelierLesPointsExtreme();
+       		
+       //bouche
+            Point bouchea = new Point(150,200);
+            Point boucheb = new Point(200,200);
+          
+            demarrerNouveauDessinAvecDesPoints()
+   			.ajouter(bouchea)
+   			.ajouter(boucheb)
+   			
+   			.nePasRelierLesPointsExtreme();
+         
               
 	}
   
