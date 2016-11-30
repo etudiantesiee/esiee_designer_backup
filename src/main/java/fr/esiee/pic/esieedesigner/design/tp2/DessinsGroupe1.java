@@ -246,9 +246,9 @@ public class DessinsGroupe1 extends CreateurDeForme{
 	 */
 	
 	public void dessinerNez(){   
-        Point basGaucheNez = new Point(6.75*X,5.25*X);
-        Point centreHautNez = new Point(7*X,5*X);
-        Point basDroiteNez = new Point(7.25*X,5.25*X);
+        Point basGaucheNez = new Point(36.75*X,5.25*X);
+        Point centreHautNez = new Point(37*X,5*X);
+        Point basDroiteNez = new Point(37.25*X,5.25*X);
         
         demarrerNouveauDessinAvecDesPoints()
         .ajouter(basGaucheNez)
@@ -261,7 +261,7 @@ public class DessinsGroupe1 extends CreateurDeForme{
 	 */
 	public void dessinerTete(){
 		
-		Point tetea = new Point(825,175);
+		Point tetea = new Point(X*33,X*7);
 	    Point teteb = new Point(825,75);
 	    Point tetec = new Point(875,50);
 	    Point teted = new Point(925,75);
