@@ -57,7 +57,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
      * dessin du contour
      */
     public void dessinerContour() {
-    	//Definition des points
+    	//Definition des points du contour
     	Point mentonBasGauche = new Point (POINT_DEPART.getX() + 3 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 2 * UNITE_VERTICALE); 
     	Point mentonHautGauche = new Point (mentonBasGauche.getX() - 2 * UNITE_HORIZONTALE, mentonBasGauche.getY() - 2 * UNITE_VERTICALE);
     	Point joueBasGauche = new Point (mentonHautGauche.getX() - UNITE_HORIZONTALE, mentonHautGauche.getY() - 3 * UNITE_VERTICALE);
