@@ -53,7 +53,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		 
 		 Point epauleDroite = new Point((11*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*8);
 		 
-		 Point sysmetriecorpsDroite = new Point((7*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*8);
+		 Point sysmetriecorpsDroite = new Point((10*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*8);
 		 
 		 Point oeildroitPoint = new Point((8*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*5);
 		 Ellipse oeilDroit = new Ellipse(oeildroitPoint, 10, 20);
@@ -80,7 +80,9 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		    .ajouter(manche2Droite)
 		    .ajouter(epauleDroite)
 		    .ajouter(sysmetriecorpsDroite)
+		    .nePasRelierLesPointsExtreme();
 		 
+		 demarrerNouveauDessinAvecDesPoints()
 		 	.ajouter(getSymetrie(talonDroite))
 			.ajouter(getSymetrie(boutpiedDroite))
 			.ajouter(getSymetrie(hautpiedDroite))
@@ -93,7 +95,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 			.ajouter(getSymetrie(main3Droite))
 			.ajouter(getSymetrie(manche2Droite))
 			.ajouter(getSymetrie(epauleDroite))
-			.ajouter(getSymetrie(sysmetriecorpsDroite));
+			.ajouter(getSymetrie(sysmetriecorpsDroite))
+			.nePasRelierLesPointsExtreme();
 			
 		
 	
