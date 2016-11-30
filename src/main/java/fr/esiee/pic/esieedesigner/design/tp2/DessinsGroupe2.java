@@ -95,8 +95,6 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		
 		
 		
-		
-		
 		 demarrerNouveauDessinAvecDesPoints()
 		 .ajouter(manche1Droite)
 		 .ajouter(manche2Droite);
