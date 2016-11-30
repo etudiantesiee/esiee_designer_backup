@@ -1,18 +1,18 @@
-package fr.esiee.pic.esieedesigner.design.tp2;
-
-import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+	package fr.esiee.pic.esieedesigner.design.tp2;
+	
+	import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
-
-/**
- * Le groupe 3 ajoutera ses dessins dans cette classe.
- * 
- * @author etudiant
- *
- */
-public class DessinsGroupe3 extends CreateurDeForme {
+	
 	/**
+	 * Le groupe 3 ajoutera ses dessins dans cette classe.
+	 * 
+	 * @author etudiant
+	 *
+	 */
+	public class DessinsGroupe3 extends CreateurDeForme {
+		/**
 	 * Unite de dessin Horizontale
 	 */
 	private static final double UNITE_HORIZONTALE = 25;
@@ -50,6 +50,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		dessinerJambeD();		
 		
 	}
+
 
 
     /**
@@ -136,11 +137,25 @@ public class DessinsGroupe3 extends CreateurDeForme {
     }
 
     /**
-     * dessin 
+     * dessin du nez
      */
     public void dessinerNez() {
+    	dessinerNarineGauche();
+        dessinerNarineDroite();
+    }
+    
+    /**
+     * dessin de la narine gauche
+     */
+    public void dessinerNarineGauche() {
     	
-        
+    }
+    
+    /**
+     * dessin de la narine droite
+     */
+    public void dessinerNarineDroite() {
+    	
     }
 
     /**
@@ -293,26 +308,26 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	   .ajouter(jambeG5)
 	   .ajouter(jambeG6)
 	   .couleurDeFond(Couleur.GRIS);
-    }
-    /**
-     * dessin 
-     */
-    public void dessinerJambeD() {
- 	   Point jambeD1 = new Point (POINT_DEPART.getX()+5*UNITE_HORIZONTALE,POINT_DEPART.getY());
- 	   Point jambeD2 = new Point (jambeD1.getX() +3*UNITE_HORIZONTALE,jambeD1.getY());
- 	   Point jambeD3 = new Point (jambeD2.getX() -UNITE_HORIZONTALE,jambeD2.getY() - UNITE_VERTICALE);
- 	   Point jambeD4 = new Point (jambeD3.getX() -UNITE_HORIZONTALE,jambeD3.getY() - 2*UNITE_VERTICALE);
- 	   Point jambeD5 = new Point (jambeD4.getX() -UNITE_HORIZONTALE,jambeD4.getY() + UNITE_VERTICALE);
- 	   Point jambeD6 = new Point (jambeD5.getX() +UNITE_HORIZONTALE,jambeD5.getY() + UNITE_VERTICALE);
- 	   
- 	   demarrerNouveauDessinAvecDesPoints()
- 	   .ajouter(jambeD1)
- 	   .ajouter(jambeD2)
- 	   .ajouter(jambeD3)
- 	   .ajouter(jambeD4)
- 	   .ajouter(jambeD5)
- 	   .ajouter(jambeD6)
- 	   .couleurDeFond(Couleur.GRIS);        
-    }
-	
-}
+	}
+	/**
+	 * dessin 
+	 */
+	    public void dessinerJambeD() {
+	 	   Point jambeD1 = new Point (POINT_DEPART.getX()+5*UNITE_HORIZONTALE,POINT_DEPART.getY());
+	 	   Point jambeD2 = new Point (jambeD1.getX() +3*UNITE_HORIZONTALE,jambeD1.getY());
+	 	   Point jambeD3 = new Point (jambeD2.getX() -UNITE_HORIZONTALE,jambeD2.getY() - UNITE_VERTICALE);
+	 	   Point jambeD4 = new Point (jambeD3.getX() -UNITE_HORIZONTALE,jambeD3.getY() - 2*UNITE_VERTICALE);
+	 	   Point jambeD5 = new Point (jambeD4.getX() -UNITE_HORIZONTALE,jambeD4.getY() + UNITE_VERTICALE);
+	 	   Point jambeD6 = new Point (jambeD5.getX() +UNITE_HORIZONTALE,jambeD5.getY() + UNITE_VERTICALE);
+	 	   
+	 	   demarrerNouveauDessinAvecDesPoints()
+	 	   .ajouter(jambeD1)
+	 	   .ajouter(jambeD2)
+	 	   .ajouter(jambeD3)
+	 	   .ajouter(jambeD4)
+	 	   .ajouter(jambeD5)
+	 	   .ajouter(jambeD6)
+	 	   .couleurDeFond(Couleur.GRIS);        
+	    }
+		
+	}
