@@ -15,6 +15,9 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
  */
 public class DessinsGroupe1 extends CreateurDeForme {
 
+	/**
+	 *  Methode de dessin du personnage du groupe 1  
+	 */
 	@Override
 	public void dessiner() {
 		// Ajout vos dessins ici
