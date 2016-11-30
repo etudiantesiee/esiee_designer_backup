@@ -25,7 +25,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	private static final double UNITE_VERTICALE = 50;
 	
-	private static final Point origin= new Point(60*25,5*25);
+	private static final Point ORIGIN= new Point(60*25,5*25);
 
 
 	@Override
@@ -55,16 +55,6 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		 
 		 Point sysmetriecorpsDroite = new Point((7*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*8);
 		 
-//		 Point oeildroitPoint = new Point((10*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*3);
-//		 Ellipse oeilDroit = new Ellipse(oeildroitPoint, 10, 20);
-//		 
-//		 Point oeilgauchePoint = new Point((8*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*3);
-//		 Ellipse oeilGauche = new Ellipse(oeilgauchePoint, 10, 20);
-//			
-//			
-//		 ajouterEllipse(oeilDroit, Couleur.NOIR);
-//		ajouterEllipse(oeilGauche, Couleur.NOIR);
-//		 
 		 
 		 demarrerNouveauDessinAvecDesPoints()
       		.ajouter(talonDroite)
@@ -80,7 +70,6 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		    .ajouter(manche2Droite)
 		    .ajouter(epauleDroite)
 		    .ajouter(sysmetriecorpsDroite)
-		 
 		 	.ajouter(getSymetrie(talonDroite))
 			.ajouter(getSymetrie(boutpiedDroite))
 			.ajouter(getSymetrie(hautpiedDroite))
@@ -100,21 +89,21 @@ public class DessinsGroupe2 extends CreateurDeForme {
 
 		
 		/*cheveux*/
-		Point a= new Point(origin.getX()+50,origin.getY()+0);
-		Point b= new Point(origin.getX()+100,origin.getY()+25);
-		Point c= new Point(origin.getX()+150,origin.getY()+75);
-		Point d= new Point(origin.getX()+150,origin.getY()+200);//pic1
-		Point e= new Point(origin.getX()+125,origin.getY()+150);
-		Point f= new Point(origin.getX()+125,origin.getY()+100);
-		Point g= new Point(origin.getX()+125,origin.getY()+200);
-		Point h= new Point(origin.getX()+100,origin.getY()+150);
-		Point i= new Point(origin.getX()+100,origin.getY()+125);
-		Point j= new Point(origin.getX()+100,origin.getY()+175);
-		Point k= new Point(origin.getX()+75,origin.getY()+125);
-		Point l= new Point(origin.getX()+75,origin.getY()+100);
-		Point m= new Point(origin.getX()+50,origin.getY()+75);
-		Point n= new Point(origin.getX()+25,origin.getY()+75);
-		Point o= new Point(origin.getX()+0,origin.getY()+50);
+		Point a= new Point(ORIGIN.getX()+50,ORIGIN.getY()+0);
+		Point b= new Point(ORIGIN.getX()+100,ORIGIN.getY()+25);
+		Point c= new Point(ORIGIN.getX()+150,ORIGIN.getY()+75);
+		Point d= new Point(ORIGIN.getX()+150,ORIGIN.getY()+200);//pic1
+		Point e= new Point(ORIGIN.getX()+125,ORIGIN.getY()+150);
+		Point f= new Point(ORIGIN.getX()+125,ORIGIN.getY()+100);
+		Point g= new Point(ORIGIN.getX()+125,ORIGIN.getY()+200);
+		Point h= new Point(ORIGIN.getX()+100,ORIGIN.getY()+150);
+		Point i= new Point(ORIGIN.getX()+100,ORIGIN.getY()+125);
+		Point j= new Point(ORIGIN.getX()+100,ORIGIN.getY()+175);
+		Point k= new Point(ORIGIN.getX()+75,ORIGIN.getY()+125);
+		Point l= new Point(ORIGIN.getX()+75,ORIGIN.getY()+100);
+		Point m= new Point(ORIGIN.getX()+50,ORIGIN.getY()+75);
+		Point n= new Point(ORIGIN.getX()+25,ORIGIN.getY()+75);
+		Point o= new Point(ORIGIN.getX()+0,ORIGIN.getY()+50);
 		
 		/*
 		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
@@ -198,8 +187,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 
 		
 		/*visage*/
-		Point p= new Point(origin.getX()+75,origin.getY()+200);
-		Point q= new Point(origin.getX()+25,origin.getY()+225);
+		Point p= new Point(ORIGIN.getX()+75,ORIGIN.getY()+200);
+		Point q= new Point(ORIGIN.getX()+25,ORIGIN.getY()+225);
 		
 		/*dessin visage*/
 		demarrerNouveauDessinAvecDesPoints().ajouter(p).ajouter(j);
@@ -209,9 +198,9 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		demarrerNouveauDessinAvecDesPoints().ajouter(getSymetrie(p)).ajouter(getSymetrie(j));
 		
 		/*bouche*/
-		Point s= new Point(origin.getX()+75,origin.getY()+150);
-		Point t= new Point(origin.getX()+75,origin.getY()+175);
-		Point u= new Point(origin.getX()+25,origin.getY()+200);
+		Point s= new Point(ORIGIN.getX()+75,ORIGIN.getY()+150);
+		Point t= new Point(ORIGIN.getX()+75,ORIGIN.getY()+175);
+		Point u= new Point(ORIGIN.getX()+25,ORIGIN.getY()+200);
 		
 		/*dessin bouche*/
 		
@@ -223,8 +212,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(getSymetrie(s));
 		
 		/*nez*/
-		Point v= new Point(origin.getX()+0,origin.getY()+125);
-		Point w= new Point(origin.getX()+5,origin.getY()+130);
+		Point v= new Point(ORIGIN.getX()+0,ORIGIN.getY()+125);
+		Point w= new Point(ORIGIN.getX()+5,ORIGIN.getY()+130);
 		
 		/*dessin nez*/
 		demarrerNouveauDessinAvecDesPoints().ajouter(w)
@@ -233,7 +222,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.nePasRelierLesPointsExtreme();
 		
 		/*yeux*/
-		Point x= new Point(origin.getX()+25,origin.getY()+100);
+		Point x= new Point(ORIGIN.getX()+25,ORIGIN.getY()+100);
 		
 		/*dessin yeux*/
 		ajouterEllipse(new Ellipse(x, 10, 20), Couleur.NOIR);
@@ -245,7 +234,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	
 	private Point getSymetrie(Point point){
-		return new Point(2*origin.getX()-point.getX(), point.getY());
+		return new Point(2*ORIGIN.getX()-point.getX(), point.getY());
 		
 	}
 
