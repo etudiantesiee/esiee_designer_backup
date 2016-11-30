@@ -18,12 +18,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+		
 		// variable taille case
 		int x = 25;
-		
-
-
-		int x = 25;	
 		
 		// Partie Flo Cheveux
 		
@@ -33,17 +30,27 @@ public class DessinsGroupe1 extends CreateurDeForme {
         Point gaucheTete4 = new Point(2*x,0);
         Point hautDroite = new Point(12*x,0);
         Point hautDroite2 = new Point(13*x,x);
+        Point hautDroite3 = new Point(13*x,3*x);
+        Point hautDroite4 = new Point(12*x,7*x);
+        Point basDroite = new Point(11*x,7*x);
+        Point basGauche = new Point(3*x,7*x);
+
+
 
 
 
         
         demarrerNouveauDessinAvecDesPoints()
+        .ajouter(basGauche)
         .ajouter(basGaucheTete)
         .ajouter(gaucheTete2)
         .ajouter(gaucheTete3)
         .ajouter(gaucheTete4)
         .ajouter(hautDroite)
         .ajouter(hautDroite2)
+        .ajouter(hautDroite3)
+        .ajouter(hautDroite4)
+        .ajouter(basDroite)
         .nePasRelierLesPointsExtreme();
 		        
 		
