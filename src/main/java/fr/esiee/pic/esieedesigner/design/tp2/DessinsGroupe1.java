@@ -239,6 +239,10 @@ public class DessinsGroupe1 extends CreateurDeForme{
         .nePasRelierLesPointsExtreme();
 		}
 	
+	/**
+	 * dessin nez
+	 */
+	
 	public void dessinerNez(){   
         Point basGaucheNez = new Point(6.75*x,5.25*x);
         Point centreHautNez = new Point(7*x,5*x);
