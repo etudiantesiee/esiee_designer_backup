@@ -1,5 +1,6 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
+import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -133,6 +134,21 @@ public class DessinsGroupe3 extends CreateurDeForme {
      */
     public void dessinerJambeG() {
         
+	   Point JambeG1 = new Point (POINT_DEPART.getX(),POINT_DEPART.getY());
+	   Point JambeG2 = new Point (JambeG1.getX() +3*UNITE_HORIZONTALE,JambeG1.getY());
+	   Point JambeG3 = new Point (JambeG2.getX() -UNITE_HORIZONTALE,JambeG2.getY() - UNITE_VERTICALE);
+	   Point JambeG4 = new Point (JambeG3.getX() +UNITE_HORIZONTALE,JambeG3.getY() - UNITE_VERTICALE);
+	   Point JambeG5 = new Point (JambeG4.getX() -UNITE_HORIZONTALE,JambeG4.getY() - UNITE_VERTICALE);
+	   Point JambeG6 = new Point (JambeG5.getX() -UNITE_HORIZONTALE,JambeG5.getY() + 2*UNITE_VERTICALE);
+	   
+	   demarrerNouveauDessinAvecDesPoints()
+	   .ajouter(JambeG1)
+	   .ajouter(JambeG2)
+	   .ajouter(JambeG3)
+	   .ajouter(JambeG4)
+	   .ajouter(JambeG5)
+	   .ajouter(JambeG6)
+	   .couleurDeFond(Couleur.GRIS);
     }
     /**
      * dessin 
