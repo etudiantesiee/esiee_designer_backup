@@ -137,11 +137,25 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
     }
 
     /**
-     * dessin 
+     * dessin du nez
      */
     public void dessinerNez() {
+    	dessinerNarineGauche();
+        dessinerNarineDroite();
+    }
+    
+    /**
+     * dessin de la narine gauche
+     */
+    public void dessinerNarineGauche() {
     	
-        
+    }
+    
+    /**
+     * dessin de la narine droite
+     */
+    public void dessinerNarineDroite() {
+    	
     }
 
     /**
