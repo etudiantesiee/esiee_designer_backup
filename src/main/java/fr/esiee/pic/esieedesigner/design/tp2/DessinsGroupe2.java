@@ -25,6 +25,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	private static final double UNITE_VERTICALE = 25;
 	
 /* point d'origine du  dessin*/
+    /* point d'origine qui sert à la réalisation de l'objectif 2 */
 	private static final Point ORIGIN= new Point(10*25,5*25);
 
 

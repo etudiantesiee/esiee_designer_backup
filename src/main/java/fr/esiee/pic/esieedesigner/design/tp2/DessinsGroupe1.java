@@ -31,7 +31,7 @@ public class DessinsGroupe1 extends CreateurDeForme{
 		dessinerCheveux();
 		dessinerNez();
 		
-   //// PARTIE AMINE ET PRADHIBAN
+		//PARTIE AMINE ET PRADHIBAN
 
 		dessinerTete();
 		dessinerRayban();
@@ -138,7 +138,7 @@ public class DessinsGroupe1 extends CreateurDeForme{
 			.ajouter(mancheGaucheBas)
 			.nePasRelierLesPointsExtreme();
 		
-		//Doigts gauche
+		//Doigts de la main gauche
 		Point doigtG1a = new Point((1+30)*X + l,13*X);
 		Point doigtG1b = new Point((1+30)*X + l,12.75*X);
 		Point doigtG2a = new Point((1+30)*X + 2*l,13*X);
@@ -246,9 +246,9 @@ public class DessinsGroupe1 extends CreateurDeForme{
 	 */
 	
 	public void dessinerNez(){   
-        Point basGaucheNez = new Point(6.75*X,5.25*X);
-        Point centreHautNez = new Point(7*X,5*X);
-        Point basDroiteNez = new Point(7.25*X,5.25*X);
+        Point basGaucheNez = new Point(36.75*X,5.25*X);
+        Point centreHautNez = new Point(37*X,5*X);
+        Point basDroiteNez = new Point(37.25*X,5.25*X);
         
         demarrerNouveauDessinAvecDesPoints()
         .ajouter(basGaucheNez)
@@ -261,9 +261,9 @@ public class DessinsGroupe1 extends CreateurDeForme{
 	 */
 	public void dessinerTete(){
 		
-		Point tetea = new Point(825,175);
-	    Point teteb = new Point(825,75);
-	    Point tetec = new Point(875,50);
+		Point tetea = new Point(X*33,X*7);
+	    Point teteb = new Point(X*33,75);
+	    Point tetec = new Point(X*35,50);
 	    Point teted = new Point(925,75);
 	    Point tetee = new Point(975,50);
 	    Point tetef = new Point(1025,75);

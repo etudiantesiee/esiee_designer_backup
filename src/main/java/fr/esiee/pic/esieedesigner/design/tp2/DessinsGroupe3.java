@@ -32,22 +32,22 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 	@Override
 	public void dessiner() {
 		//Contour
-		dessinerContour();
+		Point p1 = dessinerContour(POINT_DEPART);
 		//Visage
-		dessinerYeuxD();
-		dessinerYeuxG();
-		dessinerLunette();
-		dessinerNez();
-		dessinerBouche();
-		dessinerMenton();
-		dessinerCheveux1();
-		dessinerCheveux2();
-		dessinerCheveux3();	
+		Point p2 = dessinerYeuxD(p1);
+		Point p3 = dessinerYeuxG(p2);
+		Point p4 = dessinerLunette(p3);
+		Point p5 = dessinerNez(p4);
+		Point p6 = dessinerBouche(p5);
+		Point p7 = dessinerMenton(p6);
+		Point p8 = dessinerCheveux1(p7);
+		Point p9 = dessinerCheveux2(p8);
+		Point p10 = dessinerCheveux3(p9);	
 		//Corps
-		dessinerBrasG();
-		dessinerBrasD();
-		dessinerJambeG();
-		dessinerJambeD();		
+		Point p11 = dessinerBrasG(p10);
+		Point p12 = dessinerBrasD(p11);
+		Point p13 = dessinerJambeG(p12);
+		Point p14 = dessinerJambeD(p13);		
 		
 	}
 
@@ -56,9 +56,10 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
     /**
      * dessin du contour
      */
-    public void dessinerContour() {
-    	//Definition des points du contour
-    	Point mentonBasGauche = new Point (POINT_DEPART.getX() + 3 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 2 * UNITE_VERTICALE); 
+    public Point dessinerContour(Point p) {
+    	//Definition des points
+    	Point mentonBasGauche = new Point (p.getX() + 3 * UNITE_HORIZONTALE, p.getY() - 2 * UNITE_VERTICALE); 
+
     	Point mentonHautGauche = new Point (mentonBasGauche.getX() - 2 * UNITE_HORIZONTALE, mentonBasGauche.getY() - 2 * UNITE_VERTICALE);
     	Point joueBasGauche = new Point (mentonHautGauche.getX() - UNITE_HORIZONTALE, mentonHautGauche.getY() - 3 * UNITE_VERTICALE);
     	Point joueHautGauche = new Point (joueBasGauche.getX(), joueBasGauche.getY() - 2 * UNITE_VERTICALE);
@@ -87,35 +88,37 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
     	.ajouter(joueBasDroite)
     	.ajouter(mentonHautDroite)
     	.ajouter(mentonBasDroite);
-    	
+    	return p;
     }
     /**
      * dessin oeil droit
      */
-    public void dessinerYeuxD() {
+    public Point dessinerYeuxD(Point p) {
     	// AJouter une ellispe à droite
-    	Point centreOeilDroite = new Point(POINT_DEPART.getX() + 5*UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
+    	Point centreOeilDroite = new Point(p.getX() + 5*UNITE_HORIZONTALE, p.getY() -8*UNITE_VERTICALE);
 		Ellipse oeilDroite = new Ellipse(centreOeilDroite, 10, 10);
 		
 		ajouterEllipse(oeilDroite, Couleur.NOIR);
+		return p;
     }
     /**
      * dessin oeil gauche 
      */
-    public void dessinerYeuxG() {
+    public Point dessinerYeuxG(Point p) {
     	// AJouter une ellispe à gauche
-    	Point centreOeilGauche = new Point(POINT_DEPART.getX() + 3*UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
+    	Point centreOeilGauche = new Point(p.getX() + 3*UNITE_HORIZONTALE, p.getY() -8*UNITE_VERTICALE);
 		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 10, 10);
 		
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
-        
+        return p;
     }
     /**
      * dessin des lunettes
      */
-    public void dessinerLunette() {
+    public Point dessinerLunette(Point p) {
     	
-     Point lunette1 = new Point(POINT_DEPART.getX() + UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
+    	// Création de jolie lunette 
+     Point lunette1 = new Point(p.getX() + UNITE_HORIZONTALE, p.getY() -8*UNITE_VERTICALE);
      Point lunette2 = new Point(lunette1.getX() , lunette1.getY() -UNITE_VERTICALE);
      Point lunette3 = new Point(lunette2.getX() + 6*UNITE_HORIZONTALE, lunette2.getY());
      Point lunette4 = new Point(lunette3.getX(), lunette3.getY() +UNITE_VERTICALE);
@@ -137,24 +140,25 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
      .ajouter(lunette7)
      .ajouter(lunette8)
      .ajouter(lunette9);
-     
+     return p;
     }
 
     /**
      * dessin du nez
      */
-    public void dessinerNez() {
+    public Point dessinerNez(Point p) {
     	// Dessin des deux narines pour constituer le nez
-    	dessinerNarineGauche();
-        dessinerNarineDroite();
+    	Point pn1= dessinerNarineGauche(p);
+    	Point pn2= dessinerNarineDroite(pn1);
+    	return p;
     }
     
     /**
      * dessin de la narine gauche
      */
-    public void dessinerNarineGauche() {
+    public Point dessinerNarineGauche(Point p) {
     	//Definition des points et des variables
-    	Point nez = new Point (POINT_DEPART.getX() + 4 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 6 * UNITE_VERTICALE);
+    	Point nez = new Point (p.getX() + 4 * UNITE_HORIZONTALE, p.getY() - 6 * UNITE_VERTICALE);
     	double longueurHorizontaleNarineGauche = 5;
     	double longueurVerticaleNarineGauche = 6;
     	Point narineGauche = new Point (nez.getX() - longueurHorizontaleNarineGauche, nez.getY() + longueurVerticaleNarineGauche);
@@ -164,15 +168,15 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
     	
     	.ajouter(nez)
     	.ajouter(narineGauche);
-    	
+    	return p;
     }
     
     /**
      * dessin de la narine droite
      */
-    public void dessinerNarineDroite() {
+    public Point dessinerNarineDroite(Point p) {
     	//Definition des points et des variables
-    	Point nez = new Point (POINT_DEPART.getX() + 4 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 6 * UNITE_VERTICALE);
+    	Point nez = new Point (p.getX() + 4 * UNITE_HORIZONTALE, p.getY() - 6 * UNITE_VERTICALE);
     	double longueurHorizontaleNarineDroite = 2;
     	double longueurVerticaleNarineDroite = 5;
     	Point narineDroite = new Point (nez.getX() + longueurHorizontaleNarineDroite, nez.getY() + longueurVerticaleNarineDroite);
@@ -182,13 +186,14 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
     	
     	.ajouter(nez)
     	.ajouter(narineDroite);
+    	return p;
     }
 
     /**
      * dessin de la bouche 
      */
-    public void dessinerBouche() {
-    	 Point bouche1 = new Point(POINT_DEPART.getX() + 2*UNITE_HORIZONTALE, POINT_DEPART.getY() -5*UNITE_VERTICALE);
+    public Point dessinerBouche(Point p) {
+    	 Point bouche1 = new Point(p.getX() + 2*UNITE_HORIZONTALE, p.getY() -5*UNITE_VERTICALE);
     	 Point bouche2 = new Point(bouche1.getX() + 4*UNITE_HORIZONTALE, bouche1.getY() );
     	 Point bouche3 = new Point(bouche2.getX() -UNITE_HORIZONTALE, bouche2.getY() +2*UNITE_VERTICALE);
     	 Point bouche4 = new Point(bouche3.getX() -2*UNITE_HORIZONTALE, bouche3.getY() );
@@ -198,13 +203,15 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
     	     .ajouter(bouche2)
     	     .ajouter(bouche3)
     	     .ajouter(bouche4);
-    	
+    	return p;
     }
 
     /**
      * dessin du menton
      */
-    public void dessinerMenton() {
+    
+    public Point dessinerMenton(Point p) {
+    	// ajout de variable pour pouvoir placer plus précisement 
     	double untier = 7.5;
     	double decalage = 5.5;
     	double longueurmenton = 7.5;
@@ -213,19 +220,19 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
     	demarrerNouveauDessinAvecDesPoints()
         
 	     .ajouter(menton1)
-	     .ajouter(menton2)
-	    ;
+	     .ajouter(menton2);
+    	return p;
     	
     }
 
     /**
      * dessin des cheveux1
      */
-    public void dessinerCheveux1() {
+    public Point dessinerCheveux1(Point p) {
     	//Variable
        double troisquart = 36.5;
        //Points
- 	   Point cheveux11 = new Point (POINT_DEPART.getX() + UNITE_HORIZONTALE,POINT_DEPART.getY() - 11*UNITE_VERTICALE);
+ 	   Point cheveux11 = new Point (p.getX() + UNITE_HORIZONTALE,p.getY() - 11*UNITE_VERTICALE);
  	   Point cheveux12 = new Point (cheveux11.getX() + 2*UNITE_HORIZONTALE,cheveux11.getY() + UNITE_VERTICALE );
  	   Point cheveux13 = new Point (cheveux12.getX()- UNITE_HORIZONTALE, cheveux12.getY() - troisquart);
  	   //dessin
@@ -234,15 +241,15 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
  	   .ajouter(cheveux12)
  	   .ajouter(cheveux13)   
  	   .couleurDeFond(Couleur.GRIS);  	 
-        
+	   return p;
     }
 
     /**
      * dessin cheveux2
      */
-    public void dessinerCheveux2() {
+    public Point dessinerCheveux2(Point p) {
     	//Point
-   	   Point cheveux21 = new Point (POINT_DEPART.getX() + 3*UNITE_HORIZONTALE,POINT_DEPART.getY() - 12*UNITE_VERTICALE);
+   	   Point cheveux21 = new Point (p.getX() + 3*UNITE_HORIZONTALE,p.getY() - 12*UNITE_VERTICALE);
    	   Point cheveux22 = new Point (cheveux21.getX() + UNITE_HORIZONTALE,cheveux21.getY() + 2*UNITE_VERTICALE );
    	   Point cheveux23 = new Point (cheveux22.getX()+ UNITE_HORIZONTALE, cheveux22.getY() - 2*UNITE_VERTICALE );
    	  //dessin
@@ -250,16 +257,17 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
    	   .ajouter(cheveux21)
    	   .ajouter(cheveux22)
    	   .ajouter(cheveux23)   
-   	   .couleurDeFond(Couleur.GRIS);        
+   	   .couleurDeFond(Couleur.GRIS);    
+  	   return p;
     }
     /**
      * dessin cheveux3
      */
-    public void dessinerCheveux3() {
+    public Point dessinerCheveux3(Point p) {
     	//variable
         double troisquart = 36.5;
         //point
-  	   Point cheveux31 = new Point (POINT_DEPART.getX() + 7*UNITE_HORIZONTALE,POINT_DEPART.getY() - 11*UNITE_VERTICALE);
+  	   Point cheveux31 = new Point (p.getX() + 7*UNITE_HORIZONTALE,p.getY() - 11*UNITE_VERTICALE);
   	   Point cheveux32 = new Point (cheveux31.getX() - 2*UNITE_HORIZONTALE,cheveux31.getY() + UNITE_VERTICALE );
   	   Point cheveux33 = new Point (cheveux32.getX()+ UNITE_HORIZONTALE, cheveux32.getY() - troisquart);
   	  //dessin
@@ -267,16 +275,17 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
   	   .ajouter(cheveux31)
   	   .ajouter(cheveux32)
   	   .ajouter(cheveux33)   
-  	   .couleurDeFond(Couleur.GRIS);  	         
+  	   .couleurDeFond(Couleur.GRIS);  
+ 	   return p;
     }
     /**
      * dessin du bras gauche
      */
-    public void dessinerBrasG() {
+    public Point dessinerBrasG(Point p) {
     	//variable
     	double deuxtier = 16.6;
     	//point
- 	   Point brasG1 = new Point (POINT_DEPART.getX() + UNITE_HORIZONTALE,POINT_DEPART.getY() - 3*UNITE_VERTICALE);
+ 	   Point brasG1 = new Point (p.getX() + UNITE_HORIZONTALE,p.getY() - 3*UNITE_VERTICALE);
  	   Point brasG2 = new Point (brasG1.getX() - 3*UNITE_HORIZONTALE,brasG1.getY() );
  	   Point brasG3 = new Point (brasG2.getX()+ UNITE_HORIZONTALE, brasG2.getY() - UNITE_VERTICALE);
  	   Point brasG4 = new Point (brasG3.getX(),brasG3.getY() - UNITE_VERTICALE);
@@ -294,16 +303,17 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
  	   .ajouter(brasG6)
  	   .ajouter(brasG7)
  	   .ajouter(brasG8) 	   
- 	   .couleurDeFond(Couleur.GRIS);  	         
+ 	   .couleurDeFond(Couleur.GRIS);  
+	   return p;
     }
     /**
      * dessin du bras droit
      */
-    public void dessinerBrasD() {
+    public Point dessinerBrasD(Point p) {
     	//variable
     	double deuxtier = 16.6;
     	//point
- 	   Point brasD1 = new Point (POINT_DEPART.getX() + 7*UNITE_HORIZONTALE,POINT_DEPART.getY() - 3*UNITE_VERTICALE);
+ 	   Point brasD1 = new Point (p.getX() + 7*UNITE_HORIZONTALE,p.getY() - 3*UNITE_VERTICALE);
  	   Point brasD2 = new Point (brasD1.getX() + 3*UNITE_HORIZONTALE,brasD1.getY() );
  	   Point brasD3 = new Point (brasD2.getX()- UNITE_HORIZONTALE, brasD2.getY() - UNITE_VERTICALE);
  	   Point brasD4 = new Point (brasD3.getX() ,brasD3.getY() - UNITE_VERTICALE);
@@ -322,13 +332,14 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
  	   .ajouter(brasD7)
  	   .ajouter(brasD8) 	   
  	   .couleurDeFond(Couleur.GRIS);  	   
+	   return p;
     }
     /**
      * dessin de la jambe gauche
      */
-    public void dessinerJambeG() {
+    public Point dessinerJambeG(Point p) {
         //point
-	   Point jambeG1 = new Point (POINT_DEPART.getX(),POINT_DEPART.getY());
+	   Point jambeG1 = new Point (p.getX(),p.getY());
 	   Point jambeG2 = new Point (jambeG1.getX() +3*UNITE_HORIZONTALE,jambeG1.getY());
 	   Point jambeG3 = new Point (jambeG2.getX() -UNITE_HORIZONTALE,jambeG2.getY() - UNITE_VERTICALE);
 	   Point jambeG4 = new Point (jambeG3.getX() +UNITE_HORIZONTALE,jambeG3.getY() - UNITE_VERTICALE);
@@ -343,14 +354,15 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 	   .ajouter(jambeG5)
 	   .ajouter(jambeG6)
 	   .couleurDeFond(Couleur.GRIS);
+	   return p;
     }
 
     /**
      * dessin de la jambe droite
      */
-    public void dessinerJambeD() {
+    public Point dessinerJambeD(Point p) {
     	//point
- 	   Point jambeD1 = new Point (POINT_DEPART.getX()+5*UNITE_HORIZONTALE,POINT_DEPART.getY());
+ 	   Point jambeD1 = new Point (p.getX()+5*UNITE_HORIZONTALE,p.getY());
  	   Point jambeD2 = new Point (jambeD1.getX() +3*UNITE_HORIZONTALE,jambeD1.getY());
  	   Point jambeD3 = new Point (jambeD2.getX() -UNITE_HORIZONTALE,jambeD2.getY() - UNITE_VERTICALE);
  	   Point jambeD4 = new Point (jambeD3.getX() -UNITE_HORIZONTALE,jambeD3.getY() - 2*UNITE_VERTICALE);
@@ -364,7 +376,8 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
  	   .ajouter(jambeD4)
  	   .ajouter(jambeD5)
  	   .ajouter(jambeD6)
- 	   .couleurDeFond(Couleur.GRIS);        
+ 	   .couleurDeFond(Couleur.GRIS);     
+ 	   return p;
     }
     
 }
