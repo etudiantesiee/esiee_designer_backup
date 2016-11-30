@@ -52,10 +52,16 @@ public class DessinsGroupe3 extends CreateurDeForme {
 
 
     /**
-     * dessin 
+     * dessin  
      */
     public void dessinerContour() {
-        
+    	Point mentonBasGauche = new Point(POINT_DEPART.getX() + 3 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 2 * UNITE_VERTICALE); 
+    	Point mentonHautGauche = new Point(mentonBasGauche.getX() - 2 * UNITE_HORIZONTALE, mentonBasGauche.getY() - 2 * UNITE_VERTICALE);
+    	
+    	demarrerNouveauDessinAvecDesPoints()
+    	
+    	.ajouter(mentonBasGauche)
+    	.ajouter(mentonHautGauche);
     }
     /**
      * dessin 
@@ -70,10 +76,25 @@ public class DessinsGroupe3 extends CreateurDeForme {
         
     }
     /**
-     * dessin 
+     * dessin des lunettes
      */
     public void dessinerLunette() {
-        
+    	
+     Point lunette1 = new Point(POINT_DEPART.getX() + UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
+     Point lunette2 = new Point(lunette1.getX() , lunette1.getY() -UNITE_VERTICALE);
+     Point lunette3 = new Point(lunette2.getX() + 6*UNITE_HORIZONTALE, lunette2.getY());
+     Point lunette4 = new Point(lunette3.getX(), lunette3.getY() +UNITE_VERTICALE);
+     Point lunette5 = new Point(lunette4.getX() -UNITE_HORIZONTALE, lunette4.getY() +UNITE_VERTICALE);
+     Point lunette6 = new Point(lunette5.getX() -UNITE_HORIZONTALE, lunette5.getY() );
+     demarrerNouveauDessinAvecDesPoints()
+          
+     .ajouter(lunette1)
+     .ajouter(lunette2)
+     .ajouter(lunette3)
+     .ajouter(lunette4)
+     .ajouter(lunette5)     
+     .ajouter(lunette6);
+     
     }
 
     /**
@@ -153,7 +174,21 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin 
      */
     public void dessinerJambeD() {
-        
+ 	   Point JambeD1 = new Point (POINT_DEPART.getX()+5*UNITE_HORIZONTALE,POINT_DEPART.getY());
+ 	   Point JambeD2 = new Point (JambeD1.getX() +3*UNITE_HORIZONTALE,JambeD1.getY());
+ 	   Point JambeD3 = new Point (JambeD2.getX() -UNITE_HORIZONTALE,JambeD2.getY() - UNITE_VERTICALE);
+ 	   Point JambeD4 = new Point (JambeD3.getX() -UNITE_HORIZONTALE,JambeD3.getY() - 2*UNITE_VERTICALE);
+ 	   Point JambeD5 = new Point (JambeD4.getX() -UNITE_HORIZONTALE,JambeD4.getY() + UNITE_VERTICALE);
+ 	   Point JambeD6 = new Point (JambeD5.getX() +UNITE_HORIZONTALE,JambeD5.getY() + UNITE_VERTICALE);
+ 	   
+ 	   demarrerNouveauDessinAvecDesPoints()
+ 	   .ajouter(JambeD1)
+ 	   .ajouter(JambeD2)
+ 	   .ajouter(JambeD3)
+ 	   .ajouter(JambeD4)
+ 	   .ajouter(JambeD5)
+ 	   .ajouter(JambeD6)
+ 	   .couleurDeFond(Couleur.GRIS);        
     }
 	
 }
