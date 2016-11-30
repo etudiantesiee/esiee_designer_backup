@@ -31,34 +31,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		dessinerNez();
 		
    //// PARTIE AMINE ET PRADHIBAN
- 	   // tete
 		dessinerTete();
-		
-        // lunette rayban aviator
-         Point lunettea = new Point(75,100);
-         Point lunetteb = new Point(125,125);
-         Point lunettec = new Point(175,100);
-         Point lunetted = new Point(225,125);
-         Point lunettee = new Point(275,100);
-         Point lunettef = new Point(75,75);
-         Point lunetteg = new Point(125,50);
-         Point lunetteh = new Point(175,75);
-         Point lunettei = new Point(225,50);
-         Point lunettej = new Point(275,75);
- 	  
-        		demarrerNouveauDessinAvecDesPoints()
-        			.ajouter(lunettea)
-        			.ajouter(lunetteb)
-        			.ajouter(lunettec)
-        			.ajouter(lunetted)
-        			.ajouter(lunettee)
-        			.ajouter(lunettej)
-        			.ajouter(lunettei)
-        			.ajouter(lunetteh)
-        			.ajouter(lunetteg)
-        			.ajouter(lunettef)
-        			.couleurDeFond(Couleur.GRIS)
-        			.nePasRelierLesPointsExtreme();
+		dessinerRayban();
+         
         		
         //bouche
           Point bouchea = new Point(150,200);
@@ -73,10 +48,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 
 		// TETE
         //On a intégré votre code dans le notre
-		Point mentona = new Point(75,175);
-		Point mentonb = new Point(150,250);
-		Point mentonc = new Point(200,250);
-		Point mentond = new Point(275,175);
+
   
 		
 		// yeux gauche
@@ -91,73 +63,77 @@ public class DessinsGroupe1 extends CreateurDeForme {
 
 		// PARTIE A&D
 		
+		Point mentona = new Point(75,175);
+		Point mentonb = new Point(150,250);
+		Point mentonc = new Point(200,250);
+		Point mentond = new Point(275,175);
+		
 		//Bras GRAUCHE
-		Point debEpauleGauche = new Point(4*x,8*x);
-		Point finEpauleGauche = new Point(3*x, 8*x);
-		Point coudeGauche1 = new Point(1*x, 10*x);
-		Point coudeGauche2 = new Point(2*x, 11*x);
-		Point mancheGaucheHaut = new Point(1*x, 12*x);
-		Point mancheGaucheBas = new Point(2*x, 12*x);
-		Point aisselleGauche = new Point(3*x, 10*x);
-		Point tailleGauche = new Point(5*x,11*x);
-		Point chevilleGauche1 = new Point(4*x,13*x);
-		Point piedGauche1 = new Point(3*x,14*x);
-		Point chevilleGauche2 = new Point(5*x,13*x);
-		Point piedGauche2 = new Point(6*x,14*x);
-		Point piGauche = new Point(6*x,12*x);
-		Point piDroite = new Point(8*x,12*x);
-		
+				Point debEpauleGauche = new Point(4*x,8*x);
+				Point finEpauleGauche = new Point(3*x, 8*x);
+				Point coudeGauche1 = new Point(1*x, 10*x);
+				Point coudeGauche2 = new Point(2*x, 11*x);
+				Point mancheGaucheHaut = new Point(1*x, 12*x);
+				Point mancheGaucheBas = new Point(2*x, 12*x);
+				Point aisselleGauche = new Point(3*x, 10*x);
+				Point tailleGauche = new Point(5*x,11*x);
+				Point chevilleGauche1 = new Point(4*x,13*x);
+				Point piedGauche1 = new Point(3*x,14*x);
+				Point chevilleGauche2 = new Point(5*x,13*x);
+				Point piedGauche2 = new Point(6*x,14*x);
+				Point piGauche = new Point(6*x,12*x);
+				Point piDroite = new Point(8*x,12*x);
 				
-			
-		//Bas du corps DROITE
-		Point chevilleDroite1 = new Point(9*x,13*x);
-		Point piedDroite1 = new Point(8*x,14*x);
-		Point piedDroite2 = new Point(11*x,14*x);
-		Point chevilleDroite2 = new Point(10*x,13*x);
-		Point tailleDroite = new Point(9*x,11*x);
-		Point aisselleDroite = new Point(11*x,10*x);
-		Point coudeDroite1 = new Point(12*x,11*x);
-		Point mancheDroite1 = new Point(12*x,12*x);	
-		Point mancheDroite = new Point(13*x,12*x);
-		Point coudeDroite2 = new Point(13*x,10*x);
-		Point debEpauleDroite = new Point(10*x,8*x);
-		Point finEpauleDroite = new Point(11*x, 8*x);
-		
+						
+					
+				//Bas du corps DROITE
+				Point chevilleDroite1 = new Point(9*x,13*x);
+				Point piedDroite1 = new Point(8*x,14*x);
+				Point piedDroite2 = new Point(11*x,14*x);
+				Point chevilleDroite2 = new Point(10*x,13*x);
+				Point tailleDroite = new Point(9*x,11*x);
+				Point aisselleDroite = new Point(11*x,10*x);
+				Point coudeDroite1 = new Point(12*x,11*x);
+				Point mancheDroite1 = new Point(12*x,12*x);	
+				Point mancheDroite = new Point(13*x,12*x);
+				Point coudeDroite2 = new Point(13*x,10*x);
+				Point debEpauleDroite = new Point(10*x,8*x);
+				Point finEpauleDroite = new Point(11*x, 8*x);
+				
 
-		demarrerNouveauDessinAvecDesPoints()
-			.ajouter(mentond)
-  			.ajouter(mentonc)
-  			.ajouter(mentonb)
-  			.ajouter(mentona)
-			.ajouter(debEpauleGauche)
-			.ajouter(finEpauleGauche)
-			.ajouter(coudeGauche1)
-			.ajouter(mancheGaucheHaut)
-			.ajouter(mancheGaucheBas)
-			.ajouter(coudeGauche2)
-			.ajouter(aisselleGauche)
-			.ajouter(tailleGauche)
-			.ajouter(chevilleGauche1)
-			.ajouter(piedGauche1)
-			.ajouter(piedGauche2)
-			.ajouter(chevilleGauche2)
-			.ajouter(piGauche)
-			.ajouter(piDroite)
-			.ajouter(chevilleDroite1)
-			.ajouter(piedDroite1)
-			.ajouter(piedDroite2)
-			.ajouter(chevilleDroite2)
-			.ajouter(tailleDroite)
-			.ajouter(aisselleDroite)
-			.ajouter(coudeDroite1)
-			.ajouter(mancheDroite1)
-			.ajouter(mancheDroite)
-			.ajouter(coudeDroite2)
-			.ajouter(finEpauleDroite)
-			.ajouter(debEpauleDroite)
-			.couleurDeFond(Couleur.GRIS)
-			.nePasRelierLesPointsExtreme();
-	
+				demarrerNouveauDessinAvecDesPoints()
+					.ajouter(mentond)
+		  			.ajouter(mentonc)
+		  			.ajouter(mentonb)
+		  			.ajouter(mentona)
+					.ajouter(debEpauleGauche)
+					.ajouter(finEpauleGauche)
+					.ajouter(coudeGauche1)
+					.ajouter(mancheGaucheHaut)
+					.ajouter(mancheGaucheBas)
+					.ajouter(coudeGauche2)
+					.ajouter(aisselleGauche)
+					.ajouter(tailleGauche)
+					.ajouter(chevilleGauche1)
+					.ajouter(piedGauche1)
+					.ajouter(piedGauche2)
+					.ajouter(chevilleGauche2)
+					.ajouter(piGauche)
+					.ajouter(piDroite)
+					.ajouter(chevilleDroite1)
+					.ajouter(piedDroite1)
+					.ajouter(piedDroite2)
+					.ajouter(chevilleDroite2)
+					.ajouter(tailleDroite)
+					.ajouter(aisselleDroite)
+					.ajouter(coudeDroite1)
+					.ajouter(mancheDroite1)
+					.ajouter(mancheDroite)
+					.ajouter(coudeDroite2)
+					.ajouter(finEpauleDroite)
+					.ajouter(debEpauleDroite)
+					.couleurDeFond(Couleur.GRIS)
+					.nePasRelierLesPointsExtreme();
 		
 		
 		//MAIN GAUCHE
@@ -210,10 +186,33 @@ public class DessinsGroupe1 extends CreateurDeForme {
 			.ajouter(doigtG3a)
 			.ajouter(doigtG3b)
 			.nePasRelierLesPointsExtreme();
+		
+		
+		// doigts de la main droite
+		Point doigtD1a = new Point(12*x + l,13*x);
+		Point doigtD1b = new Point(12*x + l,12.75*x);
+		Point doigtD2a = new Point(12*x + 2*l,13*x);
+		Point doigtD2b = new Point(12*x + 2*l,12.75*x);
+		Point doigtD3a = new Point(12*x + 3*l,13*x);
+		Point doigtD3b = new Point(12*x + 3*l,12.75*x);
+
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(doigtD1a)
+			.ajouter(doigtD1b)
+			.nePasRelierLesPointsExtreme();
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(doigtD2a)
+			.ajouter(doigtD2b)
+			.nePasRelierLesPointsExtreme();
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(doigtD3a)
+			.ajouter(doigtD3b)
+			.nePasRelierLesPointsExtreme();
 	}
 	
 	public void dessinerCheveux(){
-		
 		Point basGaucheTete = new Point(2*x,7*x);
         Point gaucheTete2 = new Point(x,3*x);
         Point gaucheTete3 = new Point(x,x);
@@ -238,7 +237,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
         .ajouter(hautDroite4)
         .ajouter(basDroite)
         .nePasRelierLesPointsExtreme();
-	}
+		}
 	
 	public void dessinerNez(){   
         Point basGaucheNez = new Point(6.75*x,5.25*x);
@@ -272,7 +271,48 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	    .ajouter(teteg)
 	   .nePasRelierLesPointsExtreme();
 	}
-  
+	
+	public void dessinerRayban(){
+		Point lunettea = new Point(75,100);
+        Point lunetteb = new Point(125,125);
+        Point lunettec = new Point(175,100);
+        Point lunetted = new Point(225,125);
+        Point lunettee = new Point(275,100);
+        Point lunettef = new Point(75,75);
+        Point lunetteg = new Point(125,50);
+        Point lunetteh = new Point(175,75);
+        Point lunettei = new Point(225,50);
+        Point lunettej = new Point(275,75);
+	  
+       		demarrerNouveauDessinAvecDesPoints()
+       			.ajouter(lunettea)
+       			.ajouter(lunetteb)
+       			.ajouter(lunettec)
+       			.ajouter(lunetted)
+       			.ajouter(lunettee)
+       			.ajouter(lunettej)
+       			.ajouter(lunettei)
+       			.ajouter(lunetteh)
+       			.ajouter(lunetteg)
+       			.ajouter(lunettef)
+       			.couleurDeFond(Couleur.GRIS)
+       			.nePasRelierLesPointsExtreme();
+	}
+	
+	public void dessinerBouche(){
+
+	}
+
+	
+	public void dessinerYeux(){
+		
+	}
+	public void dessinerCorps(){
+
+			
+	}
+
+
 }
 
 
