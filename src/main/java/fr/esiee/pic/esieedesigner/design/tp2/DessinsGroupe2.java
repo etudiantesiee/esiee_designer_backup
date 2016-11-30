@@ -19,7 +19,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Pas de dessin horizontale
 	 */
 	private static final double UNITE_HORIZONTALE = 25;
-	private static final double OFFSET = 1050;
+	
 	/**
 	 * Pas de dessin verticale
 	 */
@@ -27,40 +27,34 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	private static final Point ORIGIN= new Point(60*25,5*25);
 
-
 	@Override
 	public void dessiner() {
 
 
-		 Point talonDroite = new Point(0+origin.getX(),UNITE_VERTICALE*14 + origin.getY());
-		 Point boutpiedDroite = new Point((2*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*14 + origin.getY());
-		 Point hautpiedDroite = new Point((1*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*13 + origin.getY());
+		 Point talonDroite = new Point(0+ORIGIN.getX(),UNITE_VERTICALE*14 + ORIGIN.getY());
+		 Point boutpiedDroite = new Point((2*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*14 + ORIGIN.getY());
+		 Point hautpiedDroite = new Point((1*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*13 + ORIGIN.getY());
 		 
-		 Point jupebasDroite = new Point((5*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*13 + origin.getY());
+		 Point jupebasDroite = new Point((5*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*13 + ORIGIN.getY());
 		 
 		 
-		 Point jupehautDroite = new Point((4*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*11 + origin.getY());
-		 Point aisselleDroite = new Point((4*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*10 + origin.getY());
+		 Point jupehautDroite = new Point((4*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*11 + ORIGIN.getY());
+		 Point aisselleDroite = new Point((4*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*10 + ORIGIN.getY());
 		 
-		 Point manche1Droite = new Point((5*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*11 + origin.getY());
+		 Point manche1Droite = new Point((5*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*11 + ORIGIN.getY());
 		 
-		 Point main1Droite = new Point((6*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*12 + origin.getY());
-		 Point main2Droite = new Point((6*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*11 + origin.getY());
-		 Point main3Droite = new Point((7*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*11 + origin.getY());
+		 Point main1Droite = new Point((6*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*12 + ORIGIN.getY());
+		 Point main2Droite = new Point((6*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*11 + ORIGIN.getY());
+		 Point main3Droite = new Point((7*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*11 + ORIGIN.getY());
 		 
-		 Point manche2Droite = new Point((6*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*10 + origin.getY());
+		 Point manche2Droite = new Point((6*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*10 + ORIGIN.getY());
 		
 		 
-		 Point epauleDroite = new Point((4*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*8 + origin.getY());
-		 Point couDroite = new Point((3*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*8 + origin.getY());
+		 Point epauleDroite = new Point((4*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*8 + ORIGIN.getY());
+		 Point couDroite = new Point((3*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*8 + ORIGIN.getY());
 		 
-		 Point sysmetriecorpsDroite = new Point((4*UNITE_HORIZONTALE)+origin.getX(),UNITE_VERTICALE*8 + origin.getY());
-		 
-<<<<<<< HEAD
+		 Point sysmetriecorpsDroite = new Point((4*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*8 + ORIGIN.getY());
 
- 
-=======
->>>>>>> 348c18c239420c73c35bcdba1bee9e26947812f9
 		 
 		 demarrerNouveauDessinAvecDesPoints()
       		.ajouter(talonDroite)
@@ -76,13 +70,10 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		    .ajouter(manche2Droite)
 		    .ajouter(epauleDroite)
 		    .ajouter(sysmetriecorpsDroite)
-<<<<<<< HEAD
 		    .ajouter(couDroite)
 		    .nePasRelierLesPointsExtreme();
 		 
 		 demarrerNouveauDessinAvecDesPoints()
-=======
->>>>>>> 348c18c239420c73c35bcdba1bee9e26947812f9
 		 	.ajouter(getSymetrie(talonDroite))
 			.ajouter(getSymetrie(boutpiedDroite))
 			.ajouter(getSymetrie(hautpiedDroite))
@@ -99,7 +90,31 @@ public class DessinsGroupe2 extends CreateurDeForme {
 			.ajouter(getSymetrie(couDroite))
 			.nePasRelierLesPointsExtreme();
 			
-		
+		 demarrerNouveauDessinAvecDesPoints()
+		 .ajouter(manche1Droite)
+		 .ajouter(manche2Droite);
+		 
+		 demarrerNouveauDessinAvecDesPoints()
+		 .ajouter(getSymetrie(manche1Droite))
+		 .ajouter(getSymetrie(manche2Droite));
+		 
+		 Point jupehautGauche = new Point((-4*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*11 + ORIGIN.getY());
+		 
+		 demarrerNouveauDessinAvecDesPoints()
+		 .ajouter(getSymetrie(jupehautDroite))
+		 .ajouter(getSymetrie(jupehautGauche));
+		 
+		 Point hautpiedGauche = new Point((-1*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*13 + ORIGIN.getY());
+		 
+		 demarrerNouveauDessinAvecDesPoints()
+		 .ajouter(getSymetrie(hautpiedDroite))
+		 .ajouter(getSymetrie(hautpiedGauche));
+		 
+		 Point chevilleDroite = new Point(0+ORIGIN.getX(),UNITE_VERTICALE*13 + ORIGIN.getY());
+		 
+		 demarrerNouveauDessinAvecDesPoints()
+		 .ajouter(getSymetrie(chevilleDroite))
+		 .ajouter(getSymetrie(talonDroite));
 	
 
 		
