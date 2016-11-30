@@ -114,7 +114,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
      * dessin des lunettes
      */
     public void dessinerLunette() {
-    	
+    	// Création de jolie lunette 
      Point lunette1 = new Point(POINT_DEPART.getX() + UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
      Point lunette2 = new Point(lunette1.getX() , lunette1.getY() -UNITE_VERTICALE);
      Point lunette3 = new Point(lunette2.getX() + 6*UNITE_HORIZONTALE, lunette2.getY());
@@ -154,6 +154,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
      */
     public void dessinerNarineGauche() {
     	//Definition des points et des variables
+
     	Point nez = new Point (POINT_DEPART.getX() + 4 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 6 * UNITE_VERTICALE);
     	double longueurHorizontaleNarineGauche = 5;
     	double longueurVerticaleNarineGauche = 6;
@@ -205,6 +206,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
      * dessin du menton
      */
     public void dessinerMenton() {
+    	// ajout de variable pour pouvoir placer plus précisement 
     	double untier = 7.5;
     	double decalage = 5.5;
     	double longueurmenton = 7.5;
