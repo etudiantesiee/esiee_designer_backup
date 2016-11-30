@@ -156,6 +156,22 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point m= new Point(origin.getX()+50,origin.getY()+75);
 		Point n= new Point(origin.getX()+25,origin.getY()+75);
 		Point o= new Point(origin.getX()+0,origin.getY()+50);
+
+		Point a= new Point(ORIGIN.getX()+50,ORIGIN.getY()+0);
+		Point b= new Point(ORIGIN.getX()+100,ORIGIN.getY()+25);
+		Point c= new Point(ORIGIN.getX()+150,ORIGIN.getY()+75);
+		Point d= new Point(ORIGIN.getX()+150,ORIGIN.getY()+200);
+		Point e= new Point(ORIGIN.getX()+125,ORIGIN.getY()+150);
+		Point f= new Point(ORIGIN.getX()+125,ORIGIN.getY()+100);
+		Point g= new Point(ORIGIN.getX()+125,ORIGIN.getY()+200);
+		Point h= new Point(ORIGIN.getX()+100,ORIGIN.getY()+150);
+		Point i= new Point(ORIGIN.getX()+100,ORIGIN.getY()+125);
+		Point j= new Point(ORIGIN.getX()+100,ORIGIN.getY()+175);
+		Point k= new Point(ORIGIN.getX()+75,ORIGIN.getY()+125);
+		Point l= new Point(ORIGIN.getX()+75,ORIGIN.getY()+100);
+		Point m= new Point(ORIGIN.getX()+50,ORIGIN.getY()+75);
+		Point n= new Point(ORIGIN.getX()+25,ORIGIN.getY()+75);
+		Point o= new Point(ORIGIN.getX()+0,ORIGIN.getY()+50);
 		
 		/*dessin cheveux*/
 		demarrerNouveauDessinAvecDesPoints().ajouter(a)
