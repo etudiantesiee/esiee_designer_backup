@@ -12,7 +12,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
  * 
  * @author ady & diane
  *         florian
- *         amineoos &pradhox
+ *         amineoos &pradhoX
  */
 public class DessinsGroupe1 extends CreateurDeForme{
 
@@ -51,33 +51,37 @@ public class DessinsGroupe1 extends CreateurDeForme{
 		dessinerMainDroite();
 		
 		//Bras GRAUCHE
-				Point debEpauleGauche = new Point(4*(X+30),8*X);
-				Point finEpauleGauche = new Point(3*(X+30), 8*X);
-				Point coudeGauche1 = new Point(1*(X+30), 10*X);
-				Point coudeGauche2 = new Point(2*(X+30), 11*X);
-				Point mancheGaucheHaut = new Point(1*(X+30), 12*X);
-				Point mancheGaucheBas = new Point(2*(X+30), 12*X);
-				Point aisselleGauche = new Point(3*(X+30), 10*X);
-				Point tailleGauche = new Point(5*(X+30),11*X);
-				Point chevilleGauche1 = new Point(4*(X+30),13*X);
-				Point piedGauche1 = new Point(3*(X+30),14*X);
-				Point chevilleGauche2 = new Point(5*(X+30),13*X);
-				Point piedGauche2 = new Point(6*(X+30),14*X);
-				Point piGauche = new Point(6*(X+30),12*X);
-				Point piDroite = new Point(8*(X+30),12*X);
-
-				Point chevilleDroite1 = new Point(9*(X+30),13*X);
-				Point piedDroite1 = new Point(8*(X+30),14*X);
-				Point piedDroite2 = new Point(11*(X+30),14*X);
-				Point chevilleDroite2 = new Point(10*(X+30),13*X);
-				Point tailleDroite = new Point(9*(X+30),11*X);
-				Point aisselleDroite = new Point(11*(X+30),10*X);
-				Point coudeDroite1 = new Point(12*(X+30),11*X);
-				Point mancheDroite1 = new Point(12*(X+30),12*X);	
-				Point mancheDroite = new Point(13*(X+30),12*X);
-				Point coudeDroite2 = new Point(13*(X+30),10*X);
-				Point debEpauleDroite = new Point(10*(X+30),8*X);
-				Point finEpauleDroite = new Point(11*(X+30), 8*X);				
+				Point debEpauleGauche = new Point((4+30)*X,8*X);
+				Point finEpauleGauche = new Point((3+30)*X, 8*X);
+				Point coudeGauche1 = new Point((1+30)*X, 10*X);
+				Point coudeGauche2 = new Point((2+30)*X, 11*X);
+				Point mancheGaucheHaut = new Point((1+30)*X, 12*X);
+				Point mancheGaucheBas = new Point((2+30)*X, 12*X);
+				Point aisselleGauche = new Point((3+30)*X, 10*X);
+				Point tailleGauche = new Point((5+30)*X,11*X);
+				Point chevilleGauche1 = new Point((4+30)*X,13*X);
+				Point piedGauche1 = new Point((3+30)*X,14*X);
+				Point chevilleGauche2 = new Point((5+30)*X,13*X);
+				Point piedGauche2 = new Point((6+30)*X,14*X);
+				Point piGauche = new Point((6+30)*X,12*X);
+				Point piDroite = new Point((8+30)*X,12*X);
+				
+						
+					
+				//Bas du corps DROITE
+				Point chevilleDroite1 = new Point((9+30)*X,13*X);
+				Point piedDroite1 = new Point((8+30)*X,14*X);
+				Point piedDroite2 = new Point((11+30)*X,14*X);
+				Point chevilleDroite2 = new Point((10+30)*X,13*X);
+				Point tailleDroite = new Point((9+30)*X,11*X);
+				Point aisselleDroite = new Point((11+30)*X,10*X);
+				Point coudeDroite1 = new Point((12+30)*X,11*X);
+				Point mancheDroite1 = new Point((12+30)*X,12*X);	
+				Point mancheDroite = new Point((13+30)*X,12*X);
+				Point coudeDroite2 = new Point((13+30)*X,10*X);
+				Point debEpauleDroite = new Point((10+30)*X,8*X);
+				Point finEpauleDroite = new Point((11+30)*X, 8*X);
+				
 
 				demarrerNouveauDessinAvecDesPoints()
 					.ajouter(mentond)
@@ -122,11 +126,11 @@ public class DessinsGroupe1 extends CreateurDeForme{
 		  
 		double l = 6.25;
 		//Main gauche
-		Point mainGauche1 = new Point(1*(X+30),13*X);
-		Point mainGauche2 = new Point(2*(X+30),13*X);
-		Point mancheGaucheHaut = new Point(1*(X+30), 12*X);
-		Point mancheGaucheBas = new Point(2*(X+30), 12*X);
-		
+		Point mainGauche1 = new Point((1+30)*X,13*X);
+		Point mainGauche2 = new Point((2+30)*X,13*X);
+		Point mancheGaucheHaut = new Point((1+30)*X, 12*X);
+		Point mancheGaucheBas = new Point((2+30)*X, 12*X);
+
 		demarrerNouveauDessinAvecDesPoints()
 			.ajouter(mancheGaucheHaut)
 			.ajouter(mainGauche1)
@@ -135,12 +139,12 @@ public class DessinsGroupe1 extends CreateurDeForme{
 			.nePasRelierLesPointsExtreme();
 		
 		//Doigts gauche
-		Point doigtG1a = new Point(1*(X+30) + l,13*X);
-		Point doigtG1b = new Point(1*(X+30) + l,12.75*X);
-		Point doigtG2a = new Point(1*(X+30) + 2*l,13*X);
-		Point doigtG2b = new Point(1*(X+30) + 2*l,12.75*X);
-		Point doigtG3a = new Point(1*(X+30) + 3*l,13*X);
-		Point doigtG3b = new Point(1*(X+30) + 3*l,12.75*X);
+		Point doigtG1a = new Point((1+30)*X + l,13*X);
+		Point doigtG1b = new Point((1+30)*X + l,12.75*X);
+		Point doigtG2a = new Point((1+30)*X + 2*l,13*X);
+		Point doigtG2b = new Point((1+30)*X+ 2*l,12.75*X);
+		Point doigtG3a = new Point((1+30)*X + 3*l,13*X);
+		Point doigtG3b = new Point((1+30)*X + 3*l,12.75*X);
 
 		demarrerNouveauDessinAvecDesPoints()
 			.ajouter(doigtG1a)
@@ -169,11 +173,11 @@ public class DessinsGroupe1 extends CreateurDeForme{
 		  
 		double l = 6.25;
 		
-		Point mainDroite1 = new Point(12*(X+30),13*X);
-		Point mainDroite2 = new Point(13*(X+30),13*X);
-		Point mancheDroite1 = new Point(12*(X+30),12*X);	
-		Point mancheDroite = new Point(13*(X+30),12*X);
-		
+		Point mainDroite1 = new Point((12+30)*X,13*X);
+		Point mainDroite2 = new Point((13+30)*X,13*X);
+		Point mancheDroite1 = new Point((12+30)*X,12*X);	
+		Point mancheDroite = new Point((13+30)*X,12*X);
+
 		demarrerNouveauDessinAvecDesPoints()
 			.ajouter(mancheDroite1)
 			.ajouter(mainDroite1)
@@ -184,12 +188,13 @@ public class DessinsGroupe1 extends CreateurDeForme{
 		
 		// doigts de la main droite
 
-		Point doigtD1a = new Point(12*(X) + l,13*X);
-		Point doigtD1b = new Point(12*(X+30) + l,12.75*X);
-		Point doigtD2a = new Point(12*(X+30) + 2*l,13*X);
-		Point doigtD2b = new Point(12*(X+30) + 2*l,12.75*X);
-		Point doigtD3a = new Point(12*(X+30) + 3*l,13*X);
-		Point doigtD3b = new Point(12*(X+30) + 3*l,12.75*X);
+		Point doigtD1a = new Point((12+30)*X + l,13*X);
+		Point doigtD1b = new Point((12+30)*X + l,12.75*X);
+		Point doigtD2a = new Point((12+30)*X + 2*l,13*X);
+		Point doigtD2b = new Point((12+30)*X + 2*l,12.75*X);
+		Point doigtD3a = new Point((12+30)*X + 3*l,13*X);
+		Point doigtD3b = new Point((12+30)*X+ 3*l,12.75*X);
+
 
 		demarrerNouveauDessinAvecDesPoints()
 			.ajouter(doigtD1a)
