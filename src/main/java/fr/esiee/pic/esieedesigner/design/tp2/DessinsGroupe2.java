@@ -19,7 +19,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Pas de dessin horizontale
 	 */
 	private static final double UNITE_HORIZONTALE = 25;
-	
+
 	/**
 	 * Pas de dessin verticale
 	 */
@@ -90,7 +90,13 @@ public class DessinsGroupe2 extends CreateurDeForme {
 			.ajouter(getSymetrie(sysmetriecorpsDroite))
 			.ajouter(getSymetrie(couDroite))
 			.nePasRelierLesPointsExtreme();
-			
+
+		
+		
+		
+		
+		
+		
 		 demarrerNouveauDessinAvecDesPoints()
 		 .ajouter(manche1Droite)
 		 .ajouter(manche2Droite);
@@ -116,8 +122,12 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		 demarrerNouveauDessinAvecDesPoints()
 		 .ajouter(getSymetrie(chevilleDroite))
 		 .ajouter(getSymetrie(talonDroite));
-	
+		 
+		 dessinTete();
+			
+	}
 
+	private void dessinTete(){
 		
 		/*cheveux*/
 		Point a= new Point(ORIGIN.getX()+50,ORIGIN.getY()+0);
@@ -136,53 +146,6 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point n= new Point(ORIGIN.getX()+25,ORIGIN.getY()+75);
 		Point o= new Point(ORIGIN.getX()+0,ORIGIN.getY()+50);
 		
-		/*
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz	 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz	 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz	 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-		 */
 		/*dessin cheveux*/
 		demarrerNouveauDessinAvecDesPoints().ajouter(a)
 		.ajouter(b)
@@ -259,10 +222,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		ajouterEllipse(new Ellipse(x, 10, 20), Couleur.NOIR);
 		ajouterEllipse(new Ellipse(getSymetrie(x), 10, 20), Couleur.NOIR);
 		
-		}
-	
-
-	
+		
+	}
 	
 	private Point getSymetrie(Point point){
 		return new Point(2*ORIGIN.getX()-point.getX(), point.getY());
