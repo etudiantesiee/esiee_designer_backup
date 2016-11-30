@@ -30,11 +30,6 @@ public class DessinsGroupe1 extends CreateurDeForme{
 	/**
 	 *  Methode de dessin du peronnage du groupe 1  
 	 *  Methode de dessin du peronnage du groupe 1
-	 *  Methode de dessin du peronnage du groupe 1
-	 *  Methode de dessin du peronnage du groupe 1
-	 *  Methode de dessin du peronnage du groupe 1
-	 *  Methode de dessin du peronnage du groupe 1
-	 *  Methode de dessin du peronnage du groupe 1
 	 *  
 	 */
 	public void dessiner() {
@@ -61,14 +56,8 @@ public class DessinsGroupe1 extends CreateurDeForme{
 	/**
 	 * dessin maingauche
 	 * dessin maingauche
-	 * dessin maingauche
-	 * dessin maingauche
-	 * dessin maingauche
-	 * dessin maingauche
-	 * dessin maingauche
-	 * dessin maingauche
-	 * dessin maingauche
-	 * dessin maingauche
+	 * la main gauche a été faite de maniere a commencer par la gauche et ensuite 
+	 * 
 	 * 
 	 */
 	public void dessinerMainGauche(){
