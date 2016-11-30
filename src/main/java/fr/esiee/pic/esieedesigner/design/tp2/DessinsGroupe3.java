@@ -164,9 +164,10 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin 
      */
     public void dessinerMenton() {
-    	double untier = 16.6;
-    	double longueurmenton = 20;
-    	Point menton1 = new Point(POINT_DEPART.getX() -untier+ 4*UNITE_HORIZONTALE, POINT_DEPART.getY() -2*UNITE_VERTICALE-untier);
+    	double untier = 7.5;
+    	double decalage = 5.5;
+    	double longueurmenton = 7.5;
+    	Point menton1 = new Point(POINT_DEPART.getX() - decalage+ 4*UNITE_HORIZONTALE, POINT_DEPART.getY() -2*UNITE_VERTICALE-untier);
     	Point menton2 = new Point(menton1.getX() +longueurmenton, menton1.getY());
     	demarrerNouveauDessinAvecDesPoints()
         
@@ -180,7 +181,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin 
      */
     public void dessinerCheveux1() {
-       double troisquart = 32.5;
+       double troisquart = 36.5;
  	   Point cheveux11 = new Point (POINT_DEPART.getX() + UNITE_HORIZONTALE,POINT_DEPART.getY() - 11*UNITE_VERTICALE);
  	   Point cheveux12 = new Point (cheveux11.getX() + 2*UNITE_HORIZONTALE,cheveux11.getY() + UNITE_VERTICALE );
  	   Point cheveux13 = new Point (cheveux12.getX()- UNITE_HORIZONTALE, cheveux12.getY() - troisquart);
@@ -211,7 +212,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin 
      */
     public void dessinerCheveux3() {
-        double troisquart = 32.5;
+        double troisquart = 36.5;
   	   Point cheveux31 = new Point (POINT_DEPART.getX() + 7*UNITE_HORIZONTALE,POINT_DEPART.getY() - 11*UNITE_VERTICALE);
   	   Point cheveux32 = new Point (cheveux31.getX() - 2*UNITE_HORIZONTALE,cheveux31.getY() + UNITE_VERTICALE );
   	   Point cheveux33 = new Point (cheveux32.getX()+ UNITE_HORIZONTALE, cheveux32.getY() - troisquart);
