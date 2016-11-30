@@ -15,16 +15,16 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	/**
 	 * Unite de dessin Horizontale
 	 */
-	private static final double UNITE_HORIZONTALE = 50;
+	private static final double UNITE_HORIZONTALE = 25;
 	
 	/**
 	 * Unite de dessin Verticale
 	 */
-	private static final double UNITE_VERTICALE = 50;
+	private static final double UNITE_VERTICALE = 25;
 	/**
 	 * Point de depart du dessin
 	 */
-	private static final Point POINT_DEPART = new Point(UNITE_HORIZONTALE*15, UNITE_VERTICALE*16);
+	private static final Point POINT_DEPART = new Point(UNITE_HORIZONTALE*35, UNITE_VERTICALE*26);
 
     /**
      * dessin
@@ -91,7 +91,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
      */
     public void dessinerYeuxD() {
     	Point centreOeilDroite = new Point(POINT_DEPART.getX() + 5*UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
-		Ellipse oeilDroite = new Ellipse(centreOeilDroite, 10, 20);
+		Ellipse oeilDroite = new Ellipse(centreOeilDroite, 10, 10);
 		
 		ajouterEllipse(oeilDroite, Couleur.NOIR);
     }
@@ -100,7 +100,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
      */
     public void dessinerYeuxG() {
     	Point centreOeilGauche = new Point(POINT_DEPART.getX() + 3*UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
-		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 10, 20);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 10, 10);
 		
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
         
@@ -171,7 +171,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin 
      */
     public void dessinerCheveux1() {
-       double troisquart = 75;
+       double troisquart = 32.5;
  	   Point cheveux11 = new Point (POINT_DEPART.getX() + UNITE_HORIZONTALE,POINT_DEPART.getY() - 11*UNITE_VERTICALE);
  	   Point cheveux12 = new Point (cheveux11.getX() + 2*UNITE_HORIZONTALE,cheveux11.getY() + UNITE_VERTICALE );
  	   Point cheveux13 = new Point (cheveux12.getX()- UNITE_HORIZONTALE, cheveux12.getY() - troisquart);
@@ -202,7 +202,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin 
      */
     public void dessinerCheveux3() {
-        double troisquart = 75;
+        double troisquart = 32.5;
   	   Point cheveux31 = new Point (POINT_DEPART.getX() + 7*UNITE_HORIZONTALE,POINT_DEPART.getY() - 11*UNITE_VERTICALE);
   	   Point cheveux32 = new Point (cheveux31.getX() - 2*UNITE_HORIZONTALE,cheveux31.getY() + UNITE_VERTICALE );
   	   Point cheveux33 = new Point (cheveux32.getX()+ UNITE_HORIZONTALE, cheveux32.getY() - troisquart);
@@ -217,7 +217,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin 
      */
     public void dessinerBrasG() {
-    	double deuxtier = 33.3;
+    	double deuxtier = 16.6;
  	   Point brasG1 = new Point (POINT_DEPART.getX() + UNITE_HORIZONTALE,POINT_DEPART.getY() - 3*UNITE_VERTICALE);
  	   Point brasG2 = new Point (brasG1.getX() - 3*UNITE_HORIZONTALE,brasG1.getY() );
  	   Point brasG3 = new Point (brasG2.getX()+ UNITE_HORIZONTALE, brasG2.getY() - UNITE_VERTICALE);
@@ -242,7 +242,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin 
      */
     public void dessinerBrasD() {
-    	double deuxtier = 33.3;
+    	double deuxtier = 16.6;
  	   Point brasD1 = new Point (POINT_DEPART.getX() + 7*UNITE_HORIZONTALE,POINT_DEPART.getY() - 3*UNITE_VERTICALE);
  	   Point brasD2 = new Point (brasD1.getX() + 3*UNITE_HORIZONTALE,brasD1.getY() );
  	   Point brasD3 = new Point (brasD2.getX()- UNITE_HORIZONTALE, brasD2.getY() - UNITE_VERTICALE);
