@@ -150,7 +150,26 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin 
      */
     public void dessinerBrasG() {
-        
+    	double deuxtier = 33.3;
+ 	   Point brasG1 = new Point (POINT_DEPART.getX() + UNITE_HORIZONTALE,POINT_DEPART.getY() - 3*UNITE_VERTICALE);
+ 	   Point brasG2 = new Point (brasG1.getX() - 3*UNITE_HORIZONTALE,brasG1.getY() );
+ 	   Point brasG3 = new Point (brasG2.getX()+ UNITE_HORIZONTALE, brasG2.getY() - UNITE_VERTICALE);
+ 	   Point brasG4 = new Point (brasG3.getX(),brasG3.getY() - UNITE_VERTICALE);
+ 	   Point brasG5 = new Point (brasG4.getX() + UNITE_HORIZONTALE,brasG4.getY() - 2*UNITE_VERTICALE);
+ 	   Point brasG6 = new Point (brasG5.getX() + deuxtier,brasG5.getY() + 2*UNITE_VERTICALE);
+ 	   Point brasG7 = new Point (brasG6.getX() - deuxtier,brasG6.getY());
+	   Point brasG8 = new Point (brasG7.getX(),brasG7.getY()+ UNITE_VERTICALE);
+ 
+	   demarrerNouveauDessinAvecDesPoints()
+ 	   .ajouter(brasG1)
+ 	   .ajouter(brasG2)
+ 	   .ajouter(brasG3)
+ 	   .ajouter(brasG4)
+ 	   .ajouter(brasG5)
+ 	   .ajouter(brasG6)
+ 	   .ajouter(brasG7)
+ 	   .ajouter(brasG8) 	   
+ 	   .couleurDeFond(Couleur.GRIS);  	         
     }
     /**
      * dessin 
