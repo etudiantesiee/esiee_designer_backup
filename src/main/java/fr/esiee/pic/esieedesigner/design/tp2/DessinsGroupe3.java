@@ -27,7 +27,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 	private static final Point POINT_DEPART = new Point(UNITE_HORIZONTALE*35, UNITE_VERTICALE*26);
 
     /**
-     * dessin
+     * dessin principal où sont appelés toute les fonctions
      */
 	@Override
 	public void dessiner() {
@@ -54,7 +54,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
 
     /**
-     * dessin  
+     * dessin du contour
      */
     public void dessinerContour() {
     	Point mentonBasGauche = new Point (POINT_DEPART.getX() + 3 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 2 * UNITE_VERTICALE); 
