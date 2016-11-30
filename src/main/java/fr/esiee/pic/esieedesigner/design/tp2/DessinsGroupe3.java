@@ -1,6 +1,7 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -72,12 +73,19 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin 
      */
     public void dessinerYeuxD() {
-        
+    	Point centreOeilDroite = new Point(POINT_DEPART.getX() + 5*UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
+		Ellipse oeilDroite = new Ellipse(centreOeilDroite, 10, 20);
+		
+		ajouterEllipse(oeilDroite, Couleur.NOIR);
     }
     /**
      * dessin 
      */
     public void dessinerYeuxG() {
+    	Point centreOeilGauche = new Point(POINT_DEPART.getX() + 3*UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 10, 20);
+		
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
         
     }
     /**
