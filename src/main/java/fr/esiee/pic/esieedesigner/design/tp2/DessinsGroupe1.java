@@ -1,4 +1,5 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
+
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
@@ -13,7 +14,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
  *         florian
  *         amineoos &pradhox
  */
-public class DessinsGroupe1 extends CreateurDeForme {
+public class DessinsGroupe1 extends CreateurDeForme{
 
 	/**
 	 *  Methode de dessin du personnage du groupe 1  
@@ -35,32 +36,30 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		dessinerTete();
 		dessinerRayban();
 		dessinerBouche();
+		dessinerYeuxGauche();
+		dessinerYeuxDroit();
          
 
         		
       
 
-		// TETE
-        //On a intégré votre code dans le notre
 
-  
 		
-		// yeux gauche
-		Point centreOeilGauche = new Point(150, 100);
-		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 5, 5);
-		ajouterEllipse(oeilGauche, Couleur.NOIR);
-		
-		// yeux droit
-		Point centreOeilDroit = new Point(200, 100);
-		Ellipse oeilDroit = new Ellipse(centreOeilDroit, 5, 5);
-		ajouterEllipse(oeilDroit, Couleur.NOIR);
 
+		
+		
+		
+		
 		// PARTIE A&D
 		
 		Point mentona = new Point(75,175);
 		Point mentonb = new Point(150,250);
 		Point mentonc = new Point(200,250);
 		Point mentond = new Point(275,175);
+		
+		// Main
+		dessinerMainGauche();
+		dessinerMainDroite();
 		
 		//Bras GRAUCHE
 				Point debEpauleGauche = new Point(4*x,8*x);
@@ -128,12 +127,18 @@ public class DessinsGroupe1 extends CreateurDeForme {
 					.ajouter(debEpauleDroite)
 					.couleurDeFond(Couleur.GRIS)
 					.nePasRelierLesPointsExtreme();
+	}
+	
+	
+	public void dessinerMainGauche(){
 		
-		
-		//MAIN GAUCHE
-		
+		  
+		double l = 6.25;
+		//Main gauche
 		Point mainGauche1 = new Point(1*x,13*x);
 		Point mainGauche2 = new Point(2*x,13*x);
+		Point mancheGaucheHaut = new Point(1*x, 12*x);
+		Point mancheGaucheBas = new Point(2*x, 12*x);
 		
 		demarrerNouveauDessinAvecDesPoints()
 			.ajouter(mancheGaucheHaut)
@@ -142,23 +147,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 			.ajouter(mancheGaucheBas)
 			.nePasRelierLesPointsExtreme();
 		
-		// MAIN DROITE
-
-		Point mainDroite1 = new Point(12*x,13*x);
-		Point mainDroite2 = new Point(13*x,13*x);
-		
-		demarrerNouveauDessinAvecDesPoints()
-			.ajouter(mancheDroite1)
-			.ajouter(mainDroite1)
-			.ajouter(mainDroite2)
-			.ajouter(mancheDroite)
-			.nePasRelierLesPointsExtreme();
-         
-		double l = 6.25;
-		
-		
-		// doigts de la main gauche
-		
+		//Doigts gauche
 		Point doigtG1a = new Point(1*x + l,13*x);
 		Point doigtG1b = new Point(1*x + l,12.75*x);
 		Point doigtG2a = new Point(1*x + 2*l,13*x);
@@ -179,6 +168,27 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		demarrerNouveauDessinAvecDesPoints()
 			.ajouter(doigtG3a)
 			.ajouter(doigtG3b)
+			.nePasRelierLesPointsExtreme();
+		
+		
+	}
+	
+	public void dessinerMainDroite(){
+		// MAIN DROITE
+	
+		  
+		double l = 6.25;
+		
+		Point mainDroite1 = new Point(12*x,13*x);
+		Point mainDroite2 = new Point(13*x,13*x);
+		Point mancheDroite1 = new Point(12*x,12*x);	
+		Point mancheDroite = new Point(13*x,12*x);
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(mancheDroite1)
+			.ajouter(mainDroite1)
+			.ajouter(mainDroite2)
+			.ajouter(mancheDroite)
 			.nePasRelierLesPointsExtreme();
 		
 		
@@ -247,13 +257,13 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	
 	public void dessinerTete(){
 		
-		Point tetea = new Point(75,175);
-	    Point teteb = new Point(75,75);
-	    Point tetec = new Point(125,50);
-	    Point teted = new Point(175,75);
-	    Point tetee = new Point(225,50);
-	    Point tetef = new Point(275,75);
-	    Point teteg = new Point(275,175);
+		Point tetea = new Point(825,175);
+	    Point teteb = new Point(825,75);
+	    Point tetec = new Point(875,50);
+	    Point teted = new Point(925,75);
+	    Point tetee = new Point(975,50);
+	    Point tetef = new Point(1025,75);
+	    Point teteg = new Point(1025,175);
 	        
 	    demarrerNouveauDessinAvecDesPoints()
 	    .ajouter(tetea)
@@ -267,16 +277,16 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	public void dessinerRayban(){
-		Point lunettea = new Point(75,100);
-        Point lunetteb = new Point(125,125);
-        Point lunettec = new Point(175,100);
-        Point lunetted = new Point(225,125);
-        Point lunettee = new Point(275,100);
-        Point lunettef = new Point(75,75);
-        Point lunetteg = new Point(125,50);
-        Point lunetteh = new Point(175,75);
-        Point lunettei = new Point(225,50);
-        Point lunettej = new Point(275,75);
+		Point lunettea = new Point(750+75,100);
+        Point lunetteb = new Point(750+125,125);
+        Point lunettec = new Point(750+175,100);
+        Point lunetted = new Point(750+225,125);
+        Point lunettee = new Point(750+275,100);
+        Point lunettef = new Point(750+75,75);
+        Point lunetteg = new Point(750+125,50);
+        Point lunetteh = new Point(750+175,75);
+        Point lunettei = new Point(750+225,50);
+        Point lunettej = new Point(750+275,75);
 	  
        		demarrerNouveauDessinAvecDesPoints()
        			.ajouter(lunettea)
@@ -294,8 +304,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	public void dessinerBouche(){
-        Point bouchea = new Point(150,200);
-        Point boucheb = new Point(200,200);
+        Point bouchea = new Point(750+150,200);
+        Point boucheb = new Point(750+200,200);
         	
         	demarrerNouveauDessinAvecDesPoints()
   				.ajouter(bouchea)
@@ -307,11 +317,23 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 
 	
-	public void dessinerYeux(){
+	public void dessinerYeuxGauche(){
+		
+		Point centreOeilGauche = new Point(150, 100);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 5, 5);
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
+		
+	}
+	
+public void dessinerYeuxDroit(){
+
+		Point centreOeilDroit = new Point(200, 100);
+		Ellipse oeilDroit = new Ellipse(centreOeilDroit, 5, 5);
+		ajouterEllipse(oeilDroit, Couleur.NOIR);
 		
 	}
 	public void dessinerCorps(){
-
+		
 			
 	}
 

@@ -24,10 +24,10 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 	/**
 	 * Point de depart du dessin
 	 */
-	private static final Point POINT_DEPART = new Point(UNITE_HORIZONTALE*35, UNITE_VERTICALE*26);
+	private static final Point POINT_DEPART = new Point(UNITE_HORIZONTALE*54, UNITE_VERTICALE*26);
 
     /**
-     * dessin
+     * dessin principal où sont appelés toute les fonctions
      */
 	@Override
 	public void dessiner() {
@@ -54,7 +54,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
 
     /**
-     * dessin  
+     * dessin du contour
      */
     public void dessinerContour() {
     	Point mentonBasGauche = new Point (POINT_DEPART.getX() + 3 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 2 * UNITE_VERTICALE); 
@@ -149,10 +149,15 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
      */
     public void dessinerNarineGauche() {
     	Point nez = new Point (POINT_DEPART.getX() + 4 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 6 * UNITE_VERTICALE);
+    	double longueurHorizontaleNarineGauche = 5;
+    	double longueurVerticaleNarineGauche = 6;
+    	Point narineGauche = new Point (nez.getX() - longueurHorizontaleNarineGauche, nez.getY() + longueurVerticaleNarineGauche);
+    	
     	
     	demarrerNouveauDessinAvecDesPoints()
     	
-    	.ajouter(nez);
+    	.ajouter(nez)
+    	.ajouter(narineGauche);
     	
     }
     
@@ -160,7 +165,15 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
      * dessin de la narine droite
      */
     public void dessinerNarineDroite() {
+    	Point nez = new Point (POINT_DEPART.getX() + 4 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 6 * UNITE_VERTICALE);
+    	double longueurHorizontaleNarineDroite = 2;
+    	double longueurVerticaleNarineDroite = 5;
+    	Point narineDroite = new Point (nez.getX() + longueurHorizontaleNarineDroite, nez.getY() + longueurVerticaleNarineDroite);
     	
+    	demarrerNouveauDessinAvecDesPoints()
+    	
+    	.ajouter(nez)
+    	.ajouter(narineDroite);
     }
 
     /**
