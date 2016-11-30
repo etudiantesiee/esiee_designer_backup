@@ -55,6 +55,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		 
 		 Point sysmetriecorpsDroite = new Point((4*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*8 + ORIGIN.getY());
 
+
 		 
 		 demarrerNouveauDessinAvecDesPoints()
       		.ajouter(talonDroite)
