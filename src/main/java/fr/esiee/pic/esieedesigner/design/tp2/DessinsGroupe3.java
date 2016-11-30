@@ -52,7 +52,7 @@
 	
 	
 	/**
-	 * dessin du contour de la tete
+	 * dessin du  
 	 */
 	public void dessinerContour() {
 		Point mentonBasGauche = new Point (POINT_DEPART.getX() + 3 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 2 * UNITE_VERTICALE); 
