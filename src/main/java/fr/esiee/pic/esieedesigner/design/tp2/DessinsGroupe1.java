@@ -18,11 +18,24 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
 
+
 		
 		// variable taille case
 		int x = 25;
 		
-		//Bas du corps GAUCHE
+
+		// Partie Flo
+		
+        Point basGaucheTete = new Point(50,175);
+        Point gaucheTete2 = new Point(25,75);
+
+        
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(basGaucheTete)
+        .ajouter(gaucheTete2)
+        .nePasRelierLesPointsExtreme();
+		
+		//Bras GRAUCHE
 		Point debEpauleGauche = new Point(4*x,8*x);
 		Point finEpauleGauche = new Point(3*x, 8*x);
 		Point coudeGauche1 = new Point(1*x, 10*x);
