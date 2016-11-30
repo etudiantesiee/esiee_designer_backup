@@ -304,7 +304,9 @@ public class DessinsGroupe1 extends CreateurDeForme{
        			.couleurDeFond(Couleur.GRIS)
        			.nePasRelierLesPointsExtreme();
 	}
-	
+	/**
+	 * dessin bouche gauche
+	 */
 	public void dessinerBouche(){
         Point bouchea = new Point(750+150,200);
         Point boucheb = new Point(750+200,200);
