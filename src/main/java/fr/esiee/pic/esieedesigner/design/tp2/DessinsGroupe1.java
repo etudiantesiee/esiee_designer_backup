@@ -1,4 +1,5 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
+import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -18,21 +19,102 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+		
 		// variable taille case
 		int x = 25;
 		
-
-
-		// Partie Flo
+		// Partie Flo Cheveux
 		
-        Point basGaucheTete = new Point(50,175);
-        Point gaucheTete2 = new Point(25,75);
+        Point basGaucheTete = new Point(2*x,7*x);
+        Point gaucheTete2 = new Point(x,3*x);
+        Point gaucheTete3 = new Point(x,x);
+        Point gaucheTete4 = new Point(2*x,0);
+        Point hautDroite = new Point(12*x,0);
+        Point hautDroite2 = new Point(13*x,x);
+        Point hautDroite3 = new Point(13*x,3*x);
+        Point hautDroite4 = new Point(12*x,7*x);
+        Point basDroite = new Point(11*x,7*x);
+        Point basGauche = new Point(3*x,7*x);
+
+
+
+
 
         
         demarrerNouveauDessinAvecDesPoints()
+        .ajouter(basGauche)
         .ajouter(basGaucheTete)
         .ajouter(gaucheTete2)
+        .ajouter(gaucheTete3)
+        .ajouter(gaucheTete4)
+        .ajouter(hautDroite)
+        .ajouter(hautDroite2)
+        .ajouter(hautDroite3)
+        .ajouter(hautDroite4)
+        .ajouter(basDroite)
         .nePasRelierLesPointsExtreme();
+        
+   //// PARTIE AMINE ET PRADHIBAN
+
+    	
+        
+ 	   // tete
+       Point tetea = new Point(75,175);
+       Point teteb = new Point(75,75);
+       Point tetec = new Point(125,50);
+       Point teted = new Point(175,75);
+       Point tetee = new Point(225,50);
+       Point tetef = new Point(275,75);
+       Point teteg = new Point(275,175);
+        
+         	demarrerNouveauDessinAvecDesPoints()
+         		.ajouter(tetea)
+         		.ajouter(teteb)
+         		.ajouter(tetec)
+         		.ajouter(teted)
+         		.ajouter(tetee)
+         		.ajouter(tetef)
+         		.ajouter(teteg)
+         		.nePasRelierLesPointsExtreme();
+       	
+        // lunette rayban aviator
+         Point lunettea = new Point(75,100);
+         Point lunetteb = new Point(125,125);
+         Point lunettec = new Point(175,100);
+         Point lunetted = new Point(225,125);
+         Point lunettee = new Point(275,100);
+ 	  
+        		demarrerNouveauDessinAvecDesPoints()
+        			.ajouter(lunettea)
+        			.ajouter(lunetteb)
+        			.ajouter(lunettec)
+        			.ajouter(lunetted)
+        			.ajouter(lunettee)
+        			.nePasRelierLesPointsExtreme();
+        		
+        //bouche
+          Point bouchea = new Point(150,200);
+          Point boucheb = new Point(200,200);
+    
+             demarrerNouveauDessinAvecDesPoints()
+    				.ajouter(bouchea)
+    				.ajouter(boucheb)
+    				.nePasRelierLesPointsExtreme();
+          
+        
+
+		// TETE
+        //On a intégré votre code dans le notre
+		Point mentona = new Point(75,175);
+		Point mentonb = new Point(150,250);
+		Point mentonc = new Point(200,250);
+		Point mentond = new Point(275,175);
+  
+		
+		
+		
+		
+		// PARTIE A&D
 		
 		//Bras GRAUCHE
 		Point debEpauleGauche = new Point(4*x,8*x);
@@ -50,25 +132,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point piGauche = new Point(6*x,12*x);
 		Point piDroite = new Point(8*x,12*x);
 		
-		
-		demarrerNouveauDessinAvecDesPoints()
-					.ajouter(debEpauleGauche)
-					.ajouter(finEpauleGauche)
-					.ajouter(coudeGauche1)
-					.ajouter(mancheGaucheHaut)
-					.ajouter(mancheGaucheBas)
-					.ajouter(coudeGauche2)
-					.ajouter(aisselleGauche)
-					.ajouter(tailleGauche)
-					.ajouter(chevilleGauche1)
-					.ajouter(piedGauche1)
-					.ajouter(piedGauche2)
-					.ajouter(chevilleGauche2)
-					.ajouter(piGauche)
-					.ajouter(piDroite)
-					.nePasRelierLesPointsExtreme();
 				
-
 			
 		//Bas du corps DROITE
 		Point chevilleDroite1 = new Point(9*x,13*x);
@@ -76,15 +140,34 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point piedDroite2 = new Point(11*x,14*x);
 		Point chevilleDroite2 = new Point(10*x,13*x);
 		Point tailleDroite = new Point(9*x,11*x);
-		Point aisselleDroite = new Point(11*x,12*x);
-		Point coudeDroite1 = new Point(12*x,13*x);
-		Point mancheDroite1 = new Point(12*x,14*x);	
-		Point mancheDroite = new Point(13*x,14*x);
-		Point coudeDroite2 = new Point(13*x,12*x);
-		Point debEpauleDroite = new Point(10*x,10*x);
-		Point finEpauleDroite = new Point(11*x, 10*x);
+		Point aisselleDroite = new Point(11*x,10*x);
+		Point coudeDroite1 = new Point(12*x,11*x);
+		Point mancheDroite1 = new Point(12*x,12*x);	
+		Point mancheDroite = new Point(13*x,12*x);
+		Point coudeDroite2 = new Point(13*x,10*x);
+		Point debEpauleDroite = new Point(10*x,8*x);
+		Point finEpauleDroite = new Point(11*x, 8*x);
+		
 
 		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(mentond)
+  			.ajouter(mentonc)
+  			.ajouter(mentonb)
+  			.ajouter(mentona)
+			.ajouter(debEpauleGauche)
+			.ajouter(finEpauleGauche)
+			.ajouter(coudeGauche1)
+			.ajouter(mancheGaucheHaut)
+			.ajouter(mancheGaucheBas)
+			.ajouter(coudeGauche2)
+			.ajouter(aisselleGauche)
+			.ajouter(tailleGauche)
+			.ajouter(chevilleGauche1)
+			.ajouter(piedGauche1)
+			.ajouter(piedGauche2)
+			.ajouter(chevilleGauche2)
+			.ajouter(piGauche)
+			.ajouter(piDroite)
 			.ajouter(chevilleDroite1)
 			.ajouter(piedDroite1)
 			.ajouter(piedDroite2)
@@ -97,70 +180,11 @@ public class DessinsGroupe1 extends CreateurDeForme {
 			.ajouter(coudeDroite2)
 			.ajouter(finEpauleDroite)
 			.ajouter(debEpauleDroite)
-
-			//.ajouter(piDroite)
+			.couleurDeFond(Couleur.GRIS)
 			.nePasRelierLesPointsExtreme();
 	
 		
 
-//// PARTIE AMINE ET PRADHIBAN
-
-		//menton
-	  Point mentona = new Point(75,175);
-	  Point mentonb = new Point(150,250);
-	  Point mentonc = new Point(200,250);
-	  Point mentond = new Point(275,175);
-	  	demarrerNouveauDessinAvecDesPoints()
-      			.ajouter(mentona)
-      			.ajouter(mentonb)
-      			.ajouter(mentonc)
-      			.ajouter(mentond)
-      			.nePasRelierLesPointsExtreme();
-
-  
-	   // tete
-      Point tetea = new Point(75,175);
-      Point teteb = new Point(75,75);
-      Point tetec = new Point(125,50);
-      Point teted = new Point(175,75);
-      Point tetee = new Point(225,50);
-      Point tetef = new Point(275,75);
-      Point teteg = new Point(275,175);
-       
-        	demarrerNouveauDessinAvecDesPoints()
-        		.ajouter(tetea)
-        		.ajouter(teteb)
-        		.ajouter(tetec)
-        		.ajouter(teted)
-        		.ajouter(tetee)
-        		.ajouter(tetef)
-        		.ajouter(teteg)
-        		.nePasRelierLesPointsExtreme();
-      	
-       // lunette rayban aviator
-        Point lunettea = new Point(75,100);
-        Point lunetteb = new Point(125,125);
-        Point lunettec = new Point(175,100);
-        Point lunetted = new Point(225,125);
-        Point lunettee = new Point(275,100);
-	  
-       		demarrerNouveauDessinAvecDesPoints()
-       			.ajouter(lunettea)
-       			.ajouter(lunetteb)
-       			.ajouter(lunettec)
-       			.ajouter(lunetted)
-       			.ajouter(lunettee)
-       			.nePasRelierLesPointsExtreme();
-       		
-       //bouche
-         Point bouchea = new Point(150,200);
-         Point boucheb = new Point(200,200);
-   
-            demarrerNouveauDessinAvecDesPoints()
-   				.ajouter(bouchea)
-   				.ajouter(boucheb)
-   				.nePasRelierLesPointsExtreme();
-         
               
 	}
   
