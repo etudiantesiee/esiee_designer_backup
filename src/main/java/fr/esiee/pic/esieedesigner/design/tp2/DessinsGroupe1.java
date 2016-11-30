@@ -41,81 +41,8 @@ public class DessinsGroupe1 extends CreateurDeForme{
 
 		// PARTIE A&D
 		
-		Point mentona = new Point(750+75,175);
-		Point mentonb = new Point(750+150,250);
-		Point mentonc = new Point(750+200,250);
-		Point mentond = new Point(750+275,175);
+		dessinerCorps();
 		
-		// Main
-		dessinerMainGauche();
-		dessinerMainDroite();
-		
-		//Bras GRAUCHE
-				Point debEpauleGauche = new Point((4+30)*X,8*X);
-				Point finEpauleGauche = new Point((3+30)*X, 8*X);
-				Point coudeGauche1 = new Point((1+30)*X, 10*X);
-				Point coudeGauche2 = new Point((2+30)*X, 11*X);
-				Point mancheGaucheHaut = new Point((1+30)*X, 12*X);
-				Point mancheGaucheBas = new Point((2+30)*X, 12*X);
-				Point aisselleGauche = new Point((3+30)*X, 10*X);
-				Point tailleGauche = new Point((5+30)*X,11*X);
-				Point chevilleGauche1 = new Point((4+30)*X,13*X);
-				Point piedGauche1 = new Point((3+30)*X,14*X);
-				Point chevilleGauche2 = new Point((5+30)*X,13*X);
-				Point piedGauche2 = new Point((6+30)*X,14*X);
-				Point piGauche = new Point((6+30)*X,12*X);
-				Point piDroite = new Point((8+30)*X,12*X);
-				
-						
-					
-				//Bas du corps DROITE
-				Point chevilleDroite1 = new Point((9+30)*X,13*X);
-				Point piedDroite1 = new Point((8+30)*X,14*X);
-				Point piedDroite2 = new Point((11+30)*X,14*X);
-				Point chevilleDroite2 = new Point((10+30)*X,13*X);
-				Point tailleDroite = new Point((9+30)*X,11*X);
-				Point aisselleDroite = new Point((11+30)*X,10*X);
-				Point coudeDroite1 = new Point((12+30)*X,11*X);
-				Point mancheDroite1 = new Point((12+30)*X,12*X);	
-				Point mancheDroite = new Point((13+30)*X,12*X);
-				Point coudeDroite2 = new Point((13+30)*X,10*X);
-				Point debEpauleDroite = new Point((10+30)*X,8*X);
-				Point finEpauleDroite = new Point((11+30)*X, 8*X);
-				
-
-				demarrerNouveauDessinAvecDesPoints()
-					.ajouter(mentond)
-		  			.ajouter(mentonc)
-		  			.ajouter(mentonb)
-		  			.ajouter(mentona)
-					.ajouter(debEpauleGauche)
-					.ajouter(finEpauleGauche)
-					.ajouter(coudeGauche1)
-					.ajouter(mancheGaucheHaut)
-					.ajouter(mancheGaucheBas)
-					.ajouter(coudeGauche2)
-					.ajouter(aisselleGauche)
-					.ajouter(tailleGauche)
-					.ajouter(chevilleGauche1)
-					.ajouter(piedGauche1)
-					.ajouter(piedGauche2)
-					.ajouter(chevilleGauche2)
-					.ajouter(piGauche)
-					.ajouter(piDroite)
-					.ajouter(chevilleDroite1)
-					.ajouter(piedDroite1)
-					.ajouter(piedDroite2)
-					.ajouter(chevilleDroite2)
-					.ajouter(tailleDroite)
-					.ajouter(aisselleDroite)
-					.ajouter(coudeDroite1)
-					.ajouter(mancheDroite1)
-					.ajouter(mancheDroite)
-					.ajouter(coudeDroite2)
-					.ajouter(finEpauleDroite)
-					.ajouter(debEpauleDroite)
-					.couleurDeFond(Couleur.GRIS)
-					.nePasRelierLesPointsExtreme();
 	}
 	
 	/**
@@ -352,6 +279,85 @@ public class DessinsGroupe1 extends CreateurDeForme{
 	 */
 	public void dessinerCorps(){
 		
+		//Menton
+
+		Point mentona = new Point(750+75,175);
+		Point mentonb = new Point(750+150,250);
+		Point mentonc = new Point(750+200,250);
+		Point mentond = new Point(750+275,175);
+		
+		
+		
+		//Bas du corps gauche
+		Point debEpauleGauche = new Point((4+30)*X,8*X);
+		Point finEpauleGauche = new Point((3+30)*X, 8*X);
+		Point coudeGauche1 = new Point((1+30)*X, 10*X);
+		Point coudeGauche2 = new Point((2+30)*X, 11*X);
+		Point mancheGaucheHaut = new Point((1+30)*X, 12*X);
+		Point mancheGaucheBas = new Point((2+30)*X, 12*X);
+		Point aisselleGauche = new Point((3+30)*X, 10*X);
+		Point tailleGauche = new Point((5+30)*X,11*X);
+		Point chevilleGauche1 = new Point((4+30)*X,13*X);
+		Point piedGauche1 = new Point((3+30)*X,14*X);
+		Point chevilleGauche2 = new Point((5+30)*X,13*X);
+		Point piedGauche2 = new Point((6+30)*X,14*X);
+		Point piGauche = new Point((6+30)*X,12*X);
+		Point piDroite = new Point((8+30)*X,12*X);
+		
+				
+			
+		//Bras DROITE
+		Point chevilleDroite1 = new Point((9+30)*X,13*X);
+		Point piedDroite1 = new Point((8+30)*X,14*X);
+		Point piedDroite2 = new Point((11+30)*X,14*X);
+		Point chevilleDroite2 = new Point((10+30)*X,13*X);
+		Point tailleDroite = new Point((9+30)*X,11*X);
+		Point aisselleDroite = new Point((11+30)*X,10*X);
+		Point coudeDroite1 = new Point((12+30)*X,11*X);
+		Point mancheDroite1 = new Point((12+30)*X,12*X);	
+		Point mancheDroite = new Point((13+30)*X,12*X);
+		Point coudeDroite2 = new Point((13+30)*X,10*X);
+		Point debEpauleDroite = new Point((10+30)*X,8*X);
+		Point finEpauleDroite = new Point((11+30)*X, 8*X);
+		
+
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(mentond)
+  			.ajouter(mentonc)
+  			.ajouter(mentonb)
+  			.ajouter(mentona)
+			.ajouter(debEpauleGauche)
+			.ajouter(finEpauleGauche)
+			.ajouter(coudeGauche1)
+			.ajouter(mancheGaucheHaut)
+			.ajouter(mancheGaucheBas)
+			.ajouter(coudeGauche2)
+			.ajouter(aisselleGauche)
+			.ajouter(tailleGauche)
+			.ajouter(chevilleGauche1)
+			.ajouter(piedGauche1)
+			.ajouter(piedGauche2)
+			.ajouter(chevilleGauche2)
+			.ajouter(piGauche)
+			.ajouter(piDroite)
+			.ajouter(chevilleDroite1)
+			.ajouter(piedDroite1)
+			.ajouter(piedDroite2)
+			.ajouter(chevilleDroite2)
+			.ajouter(tailleDroite)
+			.ajouter(aisselleDroite)
+			.ajouter(coudeDroite1)
+			.ajouter(mancheDroite1)
+			.ajouter(mancheDroite)
+			.ajouter(coudeDroite2)
+			.ajouter(finEpauleDroite)
+			.ajouter(debEpauleDroite)
+			.couleurDeFond(Couleur.GRIS)
+			.nePasRelierLesPointsExtreme();
+
+		// Main
+			dessinerMainGauche();
+			dessinerMainDroite();
 			
 	}
 
