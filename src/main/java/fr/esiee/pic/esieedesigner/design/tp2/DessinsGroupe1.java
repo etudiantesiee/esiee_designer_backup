@@ -121,13 +121,16 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point mentond = new Point(275,175);
   
 		
-		// yeux droit
+		// yeux gauche
 		Point centreOeilGauche = new Point(150, 100);
-		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 5, 10);
-		
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 5, 5);
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
 		
-		
+		// yeux droit
+		Point centreOeilDroit = new Point(200, 100);
+		Ellipse oeilDroit = new Ellipse(centreOeilDroit, 5, 5);
+		ajouterEllipse(oeilDroit, Couleur.NOIR);
+
 		// PARTIE A&D
 		
 		//Bras GRAUCHE
