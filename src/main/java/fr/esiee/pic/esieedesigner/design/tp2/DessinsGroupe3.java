@@ -59,6 +59,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
     public Point dessinerContour(Point p) {
     	//Definition des points
     	Point mentonBasGauche = new Point (p.getX() + 3 * UNITE_HORIZONTALE, p.getY() - 2 * UNITE_VERTICALE); 
+
     	Point mentonHautGauche = new Point (mentonBasGauche.getX() - 2 * UNITE_HORIZONTALE, mentonBasGauche.getY() - 2 * UNITE_VERTICALE);
     	Point joueBasGauche = new Point (mentonHautGauche.getX() - UNITE_HORIZONTALE, mentonHautGauche.getY() - 3 * UNITE_VERTICALE);
     	Point joueHautGauche = new Point (joueBasGauche.getX(), joueBasGauche.getY() - 2 * UNITE_VERTICALE);
@@ -116,6 +117,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
      */
     public Point dessinerLunette(Point p) {
     	
+    	// Création de jolie lunette 
      Point lunette1 = new Point(p.getX() + UNITE_HORIZONTALE, p.getY() -8*UNITE_VERTICALE);
      Point lunette2 = new Point(lunette1.getX() , lunette1.getY() -UNITE_VERTICALE);
      Point lunette3 = new Point(lunette2.getX() + 6*UNITE_HORIZONTALE, lunette2.getY());
@@ -207,7 +209,9 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
     /**
      * dessin du menton
      */
+    
     public Point dessinerMenton(Point p) {
+    	// ajout de variable pour pouvoir placer plus précisement 
     	double untier = 7.5;
     	double decalage = 5.5;
     	double longueurmenton = 7.5;
