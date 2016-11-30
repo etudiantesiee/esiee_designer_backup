@@ -95,8 +95,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
      Point lunette8 = new Point(lunette7.getX() -UNITE_HORIZONTALE, lunette7.getY() +UNITE_VERTICALE);
      Point lunette9= new Point(lunette8.getX()-UNITE_HORIZONTALE , lunette8.getY() );
      
-     
-     
+          
      demarrerNouveauDessinAvecDesPoints()
           
      .ajouter(lunette1)
@@ -115,14 +114,25 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin 
      */
     public void dessinerNez() {
+    	
         
     }
 
     /**
-     * dessin 
+     * dessin de la bouche 
      */
     public void dessinerBouche() {
-        
+    	 Point bouche1 = new Point(POINT_DEPART.getX() + 2*UNITE_HORIZONTALE, POINT_DEPART.getY() -5*UNITE_VERTICALE);
+    	 Point bouche2 = new Point(bouche1.getX() + 4*UNITE_HORIZONTALE, bouche1.getY() );
+    	 Point bouche3 = new Point(bouche2.getX() -UNITE_HORIZONTALE, bouche2.getY() +2*UNITE_VERTICALE);
+    	 Point bouche4 = new Point(bouche3.getX() -2*UNITE_HORIZONTALE, bouche3.getY() );
+    	  demarrerNouveauDessinAvecDesPoints()
+          
+    	     .ajouter(bouche1)
+    	     .ajouter(bouche2)
+    	     .ajouter(bouche3)
+    	     .ajouter(bouche4);
+    	
     }
 
     /**
