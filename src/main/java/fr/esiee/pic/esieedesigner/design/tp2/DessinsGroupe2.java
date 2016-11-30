@@ -116,6 +116,17 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		 demarrerNouveauDessinAvecDesPoints()
 		 .ajouter(getSymetrie(chevilleDroite))
 		 .ajouter(getSymetrie(talonDroite));
+		 
+		 Point jupebasGauche = new Point((-5*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*13 + ORIGIN.getY());
+		 
+		 demarrerNouveauDessinAvecDesPoints()
+		 .ajouter(getSymetrie(chevilleDroite))
+		 .ajouter(getSymetrie(jupebasDroite))
+		 .ajouter(getSymetrie(jupehautDroite))
+		 .ajouter(getSymetrie(jupehautGauche))
+		 .ajouter(getSymetrie(jupebasGauche))
+		 .ajouter(getSymetrie(chevilleDroite))
+		 .couleurDeFond(Couleur.GRIS);
 	
 
 		
