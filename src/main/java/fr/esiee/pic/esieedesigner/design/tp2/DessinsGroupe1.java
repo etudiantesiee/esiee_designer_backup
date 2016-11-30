@@ -195,9 +195,37 @@ public class DessinsGroupe1 extends CreateurDeForme {
 			.nePasRelierLesPointsExtreme();
 	
 		
+		
+		//MAIN GAUCHE
+		
+		Point mainGauche1 = new Point(1*x,13*x);
+		Point mainGauche2 = new Point(2*x,13*x);
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(mancheGaucheHaut)
+			.ajouter(mainGauche1)
+			.ajouter(mainGauche2)
+			.ajouter(mancheGaucheBas)
+			.nePasRelierLesPointsExtreme();
+		
+		// MAIN DROITE
+
+		Point mainDroite1 = new Point(12*x,13*x);
+		Point mainDroite2 = new Point(13*x,13*x);
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(mancheDroite1)
+			.ajouter(mainDroite1)
+			.ajouter(mainDroite2)
+			.ajouter(mancheDroite)
+			.nePasRelierLesPointsExtreme();
+		
 
               
 	}
+	
+
+	
   
 }
 
