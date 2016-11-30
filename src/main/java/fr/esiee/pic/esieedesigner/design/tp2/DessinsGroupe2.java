@@ -56,10 +56,10 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		 Point sysmetriecorpsDroite = new Point((7*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*8);
 		 
 		 Point oeildroitPoint = new Point((10*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*3);
-		 Ellipse oeilDroit = new Ellipse(oeil_droit_point, 10, 20);
+		 Ellipse oeilDroit = new Ellipse(oeildroitPoint, 10, 20);
 		 
 		 Point oeilgauchePoint = new Point((8*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*3);
-		 Ellipse oeilGauche = new Ellipse(oeil_gauche_point, 10, 20);
+		 Ellipse oeilGauche = new Ellipse(oeilgauchePoint, 10, 20);
 			
 			
 		 ajouterEllipse(oeilDroit, Couleur.NOIR);
