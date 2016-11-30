@@ -57,11 +57,16 @@ public class DessinsGroupe3 extends CreateurDeForme {
     public void dessinerContour() {
     	Point mentonBasGauche = new Point(POINT_DEPART.getX() + 3 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 2 * UNITE_VERTICALE); 
     	Point mentonHautGauche = new Point(mentonBasGauche.getX() - 2 * UNITE_HORIZONTALE, mentonBasGauche.getY() - 2 * UNITE_VERTICALE);
+    	Point joueBasGauche = new Point (mentonHautGauche.getX() - UNITE_HORIZONTALE, mentonHautGauche.getY() - 3 * UNITE_VERTICALE);
+    	Point joueHautGauche = new Point (joueBasGauche.getX(), joueBasGauche.getY() - 2 * UNITE_VERTICALE);
     	
     	demarrerNouveauDessinAvecDesPoints()
     	
     	.ajouter(mentonBasGauche)
-    	.ajouter(mentonHautGauche);
+    	.ajouter(mentonHautGauche)
+    	.ajouter(joueBasGauche)
+    	.ajouter(joueHautGauche);
+    	
     }
     /**
      * dessin 
