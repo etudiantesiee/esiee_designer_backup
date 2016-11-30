@@ -93,6 +93,11 @@ public class DessinsGroupe1 extends CreateurDeForme {
          Point lunettec = new Point(175,100);
          Point lunetted = new Point(225,125);
          Point lunettee = new Point(275,100);
+         Point lunettef = new Point(75,75);
+         Point lunetteg = new Point(125,50);
+         Point lunetteh = new Point(175,75);
+         Point lunettei = new Point(225,50);
+         Point lunettej = new Point(275,75);
  	  
         		demarrerNouveauDessinAvecDesPoints()
         			.ajouter(lunettea)
@@ -100,6 +105,12 @@ public class DessinsGroupe1 extends CreateurDeForme {
         			.ajouter(lunettec)
         			.ajouter(lunetted)
         			.ajouter(lunettee)
+        			.ajouter(lunettej)
+        			.ajouter(lunettei)
+        			.ajouter(lunetteh)
+        			.ajouter(lunetteg)
+        			.ajouter(lunettef)
+        			.couleurDeFond(Couleur.GRIS)
         			.nePasRelierLesPointsExtreme();
         		
         //bouche
@@ -226,8 +237,62 @@ public class DessinsGroupe1 extends CreateurDeForme {
 			.ajouter(mancheDroite)
 			.nePasRelierLesPointsExtreme();
 		
+		
+		
+		double l = 6.25;
+		
+		
+		// doigts de la main gauche
+		
+		Point doigtG1a = new Point(1*x + l,13*x);
+		Point doigtG1b = new Point(1*x + l,12.75*x);
+		Point doigtG2a = new Point(1*x + 2*l,13*x);
+		Point doigtG2b = new Point(1*x + 2*l,12.75*x);
+		Point doigtG3a = new Point(1*x + 3*l,13*x);
+		Point doigtG3b = new Point(1*x + 3*l,12.75*x);
 
-              
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(doigtG1a)
+			.ajouter(doigtG1b)
+			.nePasRelierLesPointsExtreme();
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(doigtG2a)
+			.ajouter(doigtG2b)
+			.nePasRelierLesPointsExtreme();
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(doigtG3a)
+			.ajouter(doigtG3b)
+			.nePasRelierLesPointsExtreme();
+		
+		// doigts de la main droite
+
+		Point doigtD1a = new Point(12*x + l,13*x);
+		Point doigtD1b = new Point(12*x + l,12.75*x);
+		Point doigtD2a = new Point(12*x + 2*l,13*x);
+		Point doigtD2b = new Point(12*x + 2*l,12.75*x);
+		Point doigtD3a = new Point(12*x + 3*l,13*x);
+		Point doigtD3b = new Point(12*x + 3*l,12.75*x);
+
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(doigtD1a)
+			.ajouter(doigtD1b)
+			.nePasRelierLesPointsExtreme();
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(doigtD2a)
+			.ajouter(doigtD2b)
+			.nePasRelierLesPointsExtreme();
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(doigtD3a)
+			.ajouter(doigtD3b)
+			.nePasRelierLesPointsExtreme();
+		
+		
+		
+		
 	}
 	
 

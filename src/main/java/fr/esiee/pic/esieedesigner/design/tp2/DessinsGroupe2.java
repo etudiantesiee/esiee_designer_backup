@@ -116,6 +116,53 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point n= new Point(origin.getX()+25,origin.getY()+75);
 		Point o= new Point(origin.getX()+0,origin.getY()+50);
 		
+		/*
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz	 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz	 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz	 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 */
 		/*dessin cheveux*/
 		demarrerNouveauDessinAvecDesPoints().ajouter(a)
 		.ajouter(b)
@@ -145,7 +192,9 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(getSymetrie(d))
 		.ajouter(getSymetrie(c))
 		.ajouter(getSymetrie(b))
-		.ajouter(getSymetrie(a));
+		.ajouter(getSymetrie(a))
+		.couleurDeFond(Couleur.GRIS);
+		
 
 		
 		/*visage*/
@@ -164,6 +213,14 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point t= new Point(origin.getX()+75,origin.getY()+175);
 		Point u= new Point(origin.getX()+25,origin.getY()+200);
 		
+		/*dessin bouche*/
+		
+		demarrerNouveauDessinAvecDesPoints().ajouter(s)
+		.ajouter(t)
+		.ajouter(u)
+		.ajouter(getSymetrie(u))
+		.ajouter(getSymetrie(t))
+		.ajouter(getSymetrie(s));
 		
 		}
 	
