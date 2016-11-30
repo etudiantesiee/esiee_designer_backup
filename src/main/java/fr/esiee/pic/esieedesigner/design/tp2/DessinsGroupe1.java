@@ -347,13 +347,6 @@ public class DessinsGroupe1 extends CreateurDeForme{
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
 		
 	}
-	/**
-	 * corps
-	 */
-	public void dessinerCorps(){
-		
-			
-	}
 
 
 }
