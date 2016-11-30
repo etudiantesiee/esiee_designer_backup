@@ -31,20 +31,14 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		dessinerNez();
 		
    //// PARTIE AMINE ET PRADHIBAN
+
 		dessinerTete();
 		dessinerRayban();
+		dessinerBouche();
          
+
         		
-        //bouche
-          Point bouchea = new Point(150,200);
-          Point boucheb = new Point(200,200);
-    
-             demarrerNouveauDessinAvecDesPoints()
-    				.ajouter(bouchea)
-    				.ajouter(boucheb)
-    				.nePasRelierLesPointsExtreme();
-          
-        
+      
 
 		// TETE
         //On a intégré votre code dans le notre
@@ -325,7 +319,16 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	public void dessinerBouche(){
-
+        Point bouchea = new Point(150,200);
+        Point boucheb = new Point(200,200);
+        	
+        	demarrerNouveauDessinAvecDesPoints()
+  				.ajouter(bouchea)
+  				.ajouter(boucheb)
+  				.nePasRelierLesPointsExtreme();
+        
+      
+		
 	}
 
 	

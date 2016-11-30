@@ -148,6 +148,11 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
      * dessin de la narine gauche
      */
     public void dessinerNarineGauche() {
+    	Point nez = new Point (POINT_DEPART.getX() + 4 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 6 * UNITE_VERTICALE);
+    	
+    	demarrerNouveauDessinAvecDesPoints()
+    	
+    	.ajouter(nez);
     	
     }
     
@@ -176,12 +181,13 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
     }
 
     /**
-     * dessin 
+     * dessin du menton
      */
     public void dessinerMenton() {
-    	double untier = 16.6;
-    	double longueurmenton = 20;
-    	Point menton1 = new Point(POINT_DEPART.getX() -untier+ 4*UNITE_HORIZONTALE, POINT_DEPART.getY() -2*UNITE_VERTICALE-untier);
+    	double untier = 7.5;
+    	double decalage = 5.5;
+    	double longueurmenton = 7.5;
+    	Point menton1 = new Point(POINT_DEPART.getX() - decalage+ 4*UNITE_HORIZONTALE, POINT_DEPART.getY() -2*UNITE_VERTICALE-untier);
     	Point menton2 = new Point(menton1.getX() +longueurmenton, menton1.getY());
     	demarrerNouveauDessinAvecDesPoints()
         
@@ -192,10 +198,10 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
     }
 
     /**
-     * dessin 
+     * dessin des cheveux1
      */
     public void dessinerCheveux1() {
-       double troisquart = 32.5;
+       double troisquart = 36.5;
  	   Point cheveux11 = new Point (POINT_DEPART.getX() + UNITE_HORIZONTALE,POINT_DEPART.getY() - 11*UNITE_VERTICALE);
  	   Point cheveux12 = new Point (cheveux11.getX() + 2*UNITE_HORIZONTALE,cheveux11.getY() + UNITE_VERTICALE );
  	   Point cheveux13 = new Point (cheveux12.getX()- UNITE_HORIZONTALE, cheveux12.getY() - troisquart);
@@ -209,7 +215,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
     }
 
     /**
-     * dessin 
+     * dessin cheveux2
      */
     public void dessinerCheveux2() {
    	   Point cheveux21 = new Point (POINT_DEPART.getX() + 3*UNITE_HORIZONTALE,POINT_DEPART.getY() - 12*UNITE_VERTICALE);
@@ -223,10 +229,10 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
    	   .couleurDeFond(Couleur.GRIS);        
     }
     /**
-     * dessin 
+     * dessin cheveux3
      */
     public void dessinerCheveux3() {
-        double troisquart = 32.5;
+        double troisquart = 36.5;
   	   Point cheveux31 = new Point (POINT_DEPART.getX() + 7*UNITE_HORIZONTALE,POINT_DEPART.getY() - 11*UNITE_VERTICALE);
   	   Point cheveux32 = new Point (cheveux31.getX() - 2*UNITE_HORIZONTALE,cheveux31.getY() + UNITE_VERTICALE );
   	   Point cheveux33 = new Point (cheveux32.getX()+ UNITE_HORIZONTALE, cheveux32.getY() - troisquart);
@@ -238,7 +244,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
   	   .couleurDeFond(Couleur.GRIS);  	         
     }
     /**
-     * dessin 
+     * dessin du bras gauche
      */
     public void dessinerBrasG() {
     	double deuxtier = 16.6;
@@ -263,7 +269,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
  	   .couleurDeFond(Couleur.GRIS);  	         
     }
     /**
-     * dessin 
+     * dessin du beas droit
      */
     public void dessinerBrasD() {
     	double deuxtier = 16.6;
@@ -288,7 +294,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
  	   .couleurDeFond(Couleur.GRIS);  	   
     }
     /**
-     * dessin 
+     * dessin de la jambe gauche
      */
     public void dessinerJambeG() {
         
@@ -307,26 +313,28 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 	   .ajouter(jambeG5)
 	   .ajouter(jambeG6)
 	   .couleurDeFond(Couleur.GRIS);
-	}
-	/**
-	 * dessin 
-	 */
-	    public void dessinerJambeD() {
-	 	   Point jambeD1 = new Point (POINT_DEPART.getX()+5*UNITE_HORIZONTALE,POINT_DEPART.getY());
-	 	   Point jambeD2 = new Point (jambeD1.getX() +3*UNITE_HORIZONTALE,jambeD1.getY());
-	 	   Point jambeD3 = new Point (jambeD2.getX() -UNITE_HORIZONTALE,jambeD2.getY() - UNITE_VERTICALE);
-	 	   Point jambeD4 = new Point (jambeD3.getX() -UNITE_HORIZONTALE,jambeD3.getY() - 2*UNITE_VERTICALE);
-	 	   Point jambeD5 = new Point (jambeD4.getX() -UNITE_HORIZONTALE,jambeD4.getY() + UNITE_VERTICALE);
-	 	   Point jambeD6 = new Point (jambeD5.getX() +UNITE_HORIZONTALE,jambeD5.getY() + UNITE_VERTICALE);
-	 	   
-	 	   demarrerNouveauDessinAvecDesPoints()
-	 	   .ajouter(jambeD1)
-	 	   .ajouter(jambeD2)
-	 	   .ajouter(jambeD3)
-	 	   .ajouter(jambeD4)
-	 	   .ajouter(jambeD5)
-	 	   .ajouter(jambeD6)
-	 	   .couleurDeFond(Couleur.GRIS);        
-	    }
-		
-	}
+    }
+
+    /**
+     * dessin de la jambe droite
+     */
+    public void dessinerJambeD() {
+ 	   Point jambeD1 = new Point (POINT_DEPART.getX()+5*UNITE_HORIZONTALE,POINT_DEPART.getY());
+ 	   Point jambeD2 = new Point (jambeD1.getX() +3*UNITE_HORIZONTALE,jambeD1.getY());
+ 	   Point jambeD3 = new Point (jambeD2.getX() -UNITE_HORIZONTALE,jambeD2.getY() - UNITE_VERTICALE);
+ 	   Point jambeD4 = new Point (jambeD3.getX() -UNITE_HORIZONTALE,jambeD3.getY() - 2*UNITE_VERTICALE);
+ 	   Point jambeD5 = new Point (jambeD4.getX() -UNITE_HORIZONTALE,jambeD4.getY() + UNITE_VERTICALE);
+ 	   Point jambeD6 = new Point (jambeD5.getX() +UNITE_HORIZONTALE,jambeD5.getY() + UNITE_VERTICALE);
+ 	   
+ 	   demarrerNouveauDessinAvecDesPoints()
+ 	   .ajouter(jambeD1)
+ 	   .ajouter(jambeD2)
+ 	   .ajouter(jambeD3)
+ 	   .ajouter(jambeD4)
+ 	   .ajouter(jambeD5)
+ 	   .ajouter(jambeD6)
+ 	   .couleurDeFond(Couleur.GRIS);        
+    }
+    
+}
+	
