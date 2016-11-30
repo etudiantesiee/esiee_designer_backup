@@ -31,26 +31,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		dessinerNez();
 		
    //// PARTIE AMINE ET PRADHIBAN
-        
  	   // tete
-       Point tetea = new Point(75,175);
-       Point teteb = new Point(75,75);
-       Point tetec = new Point(125,50);
-       Point teted = new Point(175,75);
-       Point tetee = new Point(225,50);
-       Point tetef = new Point(275,75);
-       Point teteg = new Point(275,175);
-        
-         	demarrerNouveauDessinAvecDesPoints()
-         		.ajouter(tetea)
-         		.ajouter(teteb)
-         		.ajouter(tetec)
-         		.ajouter(teted)
-         		.ajouter(tetee)
-         		.ajouter(tetef)
-         		.ajouter(teteg)
-         		.nePasRelierLesPointsExtreme();
-       	
+		dessinerTete();
+		
         // lunette rayban aviator
          Point lunettea = new Point(75,100);
          Point lunetteb = new Point(125,125);
@@ -269,6 +252,26 @@ public class DessinsGroupe1 extends CreateurDeForme {
         .nePasRelierLesPointsExtreme();
 	}
 	
+	public void dessinerTete(){
+		
+		Point tetea = new Point(75,175);
+	    Point teteb = new Point(75,75);
+	    Point tetec = new Point(125,50);
+	    Point teted = new Point(175,75);
+	    Point tetee = new Point(225,50);
+	    Point tetef = new Point(275,75);
+	    Point teteg = new Point(275,175);
+	        
+	    demarrerNouveauDessinAvecDesPoints()
+	    .ajouter(tetea)
+	    .ajouter(teteb)
+	    .ajouter(tetec)
+	    .ajouter(teted)
+	    .ajouter(tetee)
+	    .ajouter(tetef)
+	    .ajouter(teteg)
+	   .nePasRelierLesPointsExtreme();
+	}
   
 }
 
