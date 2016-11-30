@@ -1,5 +1,6 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -111,6 +112,12 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point mentond = new Point(275,175);
   
 		
+		// yeux droit
+		Point centreOeilGauche = new Point(150, 100);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 5, 10);
+		
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
+		
 		
 		
 		
@@ -184,9 +191,37 @@ public class DessinsGroupe1 extends CreateurDeForme {
 			.nePasRelierLesPointsExtreme();
 	
 		
+		
+		//MAIN GAUCHE
+		
+		Point mainGauche1 = new Point(1*x,13*x);
+		Point mainGauche2 = new Point(2*x,13*x);
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(mancheGaucheHaut)
+			.ajouter(mainGauche1)
+			.ajouter(mainGauche2)
+			.ajouter(mancheGaucheBas)
+			.nePasRelierLesPointsExtreme();
+		
+		// MAIN DROITE
+
+		Point mainDroite1 = new Point(12*x,13*x);
+		Point mainDroite2 = new Point(13*x,13*x);
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(mancheDroite1)
+			.ajouter(mainDroite1)
+			.ajouter(mainDroite2)
+			.ajouter(mancheDroite)
+			.nePasRelierLesPointsExtreme();
+		
 
               
 	}
+	
+
+	
   
 }
 
