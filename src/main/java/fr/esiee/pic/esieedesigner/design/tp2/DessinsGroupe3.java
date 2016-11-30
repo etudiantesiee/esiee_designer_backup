@@ -52,9 +52,10 @@ public class DessinsGroupe3 extends CreateurDeForme {
 
 
     /**
-     * dessin 
+     * dessin  
      */
     public void dessinerContour() {
+    
         
     }
     /**
@@ -70,10 +71,20 @@ public class DessinsGroupe3 extends CreateurDeForme {
         
     }
     /**
-     * dessin 
+     * dessin des lunettes
      */
     public void dessinerLunette() {
-        
+    	
+     Point lunette1 = new Point(POINT_DEPART.getX() + UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
+     Point lunette2 = new Point(lunette1.getX() + UNITE_HORIZONTALE, lunette1.getY() -UNITE_VERTICALE);
+     Point lunette3 = new Point(lunette1.getX() + 6*UNITE_HORIZONTALE, lunette2.getY());
+     
+     demarrerNouveauDessinAvecDesPoints()
+          
+     .ajouter(lunette1)
+     .ajouter(lunette2)
+     .ajouter(lunette3);
+     
     }
 
     /**
