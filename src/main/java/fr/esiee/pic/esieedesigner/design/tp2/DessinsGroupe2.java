@@ -1,5 +1,7 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
+import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -30,57 +32,68 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	public void dessiner() {
 
 
-		 Point Talon_droite = new Point((7*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*14);
-		 Point BoutPied_droite = new Point((9*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*14);
-		 Point HautPied_droite = new Point((8*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*13);
+		 Point talonDroite = new Point((7*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*14);
+		 Point boutpiedDroite = new Point((9*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*14);
+		 Point hautpiedDroite = new Point((8*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*13);
 		 
-		 Point JupeBas_droite = new Point((12*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*13);
+		 Point jupebasDroite = new Point((12*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*13);
 		 
 		 
-		 Point JupeHaut_droite = new Point((11*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*11);
-		 Point Aisselle_droite = new Point((11*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*10);
+		 Point jupehautDroite = new Point((11*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*11);
+		 Point aisselleDroite = new Point((11*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*10);
 		 
-		 Point Manche1_droite = new Point((12*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*11);
+		 Point manche1Droite = new Point((12*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*11);
 		 
-		 Point Main1_droite = new Point((13*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*12);
-		 Point Main2_droite = new Point((13*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*11);
-		 Point Main3_droite = new Point((14*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*11);
+		 Point main1Droite = new Point((13*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*12);
+		 Point main2Droite = new Point((13*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*11);
+		 Point main3Droite = new Point((14*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*11);
 		 
-		 Point Manche2_droite = new Point((13*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*10);
+		 Point manche2Droite = new Point((13*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*10);
 		
 		 
-		 Point Epaule_droite = new Point((11*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*8);
+		 Point epauleDroite = new Point((11*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*8);
 		 
-		 Point SysmetrieCorps_droite = new Point((7*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*8);
+		 Point sysmetriecorpsDroite = new Point((7*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*8);
+		 
+		 Point oeildroitPoint = new Point((10*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*3);
+		 Ellipse oeilDroit = new Ellipse(oeildroitPoint, 10, 20);
+		 
+		 Point oeilgauchePoint = new Point((8*UNITE_HORIZONTALE)+OFFSET,UNITE_VERTICALE*3);
+		 Ellipse oeilGauche = new Ellipse(oeilgauchePoint, 10, 20);
+			
+			
+		 ajouterEllipse(oeilDroit, Couleur.NOIR);
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
+		 
 		 
 		 demarrerNouveauDessinAvecDesPoints()
-      		.ajouter(Talon_droite)
-		    .ajouter(BoutPied_droite)
-		    .ajouter(HautPied_droite)
-		    .ajouter(JupeBas_droite)
-		    .ajouter(JupeHaut_droite)
-		    .ajouter(Aisselle_droite)
-		    .ajouter(Manche1_droite)
-		    .ajouter(Main1_droite)
-		    .ajouter(Main2_droite)
-		    .ajouter(Main3_droite)
-		    .ajouter(Manche2_droite)
-		    .ajouter(Epaule_droite)
-		    .ajouter(SysmetrieCorps_droite)
+      		.ajouter(talonDroite)
+		    .ajouter(boutpiedDroite)
+		    .ajouter(hautpiedDroite)
+		    .ajouter(jupebasDroite)
+		    .ajouter(jupehautDroite)
+		    .ajouter(aisselleDroite)
+		    .ajouter(manche1Droite)
+		    .ajouter(main1Droite)
+		    .ajouter(main2Droite)
+		    .ajouter(main3Droite)
+		    .ajouter(manche2Droite)
+		    .ajouter(epauleDroite)
+		    .ajouter(sysmetriecorpsDroite)
 		 
-		 	.ajouter(getSymetrie(Talon_droite))
-			.ajouter(getSymetrie(BoutPied_droite))
-			.ajouter(getSymetrie(HautPied_droite))
-			.ajouter(getSymetrie(JupeBas_droite))
-			.ajouter(getSymetrie(JupeHaut_droite))
-			.ajouter(getSymetrie(Aisselle_droite))
-			.ajouter(getSymetrie(Manche1_droite))
-			.ajouter(getSymetrie(Main1_droite))
-			.ajouter(getSymetrie(Main2_droite))
-			.ajouter(getSymetrie(Main3_droite))
-			.ajouter(getSymetrie(Manche2_droite))
-			.ajouter(getSymetrie(Epaule_droite))
-			.ajouter(getSymetrie(SysmetrieCorps_droite));
+		 	.ajouter(getSymetrie(talonDroite))
+			.ajouter(getSymetrie(boutpiedDroite))
+			.ajouter(getSymetrie(hautpiedDroite))
+			.ajouter(getSymetrie(jupebasDroite))
+			.ajouter(getSymetrie(jupehautDroite))
+			.ajouter(getSymetrie(aisselleDroite))
+			.ajouter(getSymetrie(manche1Droite))
+			.ajouter(getSymetrie(main1Droite))
+			.ajouter(getSymetrie(main2Droite))
+			.ajouter(getSymetrie(main3Droite))
+			.ajouter(getSymetrie(manche2Droite))
+			.ajouter(getSymetrie(epauleDroite))
+			.ajouter(getSymetrie(sysmetriecorpsDroite));
 			
 		
 	
@@ -103,6 +116,53 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point n= new Point(origin.getX()+25,origin.getY()+75);
 		Point o= new Point(origin.getX()+0,origin.getY()+50);
 		
+		/*
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz	 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz	 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz	 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 * abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+		 */
 		/*dessin cheveux*/
 		demarrerNouveauDessinAvecDesPoints().ajouter(a)
 		.ajouter(b)
@@ -132,7 +192,9 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(getSymetrie(d))
 		.ajouter(getSymetrie(c))
 		.ajouter(getSymetrie(b))
-		.ajouter(getSymetrie(a));
+		.ajouter(getSymetrie(a))
+		.couleurDeFond(Couleur.GRIS);
+		
 
 		
 		/*visage*/
@@ -151,6 +213,14 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point t= new Point(origin.getX()+75,origin.getY()+175);
 		Point u= new Point(origin.getX()+25,origin.getY()+200);
 		
+		/*dessin bouche*/
+		
+		demarrerNouveauDessinAvecDesPoints().ajouter(s)
+		.ajouter(t)
+		.ajouter(u)
+		.ajouter(getSymetrie(u))
+		.ajouter(getSymetrie(t))
+		.ajouter(getSymetrie(s));
 		
 		}
 	
