@@ -123,6 +123,19 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		 .ajouter(getSymetrie(chevilleDroite))
 		 .ajouter(getSymetrie(talonDroite));
 		 
+
+		 Point jupebasGauche = new Point((-5*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*13 + ORIGIN.getY());
+		 
+		 demarrerNouveauDessinAvecDesPoints()
+		 .ajouter(getSymetrie(chevilleDroite))
+		 .ajouter(getSymetrie(jupebasDroite))
+		 .ajouter(getSymetrie(jupehautDroite))
+		 .ajouter(getSymetrie(jupehautGauche))
+		 .ajouter(getSymetrie(jupebasGauche))
+		 .ajouter(getSymetrie(chevilleDroite))
+		 .couleurDeFond(Couleur.GRIS);
+	
+
 		 dessinTete();
 			
 	}
@@ -133,7 +146,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point a= new Point(ORIGIN.getX()+50,ORIGIN.getY()+0);
 		Point b= new Point(ORIGIN.getX()+100,ORIGIN.getY()+25);
 		Point c= new Point(ORIGIN.getX()+150,ORIGIN.getY()+75);
-		Point d= new Point(ORIGIN.getX()+150,ORIGIN.getY()+200);//pic1
+		Point d= new Point(ORIGIN.getX()+150,ORIGIN.getY()+200);
 		Point e= new Point(ORIGIN.getX()+125,ORIGIN.getY()+150);
 		Point f= new Point(ORIGIN.getX()+125,ORIGIN.getY()+100);
 		Point g= new Point(ORIGIN.getX()+125,ORIGIN.getY()+200);
