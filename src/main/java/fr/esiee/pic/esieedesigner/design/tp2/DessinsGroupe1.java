@@ -241,6 +241,10 @@ public class DessinsGroupe1 extends CreateurDeForme{
         .nePasRelierLesPointsExtreme();
 		}
 	
+	/**
+	 * dessin nez
+	 */
+	
 	public void dessinerNez(){   
         Point basGaucheNez = new Point(6.75*X,5.25*X);
         Point centreHautNez = new Point(7*X,5*X);
@@ -305,7 +309,9 @@ public class DessinsGroupe1 extends CreateurDeForme{
        			.couleurDeFond(Couleur.GRIS)
        			.nePasRelierLesPointsExtreme();
 	}
-	
+	/**
+	 * dessin bouche gauche
+	 */
 	public void dessinerBouche(){
         Point bouchea = new Point(750+150,200);
         Point boucheb = new Point(750+200,200);
