@@ -17,13 +17,21 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 public class DessinsGroupe1 extends CreateurDeForme{
 
 	/**
-	 *  Methode de dessin du personnage du groupe 1  
+	 *  Methode de dessnu personnage du groupe 1  
 	 */
 	
 	// variable taille case
+	/**
+	 *  Methode de dessin du psonnage du groupe 1  
+	 */
 	public static final int X = 25;
 	
 	@Override
+	/**
+	 *  Methode de dessin du peronnage du groupe 1  
+	 *  Methode de dessin du peronnage du groupe 1
+	 *  
+	 */
 	public void dessiner() {
 
 		
@@ -47,6 +55,10 @@ public class DessinsGroupe1 extends CreateurDeForme{
 	
 	/**
 	 * dessin maingauche
+	 * dessin maingauche
+	 * la main gauche a été faite de maniere a commencer par la gauche et ensuite 
+	 * 
+	 * 
 	 */
 	public void dessinerMainGauche(){
 		
@@ -105,6 +117,7 @@ public class DessinsGroupe1 extends CreateurDeForme{
 		Point mancheDroite1 = new Point((12+30)*X,12*X);	
 		Point mancheDroite = new Point((13+30)*X,12*X);
 
+		// Lancer dessin
 		demarrerNouveauDessinAvecDesPoints()
 			.ajouter(mancheDroite1)
 			.ajouter(mainDroite1)
@@ -177,6 +190,7 @@ public class DessinsGroupe1 extends CreateurDeForme{
         Point centreHautNez = new Point(37*X,5*X);
         Point basDroiteNez = new Point(37.25*X,5.25*X);
         
+		// Lancer dessin
         demarrerNouveauDessinAvecDesPoints()
         .ajouter(basGaucheNez)
         .ajouter(centreHautNez)
@@ -221,7 +235,8 @@ public class DessinsGroupe1 extends CreateurDeForme{
         Point lunetteh = new Point(750+175,75);
         Point lunettei = new Point(750+225,50);
         Point lunettej = new Point(750+275,75);
-	  
+        
+		// Lancer dessin
        		demarrerNouveauDessinAvecDesPoints()
        			.ajouter(lunettea)
        			.ajouter(lunetteb)
@@ -243,6 +258,7 @@ public class DessinsGroupe1 extends CreateurDeForme{
         Point bouchea = new Point(750+150,200);
         Point boucheb = new Point(750+200,200);
         	
+		// Lancer dessin
         	demarrerNouveauDessinAvecDesPoints()
   				.ajouter(bouchea)
   				.ajouter(boucheb)
