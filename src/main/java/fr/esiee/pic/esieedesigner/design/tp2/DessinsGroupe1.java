@@ -31,7 +31,7 @@ public class DessinsGroupe1 extends CreateurDeForme{
 		dessinerCheveux();
 		dessinerNez();
 		
-   //// PARTIE AMINE ET PRADHIBAN
+		//PARTIE AMINE ET PRADHIBAN
 
 		dessinerTete();
 		dessinerRayban();
@@ -138,7 +138,7 @@ public class DessinsGroupe1 extends CreateurDeForme{
 			.ajouter(mancheGaucheBas)
 			.nePasRelierLesPointsExtreme();
 		
-		//Doigts gauche
+		//Doigts de la main gauche
 		Point doigtG1a = new Point((1+30)*X + l,13*X);
 		Point doigtG1b = new Point((1+30)*X + l,12.75*X);
 		Point doigtG2a = new Point((1+30)*X + 2*l,13*X);
