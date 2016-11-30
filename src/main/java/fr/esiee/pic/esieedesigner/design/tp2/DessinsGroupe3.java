@@ -1,18 +1,18 @@
-package fr.esiee.pic.esieedesigner.design.tp2;
-
-import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+	package fr.esiee.pic.esieedesigner.design.tp2;
+	
+	import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
-
-/**
- * Le groupe 3 ajoutera ses dessins dans cette classe.
- * 
- * @author etudiant
- *
- */
-public class DessinsGroupe3 extends CreateurDeForme {
+	
 	/**
+	 * Le groupe 3 ajoutera ses dessins dans cette classe.
+	 * 
+	 * @author etudiant
+	 *
+	 */
+	public class DessinsGroupe3 extends CreateurDeForme {
+		/**
 	 * Unite de dessin Horizontale
 	 */
 	private static final double UNITE_HORIZONTALE = 25;
@@ -50,6 +50,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		dessinerJambeD();		
 		
 	}
+
 
 
     /**
@@ -139,8 +140,22 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin du nez
      */
     public void dessinerNez() {
+    	dessinerNarineGauche();
+        dessinerNarineDroite();
+    }
+    
+    /**
+     * dessin de la narine gauche
+     */
+    public void dessinerNarineGauche() {
     	
-        
+    }
+    
+    /**
+     * dessin de la narine droite
+     */
+    public void dessinerNarineDroite() {
+    	
     }
 
     /**
@@ -293,6 +308,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	   .ajouter(jambeG6)
 	   .couleurDeFond(Couleur.GRIS);
     }
+
     /**
      * dessin de la jambe droite
      */
@@ -313,5 +329,6 @@ public class DessinsGroupe3 extends CreateurDeForme {
  	   .ajouter(jambeD6)
  	   .couleurDeFond(Couleur.GRIS);        
     }
-	
+    
 }
+	
