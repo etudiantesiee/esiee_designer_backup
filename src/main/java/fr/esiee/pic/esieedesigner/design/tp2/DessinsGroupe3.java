@@ -57,6 +57,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
      * dessin du contour
      */
     public void dessinerContour() {
+    	//Definition des points
     	Point mentonBasGauche = new Point (POINT_DEPART.getX() + 3 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 2 * UNITE_VERTICALE); 
     	Point mentonHautGauche = new Point (mentonBasGauche.getX() - 2 * UNITE_HORIZONTALE, mentonBasGauche.getY() - 2 * UNITE_VERTICALE);
     	Point joueBasGauche = new Point (mentonHautGauche.getX() - UNITE_HORIZONTALE, mentonHautGauche.getY() - 3 * UNITE_VERTICALE);
@@ -71,6 +72,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
     	Point mentonBasDroite = new Point (mentonHautDroite.getX() - 2 * UNITE_HORIZONTALE, mentonHautDroite.getY() + 2 * UNITE_VERTICALE);
     	
     	
+    	//Dessin du contour de la tete
     	demarrerNouveauDessinAvecDesPoints()
     	
     	.ajouter(mentonBasGauche)
@@ -140,6 +142,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
      * dessin du nez
      */
     public void dessinerNez() {
+    	// Dessin des deux narines pour constituer le nez
     	dessinerNarineGauche();
         dessinerNarineDroite();
     }
@@ -148,12 +151,13 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
      * dessin de la narine gauche
      */
     public void dessinerNarineGauche() {
+    	//Definition des points et des variables
     	Point nez = new Point (POINT_DEPART.getX() + 4 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 6 * UNITE_VERTICALE);
     	double longueurHorizontaleNarineGauche = 5;
     	double longueurVerticaleNarineGauche = 6;
     	Point narineGauche = new Point (nez.getX() - longueurHorizontaleNarineGauche, nez.getY() + longueurVerticaleNarineGauche);
     	
-    	
+    	//Dessin de la narine gauche
     	demarrerNouveauDessinAvecDesPoints()
     	
     	.ajouter(nez)
@@ -165,11 +169,13 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
      * dessin de la narine droite
      */
     public void dessinerNarineDroite() {
+    	//Definition des points et des variables
     	Point nez = new Point (POINT_DEPART.getX() + 4 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 6 * UNITE_VERTICALE);
     	double longueurHorizontaleNarineDroite = 2;
     	double longueurVerticaleNarineDroite = 5;
     	Point narineDroite = new Point (nez.getX() + longueurHorizontaleNarineDroite, nez.getY() + longueurVerticaleNarineDroite);
     	
+    	//Dessin de la narine droite
     	demarrerNouveauDessinAvecDesPoints()
     	
     	.ajouter(nez)
