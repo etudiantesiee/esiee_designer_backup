@@ -1,6 +1,7 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -55,29 +56,53 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin  
      */
     public void dessinerContour() {
-    	Point mentonBasGauche = new Point(POINT_DEPART.getX() + 3 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 2 * UNITE_VERTICALE); 
-    	Point mentonHautGauche = new Point(mentonBasGauche.getX() - 2 * UNITE_HORIZONTALE, mentonBasGauche.getY() - 2 * UNITE_VERTICALE);
+    	Point mentonBasGauche = new Point (POINT_DEPART.getX() + 3 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 2 * UNITE_VERTICALE); 
+    	Point mentonHautGauche = new Point (mentonBasGauche.getX() - 2 * UNITE_HORIZONTALE, mentonBasGauche.getY() - 2 * UNITE_VERTICALE);
     	Point joueBasGauche = new Point (mentonHautGauche.getX() - UNITE_HORIZONTALE, mentonHautGauche.getY() - 3 * UNITE_VERTICALE);
     	Point joueHautGauche = new Point (joueBasGauche.getX(), joueBasGauche.getY() - 2 * UNITE_VERTICALE);
+    	Point frontGauche = new Point (joueHautGauche.getX() + UNITE_HORIZONTALE, joueHautGauche.getY() - 2 * UNITE_VERTICALE);
+    	Point frontHautGauche = new Point (frontGauche.getX() + 2 * UNITE_HORIZONTALE , frontGauche.getY() - UNITE_VERTICALE);
+    	Point frontHautDroite = new Point (frontHautGauche.getX() + 2 * UNITE_HORIZONTALE, frontHautGauche.getY() );
+    	Point frontDroite = new Point (frontHautDroite.getX() + 2 * UNITE_HORIZONTALE, frontHautDroite.getY() + UNITE_VERTICALE);
+    	Point joueHautDroite = new Point (frontDroite.getX() + UNITE_HORIZONTALE, frontDroite.getY() + 2 * UNITE_VERTICALE);
+    	Point joueBasDroite = new Point (joueHautDroite.getX() , joueHautDroite.getY() + 2 * UNITE_VERTICALE);
+    	Point mentonHautDroite = new Point (joueBasDroite.getX() - UNITE_HORIZONTALE, joueBasDroite.getY() + 3 * UNITE_VERTICALE);
+    	Point mentonBasDroite = new Point (mentonHautDroite.getX() - 2 * UNITE_HORIZONTALE, mentonHautDroite.getY() + 2 * UNITE_VERTICALE);
+    	
     	
     	demarrerNouveauDessinAvecDesPoints()
     	
     	.ajouter(mentonBasGauche)
     	.ajouter(mentonHautGauche)
     	.ajouter(joueBasGauche)
-    	.ajouter(joueHautGauche);
+    	.ajouter(joueHautGauche)
+    	.ajouter(frontGauche)
+    	.ajouter(frontHautGauche)
+    	.ajouter(frontHautDroite)
+    	.ajouter(frontDroite)
+    	.ajouter(joueHautDroite)
+    	.ajouter(joueBasDroite)
+    	.ajouter(mentonHautDroite)
+    	.ajouter(mentonBasDroite);
     	
     }
     /**
      * dessin 
      */
     public void dessinerYeuxD() {
-        
+    	Point centreOeilDroite = new Point(POINT_DEPART.getX() + 5*UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
+		Ellipse oeilDroite = new Ellipse(centreOeilDroite, 10, 20);
+		
+		ajouterEllipse(oeilDroite, Couleur.NOIR);
     }
     /**
      * dessin 
      */
     public void dessinerYeuxG() {
+    	Point centreOeilGauche = new Point(POINT_DEPART.getX() + 3*UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 10, 20);
+		
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
         
     }
     /**
@@ -95,8 +120,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
      Point lunette8 = new Point(lunette7.getX() -UNITE_HORIZONTALE, lunette7.getY() +UNITE_VERTICALE);
      Point lunette9= new Point(lunette8.getX()-UNITE_HORIZONTALE , lunette8.getY() );
      
-     
-     
+          
      demarrerNouveauDessinAvecDesPoints()
           
      .ajouter(lunette1)
@@ -115,14 +139,25 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin 
      */
     public void dessinerNez() {
+    	
         
     }
 
     /**
-     * dessin 
+     * dessin de la bouche 
      */
     public void dessinerBouche() {
-        
+    	 Point bouche1 = new Point(POINT_DEPART.getX() + 2*UNITE_HORIZONTALE, POINT_DEPART.getY() -5*UNITE_VERTICALE);
+    	 Point bouche2 = new Point(bouche1.getX() + 4*UNITE_HORIZONTALE, bouche1.getY() );
+    	 Point bouche3 = new Point(bouche2.getX() -UNITE_HORIZONTALE, bouche2.getY() +2*UNITE_VERTICALE);
+    	 Point bouche4 = new Point(bouche3.getX() -2*UNITE_HORIZONTALE, bouche3.getY() );
+    	  demarrerNouveauDessinAvecDesPoints()
+          
+    	     .ajouter(bouche1)
+    	     .ajouter(bouche2)
+    	     .ajouter(bouche3)
+    	     .ajouter(bouche4);
+    	
     }
 
     /**
@@ -155,7 +190,26 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin 
      */
     public void dessinerBrasG() {
-        
+    	double deuxtier = 33.3;
+ 	   Point brasG1 = new Point (POINT_DEPART.getX() + UNITE_HORIZONTALE,POINT_DEPART.getY() - 3*UNITE_VERTICALE);
+ 	   Point brasG2 = new Point (brasG1.getX() - 3*UNITE_HORIZONTALE,brasG1.getY() );
+ 	   Point brasG3 = new Point (brasG2.getX()+ UNITE_HORIZONTALE, brasG2.getY() - UNITE_VERTICALE);
+ 	   Point brasG4 = new Point (brasG3.getX(),brasG3.getY() - UNITE_VERTICALE);
+ 	   Point brasG5 = new Point (brasG4.getX() + UNITE_HORIZONTALE,brasG4.getY() - 2*UNITE_VERTICALE);
+ 	   Point brasG6 = new Point (brasG5.getX() + deuxtier,brasG5.getY() + 2*UNITE_VERTICALE);
+ 	   Point brasG7 = new Point (brasG6.getX() - deuxtier,brasG6.getY());
+	   Point brasG8 = new Point (brasG7.getX(),brasG7.getY()+ UNITE_VERTICALE);
+ 
+	   demarrerNouveauDessinAvecDesPoints()
+ 	   .ajouter(brasG1)
+ 	   .ajouter(brasG2)
+ 	   .ajouter(brasG3)
+ 	   .ajouter(brasG4)
+ 	   .ajouter(brasG5)
+ 	   .ajouter(brasG6)
+ 	   .ajouter(brasG7)
+ 	   .ajouter(brasG8) 	   
+ 	   .couleurDeFond(Couleur.GRIS);  	         
     }
     /**
      * dessin 

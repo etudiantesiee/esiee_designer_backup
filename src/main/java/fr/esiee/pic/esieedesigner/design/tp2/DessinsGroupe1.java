@@ -24,7 +24,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// variable taille case
 		int x = 25;
 		
-		// Partie Flo Cheveux
+		// Partie Flo 
+		///Cheveux
 		
         Point basGaucheTete = new Point(2*x,7*x);
         Point gaucheTete2 = new Point(x,3*x);
@@ -35,11 +36,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
         Point hautDroite3 = new Point(13*x,3*x);
         Point hautDroite4 = new Point(12*x,7*x);
         Point basDroite = new Point(11*x,7*x);
-        Point basGauche = new Point(3*x,7*x);
-
-
-
-
+        Point basGauche = new Point(3*x,7*x);     
 
         
         demarrerNouveauDessinAvecDesPoints()
@@ -53,6 +50,18 @@ public class DessinsGroupe1 extends CreateurDeForme {
         .ajouter(hautDroite3)
         .ajouter(hautDroite4)
         .ajouter(basDroite)
+        .nePasRelierLesPointsExtreme();
+        
+        /// Nez
+        
+        Point basGaucheNez = new Point(6.75*x,5.25*x);
+        Point centreHautNez = new Point(7*x,5*x);
+        Point basDroiteNez = new Point(7.25*x,5.25*x);
+        
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(basGaucheNez)
+        .ajouter(centreHautNez)
+        .ajouter(basDroiteNez)
         .nePasRelierLesPointsExtreme();
         
    //// PARTIE AMINE ET PRADHIBAN
@@ -112,15 +121,16 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point mentond = new Point(275,175);
   
 		
-		// yeux droit
+		// yeux gauche
 		Point centreOeilGauche = new Point(150, 100);
-		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 5, 10);
-		
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 5, 5);
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
 		
-		
-		
-		
+		// yeux droit
+		Point centreOeilDroit = new Point(200, 100);
+		Ellipse oeilDroit = new Ellipse(centreOeilDroit, 5, 5);
+		ajouterEllipse(oeilDroit, Couleur.NOIR);
+
 		// PARTIE A&D
 		
 		//Bras GRAUCHE
@@ -191,9 +201,37 @@ public class DessinsGroupe1 extends CreateurDeForme {
 			.nePasRelierLesPointsExtreme();
 	
 		
+		
+		//MAIN GAUCHE
+		
+		Point mainGauche1 = new Point(1*x,13*x);
+		Point mainGauche2 = new Point(2*x,13*x);
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(mancheGaucheHaut)
+			.ajouter(mainGauche1)
+			.ajouter(mainGauche2)
+			.ajouter(mancheGaucheBas)
+			.nePasRelierLesPointsExtreme();
+		
+		// MAIN DROITE
+
+		Point mainDroite1 = new Point(12*x,13*x);
+		Point mainDroite2 = new Point(13*x,13*x);
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(mancheDroite1)
+			.ajouter(mainDroite1)
+			.ajouter(mainDroite2)
+			.ajouter(mancheDroite)
+			.nePasRelierLesPointsExtreme();
+		
 
               
 	}
+	
+
+	
   
 }
 
