@@ -166,10 +166,14 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
      */
     public void dessinerNarineDroite() {
     	Point nez = new Point (POINT_DEPART.getX() + 4 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 6 * UNITE_VERTICALE);
+    	double longueurHorizontaleNarineDroite = 2;
+    	double longueurVerticaleNarineDroite = 5;
+    	Point narineDroite = new Point (nez.getX() + longueurHorizontaleNarineDroite, nez.getY() + longueurVerticaleNarineDroite);
     	
     	demarrerNouveauDessinAvecDesPoints()
     	
-    	.ajouter(nez);
+    	.ajouter(nez)
+    	.ajouter(narineDroite);
     }
 
     /**
