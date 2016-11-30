@@ -24,7 +24,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 	/**
 	 * Point de depart du dessin
 	 */
-	private static final Point POINT_DEPART = new Point(UNITE_HORIZONTALE*35, UNITE_VERTICALE*26);
+	private static final Point POINT_DEPART = new Point(UNITE_HORIZONTALE*54, UNITE_VERTICALE*26);
 
     /**
      * dessin principal où sont appelés toute les fonctions
