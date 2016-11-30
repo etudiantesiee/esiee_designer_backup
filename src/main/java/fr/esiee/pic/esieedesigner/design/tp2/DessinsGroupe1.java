@@ -17,13 +17,26 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 public class DessinsGroupe1 extends CreateurDeForme{
 
 	/**
-	 *  Methode de dessin du personnage du groupe 1  
+	 *  Methode de dessnu personnage du groupe 1  
 	 */
 	
 	// variable taille case
+	/**
+	 *  Methode de dessin du psonnage du groupe 1  
+	 */
 	public static final int X = 25;
 	
 	@Override
+	/**
+	 *  Methode de dessin du peronnage du groupe 1  
+	 *  Methode de dessin du peronnage du groupe 1
+	 *  Methode de dessin du peronnage du groupe 1
+	 *  Methode de dessin du peronnage du groupe 1
+	 *  Methode de dessin du peronnage du groupe 1
+	 *  Methode de dessin du peronnage du groupe 1
+	 *  Methode de dessin du peronnage du groupe 1
+	 *  
+	 */
 	public void dessiner() {
 
 		
@@ -47,6 +60,16 @@ public class DessinsGroupe1 extends CreateurDeForme{
 	
 	/**
 	 * dessin maingauche
+	 * dessin maingauche
+	 * dessin maingauche
+	 * dessin maingauche
+	 * dessin maingauche
+	 * dessin maingauche
+	 * dessin maingauche
+	 * dessin maingauche
+	 * dessin maingauche
+	 * dessin maingauche
+	 * 
 	 */
 	public void dessinerMainGauche(){
 		
