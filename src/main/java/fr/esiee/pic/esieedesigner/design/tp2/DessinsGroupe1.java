@@ -68,7 +68,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 
     	
         
- 	   // tete
+ 	   // tetea
        Point tetea = new Point(75,175);
        Point teteb = new Point(75,75);
        Point tetec = new Point(125,50);
