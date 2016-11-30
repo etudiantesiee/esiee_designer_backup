@@ -19,14 +19,13 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Pas de dessin horizontale
 	 */
 	private static final double UNITE_HORIZONTALE = 25;
-	private static final double OFFSET = 1050;
+	
 	/**
 	 * Pas de dessin verticale
 	 */
 	private static final double UNITE_VERTICALE = 25;
 	
 	private static final Point ORIGIN= new Point(60*25,5*25);
-
 
 	@Override
 	public void dessiner() {
@@ -55,7 +54,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		 Point couDroite = new Point((3*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*8 + ORIGIN.getY());
 		 
 		 Point sysmetriecorpsDroite = new Point((4*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*8 + ORIGIN.getY());
-		 
+
 
 		 
 		 demarrerNouveauDessinAvecDesPoints()
@@ -92,7 +91,31 @@ public class DessinsGroupe2 extends CreateurDeForme {
 			.ajouter(getSymetrie(couDroite))
 			.nePasRelierLesPointsExtreme();
 			
-		
+		 demarrerNouveauDessinAvecDesPoints()
+		 .ajouter(manche1Droite)
+		 .ajouter(manche2Droite);
+		 
+		 demarrerNouveauDessinAvecDesPoints()
+		 .ajouter(getSymetrie(manche1Droite))
+		 .ajouter(getSymetrie(manche2Droite));
+		 
+		 Point jupehautGauche = new Point((-4*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*11 + ORIGIN.getY());
+		 
+		 demarrerNouveauDessinAvecDesPoints()
+		 .ajouter(getSymetrie(jupehautDroite))
+		 .ajouter(getSymetrie(jupehautGauche));
+		 
+		 Point hautpiedGauche = new Point((-1*UNITE_HORIZONTALE)+ORIGIN.getX(),UNITE_VERTICALE*13 + ORIGIN.getY());
+		 
+		 demarrerNouveauDessinAvecDesPoints()
+		 .ajouter(getSymetrie(hautpiedDroite))
+		 .ajouter(getSymetrie(hautpiedGauche));
+		 
+		 Point chevilleDroite = new Point(0+ORIGIN.getX(),UNITE_VERTICALE*13 + ORIGIN.getY());
+		 
+		 demarrerNouveauDessinAvecDesPoints()
+		 .ajouter(getSymetrie(chevilleDroite))
+		 .ajouter(getSymetrie(talonDroite));
 	
 
 		
