@@ -24,6 +24,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	private static final double UNITE_VERTICALE = 25;
 	
+/* point d'origine du  dessin*/
     /* point d'origine qui sert à la réalisation de l'objectif 2 */
 	private static final Point ORIGIN= new Point(10*25,5*25);
 
@@ -227,9 +228,75 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		/*yeux*/
 		Point x= new Point(ORIGIN.getX()+25,ORIGIN.getY()+100);
 		
-		/*dessin yeux*/
+		/*dessin yeuxout mécanisme formant une image doit être capable de percevoir les différences d'intensité entre les différentes directions d'incidence de la lumière. L'œil doit donc être capable de détecter la lumière, détecter sa direction, et établir une relation hiérarchique entre les signaux provenant des différentes directions.
+Coupe transversale d'un œil composé de libellule
+
+La perception de la lumière dans l'œil se fait grâce à des pigments, composés de deux parties liées covalemment : une partie protéique, l'opsine et une partie lipidique dérivée de la vitamine A (11-cis rétinal), le chromophore. Le pigment est disposé dans la membrane des cellules photoréceptrices, et est constituée de sept hélices transmembranaires disposées en cercle dans la membrane autour du chromophore. C'est l'absorption d'un photon par le chromophore, permettant le passage de la configuration 11-cis du chromophore à une configuration all-trans, qui permet la sensibilité à la lumière. Une fois le pigment excité, l'opsine permet l'activation d'une protéine G via une de ses boucles cytoplasmiques, ce qui déclenche ensuite la réponse cellulaire.
+
+La perception de la direction nécessite de concentrer les rayons lumineux provenant d'une même direction de l'espace sur un faible nombre de photorécepteurs de la rétine, lesquels doivent être regroupés spatialement. Il existe de nombreuses manières de regrouper les rayons lumineux d'une même direction dans le monde animal, apparues indépendamment au cours de l'évolution. On peut cependant diviser les différentes méthodes en trois grandes stratégies: les rayons lumineux ne provenant pas de la bonne direction sont éliminés par ombrage d'une autre structure de l'œil sur la rétine, les rayons d'une même direction sont incurvés et orientés vers un même point de la rétine par réfraction, ou les rayons sont dirigés sur les photorécepteurs par réflexion sur un miroir concave disposé derrière la rétine. Ainsi, chaque photorécepteur ou groupe de photorécepteurs détecte la lumière provenant d'une seule direction.
+
+Enfin, la comparaison des intensités lumineuses issues d'une même direction de l'espace nécessite une intégration des signaux électriques fournis par les neurones photorécepteurs. Cette intégration se fait en aval de la rétine. Le signal perçu par le cerveau n'est jamais absolu, et seule la différence d'intensité perçue entre les photorécepteurs est retenue, et non pas le niveau total d'intensité. Ceci permet à l'œil de s'adapter à la luminosité ambiante. En effet, en condition de forte luminosité, une même différence d'intensité entre deux récepteurs paraîtra plus faible, ce qui diminue la qualité de l'image.
+*/
 		ajouterEllipse(new Ellipse(x, 10, 20), Couleur.NOIR);
 		ajouterEllipse(new Ellipse(getSymetrie(x), 10, 20), Couleur.NOIR);	
+		
+		/*
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 * COMMENTAIRE 
+		 */
+		
 	}
 	
 	
