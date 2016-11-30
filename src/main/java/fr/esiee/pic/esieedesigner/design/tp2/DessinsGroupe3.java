@@ -55,12 +55,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin  
      */
     public void dessinerContour() {
-<<<<<<< HEAD
-    	Point mentonBasGauche = new Point(POINT_DEPART.getX() + 3 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 2 * UNITE_VERTICALE);
-=======
-    
->>>>>>> 20bd8280219886311a3ed41478ebd21486d565f3
-        
+    	Point mentonBasGauche = new Point(POINT_DEPART.getX() + 3 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 2 * UNITE_VERTICALE); 
     }
     /**
      * dessin 
