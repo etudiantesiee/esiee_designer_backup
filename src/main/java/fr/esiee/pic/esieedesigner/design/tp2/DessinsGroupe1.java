@@ -1,4 +1,5 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
+
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
@@ -13,7 +14,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
  *         florian
  *         amineoos &pradhox
  */
-public class DessinsGroupe1 extends CreateurDeForme {
+public class DessinsGroupe1 extends CreateurDeForme{
 
 	/**
 	 *  Methode de dessin du personnage du groupe 1  
@@ -136,14 +137,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 					.ajouter(debEpauleDroite)
 					.couleurDeFond(Couleur.GRIS)
 					.nePasRelierLesPointsExtreme();
-		
-		
-	
-       
-		
-		
-	
 	}
+	
 	
 	public void dessinerMainGauche(){
 		
