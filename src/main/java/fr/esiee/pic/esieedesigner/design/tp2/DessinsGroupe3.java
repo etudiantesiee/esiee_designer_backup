@@ -91,15 +91,17 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
      * dessin oeil droit
      */
     public void dessinerYeuxD() {
+    	// AJouter une ellispe à droite
     	Point centreOeilDroite = new Point(POINT_DEPART.getX() + 5*UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
 		Ellipse oeilDroite = new Ellipse(centreOeilDroite, 10, 10);
 		
 		ajouterEllipse(oeilDroite, Couleur.NOIR);
     }
     /**
-     * dessin oeil gauche
+     * dessin oeil gauche 
      */
     public void dessinerYeuxG() {
+    	// AJouter une ellispe à gauche
     	Point centreOeilGauche = new Point(POINT_DEPART.getX() + 3*UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
 		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 10, 10);
 		
@@ -123,7 +125,7 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
      
           
      demarrerNouveauDessinAvecDesPoints()
-          
+          // méthode pour ajouter la variable au design
      .ajouter(lunette1)
      .ajouter(lunette2)
      .ajouter(lunette3)
