@@ -20,18 +20,30 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
 
-		// Partie Flo
+		int x = 25;	
 		
-        Point basGaucheTete = new Point(50,175);
-        Point gaucheTete2 = new Point(25,75);
+		// Partie Flo Cheveux
+		
+        Point basGaucheTete = new Point(2*x,7*x);
+        Point gaucheTete2 = new Point(x,3*x);
+        Point gaucheTete3 = new Point(x,x);
+        Point gaucheTete4 = new Point(2*x,0);
+        Point hautDroite = new Point(12*x,0);
+        Point hautDroite2 = new Point(13*x,x);
+
+
 
         
         demarrerNouveauDessinAvecDesPoints()
         .ajouter(basGaucheTete)
         .ajouter(gaucheTete2)
+        .ajouter(gaucheTete3)
+        .ajouter(gaucheTete4)
+        .ajouter(hautDroite)
+        .ajouter(hautDroite2)
         .nePasRelierLesPointsExtreme();
+		        
 		
-		int x = 25;	
 		//Bras GRAUCHE
 		Point debEpauleGauche = new Point(4*x,8*x);
 		Point finEpauleGauche = new Point(3*x, 8*x);
