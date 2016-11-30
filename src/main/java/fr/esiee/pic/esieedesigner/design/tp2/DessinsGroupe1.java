@@ -61,12 +61,20 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Ellipse oeilDroit = new Ellipse(centreOeilDroit, 5, 5);
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
 
+		
+		
+		
+		
 		// PARTIE A&D
 		
 		Point mentona = new Point(75,175);
 		Point mentonb = new Point(150,250);
 		Point mentonc = new Point(200,250);
 		Point mentond = new Point(275,175);
+		
+		// Main
+		dessinerMainGauche();
+		dessinerMainDroite();
 		
 		//Bras GRAUCHE
 				Point debEpauleGauche = new Point(4*x,8*x);
@@ -136,10 +144,22 @@ public class DessinsGroupe1 extends CreateurDeForme {
 					.nePasRelierLesPointsExtreme();
 		
 		
-		//MAIN GAUCHE
+	
+       
 		
+		
+	
+	}
+	
+	public void dessinerMainGauche(){
+		
+		  
+		double l = 6.25;
+		//Main gauche
 		Point mainGauche1 = new Point(1*x,13*x);
 		Point mainGauche2 = new Point(2*x,13*x);
+		Point mancheGaucheHaut = new Point(1*x, 12*x);
+		Point mancheGaucheBas = new Point(2*x, 12*x);
 		
 		demarrerNouveauDessinAvecDesPoints()
 			.ajouter(mancheGaucheHaut)
@@ -148,23 +168,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 			.ajouter(mancheGaucheBas)
 			.nePasRelierLesPointsExtreme();
 		
-		// MAIN DROITE
-
-		Point mainDroite1 = new Point(12*x,13*x);
-		Point mainDroite2 = new Point(13*x,13*x);
-		
-		demarrerNouveauDessinAvecDesPoints()
-			.ajouter(mancheDroite1)
-			.ajouter(mainDroite1)
-			.ajouter(mainDroite2)
-			.ajouter(mancheDroite)
-			.nePasRelierLesPointsExtreme();
-         
-		double l = 6.25;
-		
-		
-		// doigts de la main gauche
-		
+		//Doigts gauche
 		Point doigtG1a = new Point(1*x + l,13*x);
 		Point doigtG1b = new Point(1*x + l,12.75*x);
 		Point doigtG2a = new Point(1*x + 2*l,13*x);
@@ -185,6 +189,27 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		demarrerNouveauDessinAvecDesPoints()
 			.ajouter(doigtG3a)
 			.ajouter(doigtG3b)
+			.nePasRelierLesPointsExtreme();
+		
+		
+	}
+	
+	public void dessinerMainDroite(){
+		// MAIN DROITE
+	
+		  
+		double l = 6.25;
+		
+		Point mainDroite1 = new Point(12*x,13*x);
+		Point mainDroite2 = new Point(13*x,13*x);
+		Point mancheDroite1 = new Point(12*x,12*x);	
+		Point mancheDroite = new Point(13*x,12*x);
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(mancheDroite1)
+			.ajouter(mainDroite1)
+			.ajouter(mainDroite2)
+			.ajouter(mancheDroite)
 			.nePasRelierLesPointsExtreme();
 		
 		
