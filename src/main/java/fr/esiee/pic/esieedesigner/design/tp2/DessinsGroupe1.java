@@ -24,7 +24,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// variable taille case
 		int x = 25;
 		
-		// Partie Flo Cheveux
+		// Partie Flo 
+		///Cheveux
 		
         Point basGaucheTete = new Point(2*x,7*x);
         Point gaucheTete2 = new Point(x,3*x);
@@ -35,11 +36,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
         Point hautDroite3 = new Point(13*x,3*x);
         Point hautDroite4 = new Point(12*x,7*x);
         Point basDroite = new Point(11*x,7*x);
-        Point basGauche = new Point(3*x,7*x);
-
-
-
-
+        Point basGauche = new Point(3*x,7*x);     
 
         
         demarrerNouveauDessinAvecDesPoints()
@@ -53,6 +50,18 @@ public class DessinsGroupe1 extends CreateurDeForme {
         .ajouter(hautDroite3)
         .ajouter(hautDroite4)
         .ajouter(basDroite)
+        .nePasRelierLesPointsExtreme();
+        
+        /// Nez
+        
+        Point basGaucheNez = new Point(6.75*x,5.25*x);
+        Point centreHautNez = new Point(7*x,5*x);
+        Point basDroiteNez = new Point(7.25*x,5.25*x);
+        
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(basGaucheNez)
+        .ajouter(centreHautNez)
+        .ajouter(basDroiteNez)
         .nePasRelierLesPointsExtreme();
         
    //// PARTIE AMINE ET PRADHIBAN
@@ -84,6 +93,11 @@ public class DessinsGroupe1 extends CreateurDeForme {
          Point lunettec = new Point(175,100);
          Point lunetted = new Point(225,125);
          Point lunettee = new Point(275,100);
+         Point lunettef = new Point(75,75);
+         Point lunetteg = new Point(125,50);
+         Point lunetteh = new Point(175,75);
+         Point lunettei = new Point(225,50);
+         Point lunettej = new Point(275,75);
  	  
         		demarrerNouveauDessinAvecDesPoints()
         			.ajouter(lunettea)
@@ -91,6 +105,12 @@ public class DessinsGroupe1 extends CreateurDeForme {
         			.ajouter(lunettec)
         			.ajouter(lunetted)
         			.ajouter(lunettee)
+        			.ajouter(lunettej)
+        			.ajouter(lunettei)
+        			.ajouter(lunetteh)
+        			.ajouter(lunetteg)
+        			.ajouter(lunettef)
+        			.couleurDeFond(Couleur.GRIS)
         			.nePasRelierLesPointsExtreme();
         		
         //bouche
@@ -112,15 +132,16 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point mentond = new Point(275,175);
   
 		
-		// yeux droit
+		// yeux gauche
 		Point centreOeilGauche = new Point(150, 100);
-		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 5, 10);
-		
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 5, 5);
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
 		
-		
-		
-		
+		// yeux droit
+		Point centreOeilDroit = new Point(200, 100);
+		Ellipse oeilDroit = new Ellipse(centreOeilDroit, 5, 5);
+		ajouterEllipse(oeilDroit, Couleur.NOIR);
+
 		// PARTIE A&D
 		
 		//Bras GRAUCHE
