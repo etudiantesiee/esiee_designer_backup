@@ -35,25 +35,15 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		dessinerTete();
 		dessinerRayban();
 		dessinerBouche();
+		dessinerYeuxGauche();
+		dessinerYeuxDroit();
          
 
         		
       
 
-		// TETE
-        //On a intégré votre code dans le notre
 
-  
 		
-		// yeux gauche
-		Point centreOeilGauche = new Point(150, 100);
-		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 5, 5);
-		ajouterEllipse(oeilGauche, Couleur.NOIR);
-		
-		// yeux droit
-		Point centreOeilDroit = new Point(200, 100);
-		Ellipse oeilDroit = new Ellipse(centreOeilDroit, 5, 5);
-		ajouterEllipse(oeilDroit, Couleur.NOIR);
 
 		// PARTIE A&D
 		
@@ -247,13 +237,13 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	
 	public void dessinerTete(){
 		
-		Point tetea = new Point(75,175);
-	    Point teteb = new Point(75,75);
-	    Point tetec = new Point(125,50);
-	    Point teted = new Point(175,75);
-	    Point tetee = new Point(225,50);
-	    Point tetef = new Point(275,75);
-	    Point teteg = new Point(275,175);
+		Point tetea = new Point(825,175);
+	    Point teteb = new Point(825,75);
+	    Point tetec = new Point(875,50);
+	    Point teted = new Point(925,75);
+	    Point tetee = new Point(975,50);
+	    Point tetef = new Point(1025,75);
+	    Point teteg = new Point(1025,175);
 	        
 	    demarrerNouveauDessinAvecDesPoints()
 	    .ajouter(tetea)
@@ -267,16 +257,16 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	public void dessinerRayban(){
-		Point lunettea = new Point(75,100);
-        Point lunetteb = new Point(125,125);
-        Point lunettec = new Point(175,100);
-        Point lunetted = new Point(225,125);
-        Point lunettee = new Point(275,100);
-        Point lunettef = new Point(75,75);
-        Point lunetteg = new Point(125,50);
-        Point lunetteh = new Point(175,75);
-        Point lunettei = new Point(225,50);
-        Point lunettej = new Point(275,75);
+		Point lunettea = new Point(750+75,100);
+        Point lunetteb = new Point(750+125,125);
+        Point lunettec = new Point(750+175,100);
+        Point lunetted = new Point(750+225,125);
+        Point lunettee = new Point(750+275,100);
+        Point lunettef = new Point(750+75,75);
+        Point lunetteg = new Point(750+125,50);
+        Point lunetteh = new Point(750+175,75);
+        Point lunettei = new Point(750+225,50);
+        Point lunettej = new Point(750+275,75);
 	  
        		demarrerNouveauDessinAvecDesPoints()
        			.ajouter(lunettea)
@@ -294,8 +284,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	public void dessinerBouche(){
-        Point bouchea = new Point(150,200);
-        Point boucheb = new Point(200,200);
+        Point bouchea = new Point(750+150,200);
+        Point boucheb = new Point(750+200,200);
         	
         	demarrerNouveauDessinAvecDesPoints()
   				.ajouter(bouchea)
@@ -307,11 +297,23 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 
 	
-	public void dessinerYeux(){
+	public void dessinerYeuxGauche(){
+		
+		Point centreOeilGauche = new Point(150, 100);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 5, 5);
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
+		
+	}
+	
+public void dessinerYeuxDroit(){
+
+		Point centreOeilDroit = new Point(200, 100);
+		Ellipse oeilDroit = new Ellipse(centreOeilDroit, 5, 5);
+		ajouterEllipse(oeilDroit, Couleur.NOIR);
 		
 	}
 	public void dessinerCorps(){
-
+		
 			
 	}
 
