@@ -266,7 +266,33 @@ public class DessinsGroupe1 extends CreateurDeForme {
 			.ajouter(doigtG3b)
 			.nePasRelierLesPointsExtreme();
 		
+		// doigts de la main droite
 
+		Point doigtD1a = new Point(12*x + l,13*x);
+		Point doigtD1b = new Point(12*x + l,12.75*x);
+		Point doigtD2a = new Point(12*x + 2*l,13*x);
+		Point doigtD2b = new Point(12*x + 2*l,12.75*x);
+		Point doigtD3a = new Point(12*x + 3*l,13*x);
+		Point doigtD3b = new Point(12*x + 3*l,12.75*x);
+
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(doigtD1a)
+			.ajouter(doigtD1b)
+			.nePasRelierLesPointsExtreme();
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(doigtD2a)
+			.ajouter(doigtD2b)
+			.nePasRelierLesPointsExtreme();
+		
+		demarrerNouveauDessinAvecDesPoints()
+			.ajouter(doigtD3a)
+			.ajouter(doigtD3b)
+			.nePasRelierLesPointsExtreme();
+		
+		
+		
+		
 	}
 	
 

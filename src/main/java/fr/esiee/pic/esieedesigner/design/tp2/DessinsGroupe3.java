@@ -164,7 +164,16 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin 
      */
     public void dessinerMenton() {
+    	double untier = 16.6;
+    	double longueurmenton = 20;
+    	Point menton1 = new Point(POINT_DEPART.getX() -untier+ 4*UNITE_HORIZONTALE, POINT_DEPART.getY() -2*UNITE_VERTICALE-untier);
+    	Point menton2 = new Point(menton1.getX() +longueurmenton, menton1.getY());
+    	demarrerNouveauDessinAvecDesPoints()
         
+	     .ajouter(menton1)
+	     .ajouter(menton2)
+	    ;
+    	
     }
 
     /**
