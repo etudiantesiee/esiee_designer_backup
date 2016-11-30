@@ -153,11 +153,8 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
      * dessin de la narine gauche
      */
     public void dessinerNarineGauche() {
-<<<<<<< HEAD
-    	
-=======
     	//Definition des points et des variables
->>>>>>> 3a6e81b0d0e642422750780c58857c63de640526
+
     	Point nez = new Point (POINT_DEPART.getX() + 4 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 6 * UNITE_VERTICALE);
     	double longueurHorizontaleNarineGauche = 5;
     	double longueurVerticaleNarineGauche = 6;
