@@ -93,6 +93,11 @@ public class DessinsGroupe1 extends CreateurDeForme {
          Point lunettec = new Point(175,100);
          Point lunetted = new Point(225,125);
          Point lunettee = new Point(275,100);
+         Point lunettef = new Point(75,75);
+         Point lunetteg = new Point(125,50);
+         Point lunetteh = new Point(175,75);
+         Point lunettei = new Point(225,50);
+         Point lunettej = new Point(275,75);
  	  
         		demarrerNouveauDessinAvecDesPoints()
         			.ajouter(lunettea)
@@ -100,6 +105,12 @@ public class DessinsGroupe1 extends CreateurDeForme {
         			.ajouter(lunettec)
         			.ajouter(lunetted)
         			.ajouter(lunettee)
+        			.ajouter(lunettej)
+        			.ajouter(lunettei)
+        			.ajouter(lunetteh)
+        			.ajouter(lunetteg)
+        			.ajouter(lunettef)
+        			.couleurDeFond(Couleur.GRIS)
         			.nePasRelierLesPointsExtreme();
         		
         //bouche

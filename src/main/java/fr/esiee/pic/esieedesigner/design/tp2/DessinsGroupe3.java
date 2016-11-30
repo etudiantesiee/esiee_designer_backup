@@ -1,6 +1,7 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -55,29 +56,53 @@ public class DessinsGroupe3 extends CreateurDeForme {
      * dessin  
      */
     public void dessinerContour() {
-    	Point mentonBasGauche = new Point(POINT_DEPART.getX() + 3 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 2 * UNITE_VERTICALE); 
-    	Point mentonHautGauche = new Point(mentonBasGauche.getX() - 2 * UNITE_HORIZONTALE, mentonBasGauche.getY() - 2 * UNITE_VERTICALE);
+    	Point mentonBasGauche = new Point (POINT_DEPART.getX() + 3 * UNITE_HORIZONTALE, POINT_DEPART.getY() - 2 * UNITE_VERTICALE); 
+    	Point mentonHautGauche = new Point (mentonBasGauche.getX() - 2 * UNITE_HORIZONTALE, mentonBasGauche.getY() - 2 * UNITE_VERTICALE);
     	Point joueBasGauche = new Point (mentonHautGauche.getX() - UNITE_HORIZONTALE, mentonHautGauche.getY() - 3 * UNITE_VERTICALE);
     	Point joueHautGauche = new Point (joueBasGauche.getX(), joueBasGauche.getY() - 2 * UNITE_VERTICALE);
+    	Point frontGauche = new Point (joueHautGauche.getX() + UNITE_HORIZONTALE, joueHautGauche.getY() - 2 * UNITE_VERTICALE);
+    	Point frontHautGauche = new Point (frontGauche.getX() + 2 * UNITE_HORIZONTALE , frontGauche.getY() - UNITE_VERTICALE);
+    	Point frontHautDroite = new Point (frontHautGauche.getX() + 2 * UNITE_HORIZONTALE, frontHautGauche.getY() );
+    	Point frontDroite = new Point (frontHautDroite.getX() + 2 * UNITE_HORIZONTALE, frontHautDroite.getY() + UNITE_VERTICALE);
+    	Point joueHautDroite = new Point (frontDroite.getX() + UNITE_HORIZONTALE, frontDroite.getY() + 2 * UNITE_VERTICALE);
+    	Point joueBasDroite = new Point (joueHautDroite.getX() , joueHautDroite.getY() + 2 * UNITE_VERTICALE);
+    	Point mentonHautDroite = new Point (joueBasDroite.getX() - UNITE_HORIZONTALE, joueBasDroite.getY() + 3 * UNITE_VERTICALE);
+    	Point mentonBasDroite = new Point (mentonHautDroite.getX() - 2 * UNITE_HORIZONTALE, mentonHautDroite.getY() + 2 * UNITE_VERTICALE);
+    	
     	
     	demarrerNouveauDessinAvecDesPoints()
     	
     	.ajouter(mentonBasGauche)
     	.ajouter(mentonHautGauche)
     	.ajouter(joueBasGauche)
-    	.ajouter(joueHautGauche);
+    	.ajouter(joueHautGauche)
+    	.ajouter(frontGauche)
+    	.ajouter(frontHautGauche)
+    	.ajouter(frontHautDroite)
+    	.ajouter(frontDroite)
+    	.ajouter(joueHautDroite)
+    	.ajouter(joueBasDroite)
+    	.ajouter(mentonHautDroite)
+    	.ajouter(mentonBasDroite);
     	
     }
     /**
-     * dessin 
+     * dessin oeil droit
      */
     public void dessinerYeuxD() {
-        
+    	Point centreOeilDroite = new Point(POINT_DEPART.getX() + 5*UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
+		Ellipse oeilDroite = new Ellipse(centreOeilDroite, 10, 20);
+		
+		ajouterEllipse(oeilDroite, Couleur.NOIR);
     }
     /**
-     * dessin 
+     * dessin oeil gauche
      */
     public void dessinerYeuxG() {
+    	Point centreOeilGauche = new Point(POINT_DEPART.getX() + 3*UNITE_HORIZONTALE, POINT_DEPART.getY() -8*UNITE_VERTICALE);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 10, 20);
+		
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
         
     }
     /**
